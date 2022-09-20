@@ -64,3 +64,20 @@ body {
     grid-row: span 2;
 }
 
+#more {
+    display: none;
+}
+
+.rm {
+    border: none;
+    background-color: #333;
+    color: white;
+    padding: 7px;
+    font-size: 15px;
+    transition: all 0.3s ease-out;
+}
+
+.rm:hover {
+    cursor: pointer;
+    background-color: #444;
+}
