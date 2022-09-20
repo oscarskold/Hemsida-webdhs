@@ -18,6 +18,11 @@ body {
     margin: 0 auto;
 }
 
+h2 {
+    max-width: 50%;
+    margin: 0 auto;
+}
+
 #a1 {
     grid-column: span 12;
     grid-row: span 6;
@@ -101,3 +106,11 @@ body {
     margin-top: 150px;
 }
 
+
+@media screen and (max-width:550px) {
+    
+    #a-logo {
+        width: 75%;
+    }
+
+}
