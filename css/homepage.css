@@ -109,7 +109,22 @@ h2 {
     grid-auto-rows: minmax(100px, auto);
 }
 
+@media screen and (max-width:800px) {
+    
+    #s1 h1 {
+        font-size: 90px;
+    }
 
+    #s2 h1 {
+        font-size: 50px;
+    }
+
+    h2 {
+        max-width: 75%;
+        margin: 0 auto;
+    }
+
+}
 
 @media screen and (max-width: 550px) {
     .grid-wrapper { 
@@ -122,9 +137,18 @@ h2 {
         font-size: 2em;
     }
 
+    #s1 h1 {
+        font-size: 2em;
+    }
+
     #banner h1 {
         font-size: 70px;
     }
+
+    #s2 h1 {
+        font-size: 40px;
+    }
+
 
 }
 

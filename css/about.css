@@ -107,6 +107,15 @@ h2 {
 }
 
 
+@media screen and (max-width:800px) {
+    
+    h2 {
+        max-width: 75%;
+        margin: 0 auto;
+    }
+
+}
+
 @media screen and (max-width:550px) {
     
     #a-logo {
