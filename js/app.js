@@ -32,7 +32,7 @@ function Readmore() {
   
     if (dots.style.display === "none") {
       dots.style.display = "inline";
-      btnText.innerHTML = "Läs mindre";
+      btnText.innerHTML = "Läs mer";
       moreText.style.display = "none";
     } else {
       dots.style.display = "none";
