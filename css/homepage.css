@@ -30,7 +30,7 @@ body {
     object-position: center;
     grid-column: span 13;
     grid-row: span 5;
-    background-image: url(../img/banner.png);
+    background-image: url(../img/banner.jpg);
     background-position: center;
     background-size: cover;
     transition: all .3s ease-in-out;
