@@ -12,6 +12,11 @@ footer h2 {
 
 footer a {
     color: #f5f5f5;
+    transition: all 0.2s ease-out;
+}
+
+footer a:hover {
+    color: #dcdcdc;
 }
 
 .h2a {
@@ -100,4 +105,14 @@ footer hr {
     width: 50px;
     height: 50px;
     margin-top: 40px;
+}
+
+@media screen and (max-width: 1100px) {
+
+    .f-social img {
+        width: 50px;
+        height: 50px;
+        margin-top: 25px;
+    }    
+
 }
