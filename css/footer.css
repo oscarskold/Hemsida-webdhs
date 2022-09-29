@@ -116,3 +116,20 @@ footer hr {
     }    
 
 }
+
+@media screen and (max-width: 700px) {
+    
+    .h2a {
+        font-size: 20px;
+
+    }
+
+    footer h2 {
+        font-size: 25px;
+    }
+
+    footer li {
+        font-size: 15px;
+    }
+
+}
