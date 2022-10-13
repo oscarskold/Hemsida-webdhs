@@ -10,12 +10,13 @@ body{
 
 
 nav {
-    position: -webkit-sticky;
-    position: sticky;
+    position: fixed;
     top: 0;
+    width: 100%;
     padding: 10px;
-    background-color: black;
     display: flex;
+    transition: 400ms ease-in-out background-color,
+            200ms ease-in-out box-shadow;
     align-items: center;
     justify-content: space-between;
     z-index: 1;
@@ -38,6 +39,19 @@ nav {
 
 .navbar_links li {
     opacity: 0;
+    list-style-type: none;
+}
+
+.active_nav {
+    background-color: black;
+    box-shadow: 0 0 .5rem rgba(0, 0, 0, .6);
+}
+/* .active_nav .navbar_links a,
+.active_nav .logo {
+    color: #0e0e0e;
+} */
+.active_nav .nav_links a:hover {
+    color: black;
 }
 
 .r-side {

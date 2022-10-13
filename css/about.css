@@ -11,6 +11,10 @@ body {
     /* color: #9C9C9C; */
 }
 
+nav {
+    background-color: black;
+}
+
 .grid-wrapper {
     display: grid;
     grid-template-columns: repeat(12,1fr);
