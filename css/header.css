@@ -141,6 +141,14 @@ li, a {
     font-size: 20px;
 }
 
+.nav-items {
+    transition: all ease-in-out 0.3s;
+}
+
+.nav-items:hover {
+    transform: scale(1.05);
+}
+
 /* .navbar_links li {
     list-style: none;
     display: inline-block;
