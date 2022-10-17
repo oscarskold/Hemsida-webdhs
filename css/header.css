@@ -122,7 +122,7 @@ nav a:hover {
 
 .logo a {
     transition: all 0.7s ease-out;
-    color: #004aad;
+    color: white;
     display: inline-flex;
     padding-top: 10;
 }
@@ -133,7 +133,7 @@ nav a:hover {
 }
 
 .logo a:hover {
-    color: mediumblue;
+    color: whitesmoke;
 }
 
 li, a {
