@@ -122,7 +122,7 @@ nav a:hover {
 
 .logo a {
     transition: all 0.7s ease-out;
-    color: white;
+    color: #ffffff;
     display: inline-flex;
     padding-top: 10;
 }
