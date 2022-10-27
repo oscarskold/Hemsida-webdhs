@@ -1,7 +1,3 @@
-* {
-    background-repeat: no-repeat;
-}
-
 html {
     scroll-behavior: smooth;
 }
@@ -9,6 +5,67 @@ html {
 body {
     font-family: 'Roboto', sans-serif;
 }
+
+/* animmation */
+
+.cb-slideshow::after{
+    content: '';
+    background: transparent url(/img/banner.jpg);
+}
+
+.cb-slideshow li span{
+    width: 100%;
+    height: 100%;
+    grid-column: span 13;
+    grid-row: span 5;
+    position: absolute;
+    background-size: cover;
+    background-position: 50% 40%;
+    background-repeat: none;
+    opacity: 1;
+    z-index: 1;
+    animation: imageAnimation 36s linear infinite 0s; 
+}
+
+#banner {
+    object-position: center;
+    grid-column: span 13;
+    grid-row: span 5;
+    background-image: url(../img/banner.jpg);
+    background-position: center;
+    background-size: cover;
+    transition: all .3s ease-in-out;
+    background-attachment: fixed;
+} 
+
+/* Bilder*/
+
+.cb-slideshow li:nth-child(1) span{
+    background-image: url(/img/Vilgot.png);
+}
+.cb-slideshow li:nth-child(2) span{
+    background-image: url(/img/Oscar.png);
+}
+.cb-slideshow li:nth-child(3) span{
+    background-image: url(/img/Oskar.png);
+}
+.cb-slideshow li:nth-child(4) span{
+    background-image: url(/img/Noah.png);
+}
+.cb-slideshow li:nth-child(5) span{
+    background-image: url(/img/logo-white.png);
+}
+
+@keyframes imageAnimation { 
+    0% { opacity: 0; animation-timing-function: ease-in; }
+    8% { opacity: 1; animation-timing-function: ease-out; }
+    17% { opacity: 1 }
+    25% { opacity: 0 }
+    100% { opacity: 0 }
+}
+
+/* end of animartion */
+
 
 .grid-wrapper {
     display: grid;
@@ -26,22 +83,12 @@ body {
             user-select: none; 
 }
 
-#banner {
-    object-position: center;
-    grid-column: span 13;
-    grid-row: span 5;
-    background-image: url(../img/banner.jpg);
-    background-position: center;
-    background-size: cover;
-    transition: all .3s ease-in-out;
-    background-attachment: fixed;
-}
 
-#banner h1 {
+/* #banner h1 {
     font-size: 100px;
     padding-top: 100px;
     text-align: center;
-}
+} */
 
 
 /* #banner:hover {
