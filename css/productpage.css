@@ -52,8 +52,17 @@ h1 {
     font-weight: bold;
 }
 
+#back {
+    color: #696969;
+}
+
+#back:hover {
+    border-bottom: 2px solid #696969;
+}
+
 hr {
-    height: 2px;
+    margin-top: 20px;
+    height: 3px;
     background-color: black;
     border: none;
     width: 20%;
@@ -76,10 +85,15 @@ p {
     margin-bottom: 30px;
 }
 
-.text a {
+#buy {
     padding: 10px 30px;
     font-size: 20px;
     border: none;
     background-color: black;
     color: #ffffff;
+    transition: all ease-in-out 0.3s;
+}
+
+#buy:hover {
+    background-color: #222024;
 }
