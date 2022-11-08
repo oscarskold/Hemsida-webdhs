@@ -36,7 +36,7 @@ nav {
 .image {
     grid-column: span 1;
     grid-row: span 4;
-    background-image: url(../img/Vilgot.png);
+    /* background-image: url(../img/computer.png); */
     background-position: center;
     background-size: cover;
 }
@@ -89,11 +89,15 @@ p {
     padding: 10px 30px;
     font-size: 20px;
     border: none;
-    background-color: black;
-    color: #ffffff;
-    transition: all ease-in-out 0.3s;
+    background-color: white;
+    border-radius: 25px;
+    border: 2px solid #004aad;
+    color: #004aad;
+    transition: all 0.3s ease-out;
 }
 
 #buy:hover {
-    background-color: #222024;
+    cursor: pointer;
+    background-color: #004aad;
+    color: white;
 }
