@@ -36,10 +36,12 @@ nav {
 .image {
     grid-column: span 1;
     grid-row: span 4;
-    /* background-image: url(../img/computer.png); */
-    background-position: center;
-    background-size: cover;
-}
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
 
 .text {
     grid-column: span 1;
