@@ -38,10 +38,10 @@ nav {
     grid-row: span 4;
   }
 
-  img {
+.image img {
     width: 100%;
     height: 100%;
-  }
+}
 
 .text {
     grid-column: span 1;
