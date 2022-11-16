@@ -14,7 +14,6 @@ nav {
     background-color: black;
 }
 
-
 .grid-wrapper {
     display: grid;
     grid-template-columns: repeat(12,1fr);
@@ -30,9 +29,10 @@ nav {
     grid-column: span 12;
     grid-row: span 1;
 }
+
 .cards {
     grid-column: span 4;
-    grid-row: span 3;
+    grid-row: span 2;
     text-align: center;
     border-radius: 0.5rem;
     overflow: hidden;
@@ -41,9 +41,14 @@ nav {
     font-size: 20px;
 }
 
+.cards hr {
+    height: 1px;
+    background-color: black;
+    border: none;
+}
+
 .cards:hover {
     transform: scale(1.10);
-
 }
 
 .cards img {
@@ -67,18 +72,6 @@ nav {
 #s2 {
     grid-column: span 12;
     grid-row: span 2;
-}
-
-#more {
-    display: none;
-}
-
-#more2 {
-    display: none;
-}
-
-#more3 {
-    display: none;
 }
 
 .rm {
