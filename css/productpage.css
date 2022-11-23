@@ -87,7 +87,8 @@ p {
     margin-bottom: 30px;
 }
 
-#buy {
+.buy {
+
     padding: 10px 30px;
     font-size: 20px;
     border: none;
@@ -98,8 +99,17 @@ p {
     transition: all 0.3s ease-out;
 }
 
+
 #buy:hover {
     cursor: pointer;
     background-color: #004aad;
     color: white;
 }
+
+.buy:hover {
+    cursor: pointer;
+    background-color: #004aad;
+    color: white;
+}
+
+
