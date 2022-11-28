@@ -180,17 +180,12 @@ nav a:hover {
         overflow-x: hidden;
     }
 
-    nav {
-        padding: 30px;
-    }
-    
-
     .navbar_links {
         position: absolute;
         right: 0px;
         height: 92vh;
         top: 8vh;
-        background-color: black;
+        background-color: #252525;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -221,18 +216,13 @@ nav a:hover {
         overflow-x: hidden;
     }
 
-    nav {
-        padding: 30px;
-    }
-
-
 
     .navbar_links {
         position: absolute;
         right: 0px;
         height: 92vh;
         top: 8vh;
-        background-color: black;
+        background-color: #252525;
         display: flex;
         flex-direction: column;
         align-items: center;
