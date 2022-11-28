@@ -14,13 +14,13 @@
     <title>Web-DHS</title>
 </head>
 <body>
-    
+
     <nav>
         <div class="logo nav-pos">
             <a href="Homepage.html"><img src="../img/logo-white.png" alt=""><h3>Web-DHS</h3></a>
         </div>
         <div class="r-side">
-            <a href="" class="nav-items"><img src="../img/shoppingcart.png" alt=""></a>
+            <a href="shop.html" class="nav-items"><img src="../img/shoppingcart.png" alt=""></a>
             <div class="burger right nav-items">
                 <div class="line1"></div>
                 <div class="line2"></div>
@@ -44,5 +44,37 @@
   
     </nav>
 
+    <div class="form">
+        <script language="JavaScript" src="../js/gen_validatorv31.js" type="text/javascript"></script>
+        <!-- Start code for the form-->
+        <form method="post" name="myemailform" action="form-to-email.php">
+            <p>
+                <label for='name'>Enter Name: </label><br>
+                <input class="form-text" type="text" name="name" placeholder="Enter Name here">
+            </p>
+            <p>
+                <label for='email'>Enter Email Address:</label><br>
+                <input class="form-text" type="text" name="email" placeholder="Enter Email here">
+            </p>
+            <p>
+                <label for='message'>Enter Message:</label> <br>
+                <textarea class="form-info" name="message" placeholder="Enter information here"></textarea>
+            </p>
+            <input type="submit" name='submit' value="submit">
+        </form>
+        <script language="JavaScript">
+        // Code for validating the form
+        // Visit http://www.javascript-coder.com/html-form/javascript-form-validation.phtml
+        // for details
+        var frmvalidator  = new Validator("myemailform");
+        frmvalidator.addValidation("name","req","Please provide your name"); 
+        frmvalidator.addValidation("email","req","Please provide your email"); 
+        frmvalidator.addValidation("email","email","Please enter a valid email address"); 
+        </script>
+    </div>
+    
+
+    <script src="../js/nav.js"></script>
+    <script src="../js/burger.js"></script>
 </body>
 </html>

@@ -12,7 +12,7 @@ body {
 }
 
 nav {
-    background-color: black;
+    background-color: #252525    ;
 }
 
 .grid-wrapper {
@@ -88,10 +88,6 @@ p {
 }
 
 .buy {
-<<<<<<< HEAD
-
-=======
->>>>>>> 8c24d513a8d17353f4962843b052e094c09fc7aa
     padding: 10px 30px;
     font-size: 20px;
     border: none;
@@ -102,7 +98,6 @@ p {
     transition: all 0.3s ease-out;
 }
 
-<<<<<<< HEAD
 
 #buy:hover {
     cursor: pointer;
@@ -110,15 +105,9 @@ p {
     color: white;
 }
 
-=======
->>>>>>> 8c24d513a8d17353f4962843b052e094c09fc7aa
 .buy:hover {
     cursor: pointer;
     background-color: #004aad;
     color: white;
 }
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 8c24d513a8d17353f4962843b052e094c09fc7aa
