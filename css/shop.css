@@ -32,7 +32,7 @@ nav {
 #title {
     grid-column: span 2;
     background-color: #004aad; /* For browsers that do not support gradients */
-    background-image: linear-gradient(to bottom right, #004aad , #38b6ff);
+    /* background-image: linear-gradient(to bottom right, #004aad , #38b6ff); */
     padding: 10px 20px;
     color: #ffff;
     font-size: 25px;
@@ -53,6 +53,12 @@ nav {
     margin-top: 5px;
     font-size: 20px;
     text-indent: 5px;
+    border-radius: 5px;
+}
+
+.form-text:focus {
+    outline: none;
+    border: 2px solid #38b6ff;
 }
 
 .form-info {
@@ -61,6 +67,12 @@ nav {
     margin-top: 5px;
     font-size: 20px;
     font-family: 'Roboto', sans-serif;
+    border-radius: 5px;
+}
+
+.form-info:focus {
+    outline: none;
+    border: 2px solid #38b6ff;
 }
 
 textarea {
@@ -74,7 +86,7 @@ textarea {
     font-size: 20px;
     text-align: center;
     border: none;
-    color: white;
+    color: white; 
     background-color: #004aad;
     transition: all 0.5s ease-in;
     cursor: pointer;
