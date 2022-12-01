@@ -25,6 +25,7 @@ footer a:hover {
 footer li {
     padding-top: 10px;
     list-style: none;
+    transition: all ease-in 0.2s;
 }
 
 footer li:hover {
