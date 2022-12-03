@@ -16,7 +16,7 @@ nav {
     padding: 10px;
     display: flex;
     transition: 400ms ease-in-out background-color,
-            200ms ease-in-out box-shadow;
+                200ms ease-in-out box-shadow;
     align-items: center;
     justify-content: space-between;
     z-index: 1;
@@ -27,7 +27,7 @@ nav {
     right: 0px;
     height: 92vh;
     top: 8vh;
-    background-color: black;
+    background-color: #252525;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -43,7 +43,7 @@ nav {
 }
 
 .active_nav {
-    background-color: black;
+    background-color: #252525;
     box-shadow: 0 0 .5rem rgba(0, 0, 0, .6);
 }
 
@@ -184,13 +184,12 @@ nav a:hover {
         padding: 30px;
     }
     
-
     .navbar_links {
         position: absolute;
         right: 0px;
         height: 92vh;
         top: 8vh;
-        background-color: black;
+        background-color: #252525;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -225,14 +224,12 @@ nav a:hover {
         padding: 30px;
     }
 
-
-
     .navbar_links {
         position: absolute;
         right: 0px;
         height: 92vh;
         top: 8vh;
-        background-color: black;
+        background-color: #252525;
         display: flex;
         flex-direction: column;
         align-items: center;

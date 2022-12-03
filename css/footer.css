@@ -1,13 +1,9 @@
 footer {
     /* background-color: #28282B; */
-    background-color: black;
+    background-color: #252525;
     height: 440px;
     font-family: 'Montserrat';
     z-index: -1;
-}
-
-footer h2 {
-    font-size: 30px;
 }
 
 footer a {
@@ -22,11 +18,18 @@ footer a:hover {
 
 .h4a {
     font-size: 25px;
+    color: #f5f5f5;
 }
+
 
 footer li {
     padding-top: 10px;
     list-style: none;
+    transition: all ease-in 0.2s;
+}
+
+footer li:hover {
+    transform: scale(1.05);
 }
 
 /* h2 {
@@ -106,6 +109,10 @@ footer hr {
     width: 50px;
     height: 50px;
     margin-top: 40px;
+}
+
+.f-social img:hover {
+    transform: scale(1.05);
 }
 
 @media screen and (max-width: 1100px) {
