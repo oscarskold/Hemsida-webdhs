@@ -180,6 +180,10 @@ nav a:hover {
         overflow-x: hidden;
     }
 
+    nav {
+        padding: 30px;
+    }
+    
     .navbar_links {
         position: absolute;
         right: 0px;
@@ -216,6 +220,9 @@ nav a:hover {
         overflow-x: hidden;
     }
 
+    nav {
+        padding: 30px;
+    }
 
     .navbar_links {
         position: absolute;
