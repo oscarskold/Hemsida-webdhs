@@ -179,16 +179,15 @@ nav a:hover {
     body {
         overflow-x: hidden;
     }
-
-    nav {
-        padding: 30px;
-    }
     
+    nav {
+        padding: 45px;
+    }
+
     .navbar_links {
         position: absolute;
         right: 0px;
         height: 92vh;
-        top: 8vh;
         background-color: #252525;
         display: flex;
         flex-direction: column;
@@ -205,9 +204,13 @@ nav a:hover {
 
     .burger {
         display: block;
+        scale: 1.5;
     }
 
-    
+    .logo {
+        scale: 1.5;
+    }
+
 }
 
 .nav-active {
@@ -221,14 +224,13 @@ nav a:hover {
     }
 
     nav {
-        padding: 30px;
+        padding: 45px;
     }
 
     .navbar_links {
         position: absolute;
         right: 0px;
         height: 92vh;
-        top: 8vh;
         background-color: #252525;
         display: flex;
         flex-direction: column;
