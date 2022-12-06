@@ -7,11 +7,10 @@ class cart_items{
 
     public $id;
     public $pruduct_id;
-    // public $qun;
-    // public $description;
-    // public $catagory_id;
-    // public $catagory_name;
-    // public $timestamp;
+    public $quntity;
+    public $user_id;
+    public $creatwed;
+    public $modified;
 
     public function __construct($db){
         $this->con = $db;   

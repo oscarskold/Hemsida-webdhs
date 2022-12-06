@@ -16,6 +16,7 @@
 </head>
 <body>
 
+    <h1>HEllo</h1>
 
     <script src="../js/SQL/cart/cart.js"></script>
 </body>
