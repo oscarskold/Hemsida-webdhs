@@ -1,0 +1,74 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    link(rel='stylesheet' href='../css/homepage.css')
+    link(rel='stylesheet' href='../css/header.css')
+    link(rel='stylesheet' href='../css/footer.css')
+    link(rel='shortcut icon' href='../img/Logo.png')
+    link(rel='preconnect' href='https://fonts.googleapis.com')
+    link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
+    link(href='https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap' rel='stylesheet')
+    link(href='https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap' rel='stylesheet')
+    script(src='../js/nav.js' type='text/javascript' defer='')
+    title Web-DHS
+  body
+    nav-component
+    main
+      .grid-wrapper
+        #banner.noselect
+          #banner_pic
+        #s1
+          h1 Web-DHS UF
+          h2 Bättre lösning för UF Företag
+          hr.hrline(color='lightgrey')
+        #s2
+          h1 Varför behöver ett UF en hemsida?
+          h2
+            | En bra, lättförståelig och smart hemsida är A och O när det kommer till modern marknadsföring och försäljning.
+            | I våran mer internetbaserade värld är en bra hemsida som den nya butiken.
+            | En hemsida är också mycket lättare att kontrollera än en Instagram eller Facebook sida.
+            | På en hemsida kan man visa mer information snabbare och lättare för användaren.
+    footer#footer.footer-grid
+      #footer-filler
+      #footer-pricing
+        h4.h4a Priser
+        hr
+        ul
+          li
+            a(href='Services.jade') Våra Produkter
+          li
+            a(href='') Betalning
+          li
+            a(href='') Exempel
+      #footer-about
+        h4.h4a Om
+        hr
+        ul
+          li
+            a(href='About.jade#a2') Vad vi gör
+          li
+            a(href='About.jade#members') Vårat Team
+          li
+            a(href='About.jade#a3') Hur vi fungerar
+      #footer-contact
+        h4.h4a Kontakt
+        hr
+        ul
+          li
+            a(href='mailto:') Example@gmail.com
+          li
+            a(href='tel:') +46 12 34 56 78
+          li
+            a(href='https://www.instagram.com/webdhs.uf/' target='_blank') Instagram
+      .f-social
+        hr
+        a(href='https://www.instagram.com/webdhs.uf/' target='_blank')
+          img(src='../img/instagram.png' alt='instagram logo')
+        a(href='mailto:noah.lagerstrom@elev.ga.ntig')
+          img(src='../img/e-mail.png' alt='instagram logo')
+    //
+      <script src="../js/nav.js"></script>
+      <script src="../js/burger.js"></script>
