@@ -6,7 +6,7 @@ var con = mysql.createConnection({
     user: 'root',
     password: 'Admin',
     port: '3307',
-    database: 'webdhs'
+    database: 'shopping_cart'
 });
 
 module.exports = con;

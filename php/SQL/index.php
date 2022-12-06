@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,7 +16,6 @@
 </head>
 <body>
 
-<?php  ?>    
 
     <script src="../js/SQL/cart/cart.js"></script>
 </body>
