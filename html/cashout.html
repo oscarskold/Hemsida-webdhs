@@ -12,6 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <script src="../js/nav.js" type="text/javascript" defer></script>
+    <script src="../js/footer.js" type="text/javascript" defer></script>
     <title>Web-DHS</title>
 </head>
 <body>
@@ -34,6 +35,10 @@
                         <input class="form-text" type="text" name="email" placeholder=" Skriv eran E-mail Address här">
                     </p>
                     <p>
+                        <label for='phone'>Telefonnummer:</label><br>
+                        <input class="tel" type="tel" name="tel" placeholder=" Skriv erat Telefonnummer här">
+                    </p>
+                    <p>
                         <label for='message'>Övrig information:</label> <br>
                         <textarea class="form-info" name="message" placeholder="Övrig information"></textarea>
                     </p>
@@ -49,49 +54,27 @@
                 frmvalidator.addValidation("email","email","Please enter a valid email address"); 
                 </script>
             </div>
+            <div>
+                <p>
+                    <label class="container">show
+                        <input type="radio" name="radio" value="show" id="show" onclick="show2();">
+                        <span class="checkmark"></span>
+                    </label>
+                </p>
+                <div id="div1" class="hide">popopopopop</div>
+                <p>
+                    <label class="container">One
+                        <input type="radio" name="radio" onclick="show1();">
+                        <span class="checkmark"></span>
+                    </label>
+                </p>
+                <div id="div2" class="hide frakt">rjejrekre</div>
+            </div>
         </div>
     </div>
 
-    <footer class="footer-grid" id="footer">
-        <div id="footer-filler">
-        </div>
-        <div id="footer-pricing">
-            <h4 class="h4a">Priser</h4>
-            <hr>
-            <ul>
-                <li><a href="Services.html">Våra Produkter</a></li>
-                <li><a href="">Betalning</a></li>
-                <li><a href="">Exempel</a></li>
-            </ul>
-        </div>
-        <div id="footer-about">    
-            <h4 class="h4a">Om</h4>
-            <hr>
-            <ul>
-                <li><a href="About.html#a2">Vad vi gör</a></li>
-                <li><a href="About.html#members">Vårat Team</a></li>
-                <li><a href="About.html#a3">Hur vi fungerar</a></li>
-            </ul>
-        </div>
-        <div id="footer-contact">
-            <h4 class="h4a">Kontakt</h4>
-            <hr>
-            <ul>
-                <li><a href="mailto:">Example@gmail.com</a></li>
-                <li><a href="tel:">+46 12 34 56 78</a></li>
-                <li><a href="https://www.instagram.com/webdhs.uf/" target="_blank">Instagram</a></li>
-            </ul>
-        </div>
+    <footer-component></footer-component>
 
-        <div class="f-social">
-            <hr>
-            <a href="https://www.instagram.com/webdhs.uf/" target="_blank"><img src="../img/instagram.png" alt="instagram logo"></a>
-            <a href="mailto:noah.lagerstrom@elev.ga.ntig"><img src="../img/e-mail.png" alt="instagram logo"></a>
-
-        </div>
-    </footer>
-
-    <script src="../js/nav.js"></script>
-    <script src="../js/burger.js"></script>
+<script src="../js/index.js"></script>
 </body>
 </html>
