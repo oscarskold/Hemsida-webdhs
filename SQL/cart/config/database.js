@@ -9,4 +9,11 @@ var con = mysql.createConnection({
     database: 'shopping_cart'
 });
 
+// con.query('SELECT name FROM produkt', function(err, result, fields){
+//     if (err) throw err
+//     console.log(result[0])
+    
+// })
+
+
 module.exports = con;

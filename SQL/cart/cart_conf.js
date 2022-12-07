@@ -5,14 +5,19 @@ var express = require('express');
 var router = express.Router();
 
 
-
 router.get('/', function(req, res, next) {
-  con.query('SELECT name, description, price FROM produkt BY id DESC', function(err, result){
+  
+  con.query('SELECT id, name, description, price FROM produkt ORDER BY id', function(err, result){
+    
     if (err){
-      // req.flash('error', err)
-      res.render('cart', {data: ''})
+      res.render('cart', {
+        data: ''
+        })
+      console.log('not connected', err)
+
     } else{
-      res.render('cart', {data1: result}, {data2: result[1]}, {data3: result[2]})
+      res.render('cart', {data: result})
+
       console.log(result);
     }
   });
