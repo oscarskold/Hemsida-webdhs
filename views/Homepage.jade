@@ -13,6 +13,7 @@ html(lang='en')
     link(href='https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap' rel='stylesheet')
     link(href='https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap' rel='stylesheet')
     script(src='../js/nav.js' type='text/javascript' defer='')
+    script(src='../js/footer.js' type='text/javascript' defer='')
     title Web-DHS
   body
     nav-component
@@ -31,44 +32,9 @@ html(lang='en')
             | I våran mer internetbaserade värld är en bra hemsida som den nya butiken.
             | En hemsida är också mycket lättare att kontrollera än en Instagram eller Facebook sida.
             | På en hemsida kan man visa mer information snabbare och lättare för användaren.
-    footer#footer.footer-grid
-      #footer-filler
-      #footer-pricing
-        h4.h4a Priser
-        hr
-        ul
-          li
-            a(href='Services.jade') Våra Produkter
-          li
-            a(href='') Betalning
-          li
-            a(href='') Exempel
-      #footer-about
-        h4.h4a Om
-        hr
-        ul
-          li
-            a(href='About.jade#a2') Vad vi gör
-          li
-            a(href='About.jade#members') Vårat Team
-          li
-            a(href='About.jade#a3') Hur vi fungerar
-      #footer-contact
-        h4.h4a Kontakt
-        hr
-        ul
-          li
-            a(href='mailto:') Example@gmail.com
-          li
-            a(href='tel:') +46 12 34 56 78
-          li
-            a(href='https://www.instagram.com/webdhs.uf/' target='_blank') Instagram
-      .f-social
-        hr
-        a(href='https://www.instagram.com/webdhs.uf/' target='_blank')
-          img(src='../img/instagram.png' alt='instagram logo')
-        a(href='mailto:noah.lagerstrom@elev.ga.ntig')
-          img(src='../img/e-mail.png' alt='instagram logo')
+    
+    footer-component
+
     //
       <script src="../js/nav.js"></script>
       <script src="../js/burger.js"></script>
