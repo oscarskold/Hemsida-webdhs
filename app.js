@@ -4,8 +4,8 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var flash = require('express-flash');
-var mysql = require('mysql');
-var con = require('./SQL/cart/config/database')
+var session = require('express-session');
+
 
 var HomepageRouter = require('./routes/Homepage');
 var ServicesRouter = require('./routes/Services');
@@ -21,7 +21,7 @@ var app = express();
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
-app.engine('jade', require('jade').__express);
+// app.engine('jade', require('jade').__express);
 // app.engine('html', require('ejs').renderFile)
 // app.set('view engine', 'ejs');
 
@@ -30,6 +30,15 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(flash())
+app.use(
+    session({
+      secret: '123@abc',
+      resave: false,
+      saveUninitialized: true,
+      cookie: { maxAge: 6000},
+    }),
+)
 
 app.use('/', HomepageRouter);
 app.use('/Services', ServicesRouter);
