@@ -18,30 +18,21 @@ html(lang='en')
     nav-component
     main.grid-wrapper
       #s1
-      .cards
-        img(src='../img/bas.png' alt='')
-        div
-          span.t1 Baspaket
-          hr
-          span 299kr
-          span Vårat billigaste alternativ, här ingår även en fri månad Hosting
-        a.rm(href='product1') Läs mer
-      .cards
-        img(src='../img/premium.png' alt='')
-        div
-          span.t1 Premiumpaket
-          hr
-          span Från 399kr
-          span Personligt gjord hemsida, mer möjlighet för förändring
-        a.rm.prod2(href='product2') Läs mer
-      .cards
-        img(src='../img/hosting.png' alt='')
-        div
-          span.t1 Webhosting
-          hr
-          span 49kr/månad
-          span Månadsavgift på 49kr, här ingår snabb och aktiv support
-        a.rm.prod3(href='product3') Läs mer
+        - for (var i=0; i<data.length; i++){
+                //- td #{data[i].id} 
+                //- tb #{data[i].name} 
+                //- tb #{data[i].description}  
+                //- tb #{data[i].price} 
+                //- br
+              .cards
+                img(src='../img/'+data[i].name+'.png' alt='')
+                div
+                  span.t1 #{data[i].name}
+                  hr
+                  span #{data[i].price}kr
+                  span #{data[i].description}
+                a.rm(href='#{data[i].name}') Läs mer
+              - }                  
       #s2
     footer#footer.footer-grid
       #footer-filler
@@ -82,3 +73,4 @@ html(lang='en')
         a(href='mailto:noah.lagerstrom@elev.ga.ntig')
           img(src='../img/e-mail.png' alt='instagram logo')
     script(src='../js/burger.js')
+

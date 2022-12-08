@@ -11,9 +11,9 @@ var HomepageRouter = require('./routes/Homepage');
 var ServicesRouter = require('./routes/Services');
 var AboutRouter = require('./routes/About');
 var cashtoutRouter = require('./routes/cashtout');
-var product1Router = require('./routes/product1');
-var product2Router = require('./routes/product2');
-var product3Router = require('./routes/product3');
+var BaspaketRouter = require('./routes/Baspaket');
+var PremiumPaketRouter = require('./routes/PremiumPaket');
+var WebhostingRouter = require('./routes/Webhosting');
 var cartRouter = require('./SQL/cart/cart_conf');
 
 var app = express();
@@ -44,9 +44,9 @@ app.use('/', HomepageRouter);
 app.use('/Services', ServicesRouter);
 app.use('/About', AboutRouter);
 app.use('/cashtout', cashtoutRouter);
-app.use('/product1', product1Router);
-app.use('/product2', product2Router);
-app.use('/product3', product3Router);
+app.use('/Baspaket', BaspaketRouter);
+app.use('/PremiumPaket', PremiumPaketRouter);
+app.use('/Webhosting', WebhostingRouter);
 app.use('/cart', cartRouter)
 
 // catch 404 and forward to error handler
