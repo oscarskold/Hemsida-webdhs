@@ -187,6 +187,7 @@ nav a:hover {
     .navbar_links {
         position: absolute;
         right: 0px;
+        margin-top: 75px;
         height: 92vh;
         background-color: #252525;
         display: flex;
@@ -204,7 +205,6 @@ nav a:hover {
 
     .burger {
         display: block;
-        scale: 1.5;
     }
 
     .logo {

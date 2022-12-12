@@ -39,6 +39,18 @@ nav {
     font-weight: 700;
 }
 
+#back {
+    color: #696969;
+}
+
+#back:hover {
+    border-bottom: 2px solid #696969;
+}
+
+form {
+    padding-top: 10px;
+}
+
 .form {
     padding-bottom: 100px;
     padding-top: 10px;
@@ -136,14 +148,14 @@ textarea {
     background-color: #eee;
     border-radius: 50%;
 }
-  
+
 .hide {
     display: none;
   }  
 
   /* On mouse-over, add a grey background color */
 .container:hover input ~ .checkmark {
-    background-color: #2196F3;
+    background-color: #969696;
 }
   
   /* When the radio button is checked, add a blue background */
@@ -174,5 +186,21 @@ textarea {
 }
 
 .frakt {
+    height: 200px;
+    position: relative;
+}
 
+.frakt a .img-top {
+    display: none;
+    position: absolute;
+    left: 0;
+    z-index: 99;
+}
+
+.frakt a:hover .img-top {
+    display: inline;
+}
+
+.betalning {
+    height: 200px;
 }

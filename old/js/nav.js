@@ -10,7 +10,7 @@ class Header extends HTMLElement {
           <a href="Homepage.html"><img src="../img/logo-white.png" alt=""><h3>Web-DHS</h3></a>
       </div>
       <div class="r-side">
-          <a href="cashout.html" class="nav-items"><img src="../img/shoppingcart.png" alt=""></a>
+          <a href="checkout.html" class="nav-items"><img src="../img/shoppingcart.png" alt=""></a>
           <div class="burger right nav-items">
               <div class="line1"></div>
               <div class="line2"></div>
