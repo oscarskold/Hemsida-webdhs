@@ -13,17 +13,13 @@ html(lang='en')
     link(href='https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap' rel='stylesheet')
     link(href='https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap' rel='stylesheet')
     script(src='../js/nav.js' type='text/javascript' defer='')
-    title Web-DHS
+    title Web-DHS h
   body
     nav-component
     main.grid-wrapper
       #s1
+
         - for (var i=0; i<data.length; i++){
-                //- td #{data[i].id} 
-                //- tb #{data[i].name} 
-                //- tb #{data[i].description}  
-                //- tb #{data[i].price} 
-                //- br
               .cards
                 img(src='../img/'+data[i].name+'.png' alt='')
                 div
@@ -32,12 +28,14 @@ html(lang='en')
                   span #{data[i].price}kr
                   span #{data[i].description}
                 a.rm(href='#{data[i].name}') Läs mer
-              - }                  
+                form(action="./cart" method='POST') 
+                  button.add(type='submit' name='id' value=data[i].id href='./add' ) Add to cart
+              - }       
       #s2
     footer#footer.footer-grid
       #footer-filler
       #footer-pricing
-        h4.h4a Priser
+        h4.h4a #{data.length} 
         hr
         ul
           li

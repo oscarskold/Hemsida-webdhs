@@ -18,9 +18,11 @@ router.get('/', function(req, res, next) {
     } else{
       res.render('cart', {data: result})
 
-      console.log(result);
+      console.log('(:');
     }
   });
 });
+
+
 
 module.exports = router;
