@@ -10,7 +10,7 @@ var session = require('express-session');
 var HomepageRouter = require('./routes/Homepage');
 var ServicesRouter = require('./routes/Services');
 var AboutRouter = require('./routes/About');
-var cashtoutRouter = require('./routes/cashtout');
+var checkoutRouter = require('./routes/checkout');
 var BaspaketRouter = require('./routes/Baspaket');
 var PremiumPaketRouter = require('./routes/PremiumPaket');
 var WebhostingRouter = require('./routes/Webhosting');
@@ -43,7 +43,7 @@ app.use(
 app.use('/', HomepageRouter);
 app.use('/Services', ServicesRouter);
 app.use('/About', AboutRouter);
-app.use('/cashtout', cashtoutRouter);
+app.use('/checkout', checkoutRouter);
 app.use('/Baspaket', BaspaketRouter);
 app.use('/PremiumPaket', PremiumPaketRouter);
 app.use('/Webhosting', WebhostingRouter);

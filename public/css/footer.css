@@ -45,9 +45,8 @@ footer li:hover {
 
 .footer-grid {
     display: grid;
-    grid-template-columns: repeat(6,1fr);
+    grid-template-columns: repeat(5,1fr);
     margin: 0 auto;
-    gap: 10px;
     text-align: center;
 
 }
@@ -58,7 +57,7 @@ footer li:hover {
 }
 
 #footer-about {
-    grid-column: span 2;
+    grid-column: span 1;
     padding-top: 75px;
 }
 
@@ -109,6 +108,7 @@ footer hr {
     width: 50px;
     height: 50px;
     margin-top: 40px;
+    transition: all 0.2s ease-out;
 }
 
 .f-social img:hover {
@@ -131,7 +131,6 @@ footer hr {
         display: grid;
         grid-template-columns: repeat(5,1fr);
         margin: 0 auto;
-        gap: 10px;
         text-align: center;
     
     }    
@@ -155,9 +154,8 @@ footer hr {
 
     .footer-grid {
         display: grid;
-        grid-template-columns: repeat(4,1fr);
+        grid-template-columns: repeat(5,1fr);
         margin: 0 auto;
-        gap: 10px;
         text-align: center;
     
     }    
@@ -174,7 +172,6 @@ footer hr {
         display: grid;
         grid-template-columns: repeat(5,1fr);
         margin: 0 auto;
-        gap: 10px;
         text-align: center;
     
     }    

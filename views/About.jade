@@ -7,7 +7,6 @@ html(lang='en')
     link(rel='stylesheet' href='../css/header.css')
     link(rel='stylesheet' href='../css/footer.css')
     link(rel='stylesheet' href='../css/about.css')
-    link(rel='shortcut icon' href='../img/Logo.png')
     link(rel='preconnect' href='https://fonts.googleapis.com')
     link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
     link(rel='preconnect' href='https://fonts.googleapis.com')
@@ -15,13 +14,15 @@ html(lang='en')
     link(href='https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap' rel='stylesheet')
     link(href='https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap' rel='stylesheet')
     script(src='../js/nav.js' type='text/javascript' defer='')
+    script(src='../js/footer.js' type='text/javascript' defer='')
+    link(rel='shortcut icon' href='../img/Logo.png')
     title Web-DHS
   body
     nav-component
     main.grid-wrapper
       #a1
         h1 Om oss
-        img#a-logo(src='../public/img/Logo.png' alt='')
+        img#a-logo(src='../img/Logo.png' alt='')
       #a2
         h1 Vad gör Web-DHS UF
         h2
@@ -52,7 +53,7 @@ html(lang='en')
             | att nå ut till sina kunder, alltså en hemsida
           h3
             | Contact - 
-            a(href='mailto:name@example.com') name@example.com
+            a(href='mailto:oscar.skold@web-dhs.se') oscar.skold@web-dhs.se
         div
           img.about-img(src='../img/Oskar.png' alt='')
           h1 Vice VD / CFO - Oskar Sanengen
@@ -62,7 +63,7 @@ html(lang='en')
             | Oskar är målmedveten om att sköta företagets ekonomi på ett så effektivt sätt som möjligt.
           h3
             | Contact - 
-            a(href='mailto:name@example.com') name@example.com
+            a(href='mailto:oskar.sanengen@web-dhs.se') oskar.sanengen@web-dhs.se
         div
           img(src='../img/Noah.png' alt='')
           h1 Head of Marketing / Lead Designer - Noah Lagerström
@@ -73,7 +74,7 @@ html(lang='en')
             | Noah är passionerad i skapande av hemsidor och dess funktioner.
           h3
             | Contact - 
-            a(href='mailto:name@example.com') name@example.com
+            a(href='mailto:noah.lagerstrom@web-dhs.se') noah.lagerstrom@web-dhs.se
         div
           img(src='../img/Melker.png' alt='')
           h1 Head of Communication - Melker Adolfsson
@@ -82,7 +83,7 @@ html(lang='en')
             | Melker brinner för att hjälpa våra kunder och att se till att de får en trevlig upplevelse av företaget.
           h3
             | Contact - 
-            a(href='mailto:name@example.com') name@example.com
+            a(href='mailto:kontakt@web-dhs.se') kontakt@web-dhs.se
         div
           img(src='../img/Vilgot.png' alt='')
           h1 Head of Purchases - Vilgot Thyrén
@@ -93,43 +94,6 @@ html(lang='en')
             | Vilgot brinner för att hjälpa företag att komma ut på nätet med så bra hemsidor som möjligt.
           h3
             | Contact - 
-            a(href='mailto:name@example.com') name@example.com
-    footer#footer.footer-grid
-      #footer-filler
-      #footer-pricing
-        h4.h4a Priser
-        hr
-        ul
-          li
-            a(href='Services') Våra Produkter
-          li
-            a(href='') Betalning
-          li
-            a(href='') Exempel
-      #footer-about
-        h4.h4a Om
-        hr
-        ul
-          li
-            a(href='About#a2') Vad vi gör
-          li
-            a(href='About#members') Vårat Team
-          li
-            a(href='About#a3') Hur vi fungerar
-      #footer-contact
-        h4.h4a Kontakt
-        hr
-        ul
-          li
-            a(href='mailto:') Example@gmail.com
-          li
-            a(href='tel:') +46 12 34 56 78
-          li
-            a(href='https://www.instagram.com/webdhs.uf/' target='_blank') Instagram
-      .f-social
-        hr
-        a(href='https://www.instagram.com/webdhs.uf/' target='_blank')
-          img(src='../img/instagram.png' alt='instagram logo')
-        a(href='mailto:noah.lagerstrom@elev.ga.ntig')
-          img(src='../img/e-mail.png' alt='instagram logo')
+            a(href='mailto:vilgot.thyren@web-dhs.se') vilgot.thyren@web-dhs.se
+    footer-component
     script(src='../js/burger.js')
