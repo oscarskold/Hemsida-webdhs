@@ -1,0 +1,84 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    link(rel='stylesheet' href='../css/header.css')
+    link(rel='stylesheet' href='../css/footer.css')
+    link(rel='stylesheet' href='../css/services.css')
+    link(rel='shortcut icon' href='../img/Logo.png')
+    link(rel='preconnect' href='https://fonts.googleapis.com')
+    link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
+    link(href='https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap' rel='stylesheet')
+    link(href='https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap' rel='stylesheet')
+    script(src='../js/nav.js' type='text/javascript' defer='')
+    title Web-DHS
+  body
+    nav-component
+    main.grid-wrapper
+      #s1
+      .cards
+        img(src='../img/bas.png' alt='')
+        div
+          span.t1 Baspaket
+          hr
+          span 299kr
+          span Vårat billigaste alternativ, här ingår även en fri månad Hosting
+        a.rm(href='product1') Läs mer
+      .cards
+        img(src='../img/premium.png' alt='')
+        div
+          span.t1 Premiumpaket
+          hr
+          span Från 399kr
+          span Personligt gjord hemsida, mer möjlighet för förändring
+        a.rm.prod2(href='product2') Läs mer
+      .cards
+        img(src='../img/hosting.png' alt='')
+        div
+          span.t1 Webhosting
+          hr
+          span 49kr/månad
+          span Månadsavgift på 49kr, här ingår snabb och aktiv support
+        a.rm.prod3(href='product3') Läs mer
+      #s2
+    footer#footer.footer-grid
+      #footer-filler
+      #footer-pricing
+        h4.h4a Priser
+        hr
+        ul
+          li
+            a(href='Services') Våra Produkter
+          li
+            a(href='') Betalning
+          li
+            a(href='') Exempel
+      #footer-about
+        h4.h4a Om
+        hr
+        ul
+          li
+            a(href='About#a2') Vad vi gör
+          li
+            a(href='About#members') Vårat Team
+          li
+            a(href='About#a3') Hur vi fungerar
+      #footer-contact
+        h4.h4a Kontakt
+        hr
+        ul
+          li
+            a(href='mailto:') Example@gmail.com
+          li
+            a(href='tel:') +46 12 34 56 78
+          li
+            a(href='https://www.instagram.com/webdhs.uf/' target='_blank') Instagram
+      .f-social
+        hr
+        a(href='https://www.instagram.com/webdhs.uf/' target='_blank')
+          img(src='../img/instagram.png' alt='instagram logo')
+        a(href='mailto:noah.lagerstrom@elev.ga.ntig')
+          img(src='../img/e-mail.png' alt='instagram logo')
+    script(src='../js/burger.js')
