@@ -102,24 +102,3 @@ p {
     color: white;
 }
 
-<<<<<<< HEAD
-=======
-
-@media screen and (max-width:1050px) {
-
-    .image {
-        grid-column: span 2;
-        grid-row: span 4;
-        padding-top: 100px;
-        padding-bottom: 40px;
-      }
-        
-      .text {
-        grid-column: span 2;
-        grid-row: span 4;
-        width: 90%;
-        margin: 0 auto;
-    }    
-
-}
->>>>>>> 35b113946b9ee3e423dd4e4c459ca8779ff1e459

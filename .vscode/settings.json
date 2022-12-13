@@ -1,3 +1,19 @@
 {
+    "sqltools.connections": [
+        {
+            "mysqlOptions": {
+                "authProtocol": "default"
+            },
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 3307,
+            "driver": "MySQL",
+            "name": "UF_SQL",
+            "database": "webdhs",
+            "username": "root",
+            "password": "Admin",
+            "connectionTimeout": 15
+        }
+    ],
     "liveServer.settings.port": 5501
 }
