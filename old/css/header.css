@@ -199,6 +199,7 @@ nav a:hover {
         width: 65%;
         transform: translateX(100%);
         transition: transform 0.5s ease-in;
+        padding-top: 10px;
     }
 
     .navbar_links li {
