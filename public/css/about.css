@@ -80,7 +80,7 @@ h2 {
 
 #members {
     grid-column: span 12;
-    grid-row: span 22;
+    grid-row: span 24;
     text-align: center;
 }
 
@@ -121,6 +121,20 @@ h2 {
         margin: 0 auto;
     }
 
+    #members {
+        grid-column: span 12;
+        grid-row: span 24;
+    }    
+
+}
+
+@media screen and (max-width:750px) {
+    
+    #members {
+        grid-column: span 12;
+        grid-row: span 26;
+    }
+
 }
 
 @media screen and (max-width:550px) {
@@ -129,4 +143,17 @@ h2 {
         width: 75%;
     }
 
+    #members {
+        grid-column: span 12;
+        grid-row: span 28;
+    }
+
+}
+
+@media screen and (max-width:450px) {
+    
+    #members {
+        grid-column: span 12;
+        grid-row: span 30;
+    }
 }

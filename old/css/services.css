@@ -34,7 +34,6 @@ nav {
     grid-column: span 4;
     grid-row: span 2;
     text-align: center;
-    border-radius: 0.5rem;
     overflow: hidden;
     box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
     transition: ease-in-out 0.2s;
@@ -65,8 +64,13 @@ nav {
     display: block;
 }
 
+.card-info {
+    color: #3A3A3A;
+}
+
 .t1 {
     font-weight: 700;
+    font-size: 30px;
 }
 
 #s2 {
@@ -77,37 +81,34 @@ nav {
 .rm {
     border: none;
     background-color: white;
-    border-radius: 20px;
-    border: 2px solid #004aad;
-    color: #004aad;
-    padding: 7px 10px;
+    /* border-radius: 10px; */
+    background-color: #004aad;
+    color: white;
+    padding: 10px 35px;
     font-size: 15px;
-    transition: all 0.3s ease-out;
+    transition: all 0.3s ease-in-out;
 }
 
 .rm:hover {
     cursor: pointer;
-    background-color: #004aad;
-    color: white;
+    background-color: #38b6ff;
 }
 
 .prod3 {
-    border: 2px solid #F64A00;
-    color: #F64A00;
+    background-color: #F64A00;
 }
 
 .prod3:hover {
-    background-color: #F64A00;
+    background-color: #FFB000;
     color: white;
 }
 
 .prod2 {
-    border: 2px solid #84009F;
-    color: #84009F;
+    background-color: #84009F;
 }
 
 .prod2:hover{
-    background-color: #84009F;
+    background-color: #AA00FF;
     color: white;
 }
 

@@ -24,6 +24,7 @@
         <div class="checkout">
             <div id="title">Web-DHS Kassa</div>
             <div class="form">
+                <a id="back" href="Homepage.html">Tillbaka till start</a>
                 <script language="JavaScript" src="../js/gen_validatorv31.js" type="text/javascript"></script>
                 <!-- Start code for the form-->
                 <form method="post" name="myemailform" action="form-to-email.php">
@@ -63,7 +64,10 @@
                     </label>
                 </p>
                 <div id="div1" class="hide betalning">
-                    <hr>
+                    <label class="container">Swish
+                        <input type="radio" name="radio" value="show" id="show" onclick="show3();">
+                        <span class="checkmark"></span>
+                    </label>
                 </div>
                 <hr>
                 <p>

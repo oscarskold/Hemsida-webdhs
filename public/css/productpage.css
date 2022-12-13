@@ -22,6 +22,7 @@ nav {
     width: 90%;
     padding-top: 100px;
     margin: 0 auto;
+    margin-bottom: 100px;
 }
 
 .noselect {
@@ -62,11 +63,11 @@ h1 {
     border-bottom: 2px solid #696969;
 }
 
-hr {
+.text hr {
     margin-top: 20px;
-    height: 3px;
+    height: 2px;
     background-color: #252525;
-    border: none;
+    border: 0px;
     width: 20%;
     margin-bottom: 25px;
 }
@@ -102,8 +103,6 @@ p {
     color: white;
 }
 
-<<<<<<< HEAD
-=======
 
 @media screen and (max-width:1050px) {
 
@@ -122,4 +121,3 @@ p {
     }    
 
 }
->>>>>>> 35b113946b9ee3e423dd4e4c459ca8779ff1e459

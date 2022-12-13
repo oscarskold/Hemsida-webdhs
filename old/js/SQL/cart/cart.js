@@ -5,9 +5,9 @@ var con = require('./config/database.js')
 
 
 
-con.query('SELECT name FROM produkt', function(err, result, fields){
+con.query('SELECT id, name, description, price FROM produkt ORDER BY id', function(err, result, fields){
     if (err) throw err
-    console.log(result[0])
+    console.log(result)
     
 })
 
