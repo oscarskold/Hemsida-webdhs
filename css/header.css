@@ -223,7 +223,7 @@ nav a:hover {
     transform: translateX(0%);
 }
 
-@media screen and (max-width:400px) {
+/* @media screen and (max-width:400px) {
 
     body {
         overflow-x: hidden;
@@ -265,7 +265,7 @@ nav a:hover {
     .r-side div {
         padding-right: 10px;
     }
-}
+} */
 
 .nav-active {
     transform: translateX(0%);
