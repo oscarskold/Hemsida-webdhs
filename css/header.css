@@ -229,7 +229,7 @@ nav a:hover {
     .navbar_links {
         position: absolute;
         right: 0px;
-        height: 80vh;
+        height: 100%;
         top: 0vh;
         background-color: #252525;
         display: flex;
