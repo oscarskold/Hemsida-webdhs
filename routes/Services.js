@@ -18,7 +18,7 @@ router.get('/', function(req, res, next) {
     } else{
       res.render('Services', {data: result})
 
-      console.log(result);
+      console.log('(:');
     }
   });
 });

@@ -8,12 +8,11 @@
             "server": "localhost",
             "port": 3307,
             "driver": "MySQL",
-            "name": "UF_SQL",
-            "database": "webdhs",
+            "name": "webdhs",
+            "database": "shopping_cart",
             "username": "root",
             "password": "Admin",
             "connectionTimeout": 15
         }
-    ],
-    "liveServer.settings.port": 5501
+    ]
 }

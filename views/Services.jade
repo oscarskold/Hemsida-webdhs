@@ -13,6 +13,7 @@ html(lang='en')
     link(href='https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap' rel='stylesheet')
     link(href='https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap' rel='stylesheet')
     script(src='../js/nav.js' type='text/javascript' defer='')
+    script(src='../js/footer.js' type='text/javascript' defer='')
     title Web-DHS h
   body
     nav-component
@@ -28,47 +29,12 @@ html(lang='en')
                   span #{data[i].price}kr
                   span #{data[i].description}
                 a.rm(href='#{data[i].name}') Läs mer
-                form(action="./cart" method='POST') 
-                  button.add(type='submit' name='id' value=data[i].id href='./add' ) Add to cart
-              - }       
-      #s2
-    footer#footer.footer-grid
-      #footer-filler
-      #footer-pricing
-        h4.h4a #{data.length} 
-        hr
-        ul
-          li
-            a(href='Services') Våra Produkter
-          li
-            a(href='') Betalning
-          li
-            a(href='') Exempel
-      #footer-about
-        h4.h4a Om
-        hr
-        ul
-          li
-            a(href='About#a2') Vad vi gör
-          li
-            a(href='About#members') Vårat Team
-          li
-            a(href='About#a3') Hur vi fungerar
-      #footer-contact
-        h4.h4a Kontakt
-        hr
-        ul
-          li
-            a(href='mailto:') Example@gmail.com
-          li
-            a(href='tel:') +46 12 34 56 78
-          li
-            a(href='https://www.instagram.com/webdhs.uf/' target='_blank') Instagram
-      .f-social
-        hr
-        a(href='https://www.instagram.com/webdhs.uf/' target='_blank')
-          img(src='../img/instagram.png' alt='instagram logo')
-        a(href='mailto:noah.lagerstrom@elev.ga.ntig')
-          img(src='../img/e-mail.png' alt='instagram logo')
-    script(src='../js/burger.js')
+                form()
+                - id = data[i].id 
+                  button.add(onclick="addtocart(id)") Add to cart
+                  //type='submit' name='add' value=data[i].id href='./add' 
+              - }
 
+footer-component
+
+script(src='js/add.js' type='text/javascript' defer='')
