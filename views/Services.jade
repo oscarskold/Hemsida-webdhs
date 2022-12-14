@@ -18,20 +18,20 @@ html(lang='en')
   body
     nav-component
     main.grid-wrapper
-      #s1
 
         - for (var i=0; i<data.length; i++){
-              .cards
-                img(src='../img/'+data[i].name+'.png' alt='')
-                div
-                  span.t1 #{data[i].name}
-                  hr
-                  span #{data[i].price}kr
-                  span #{data[i].description}
-                a.rm(href='#{data[i].name}') Läs mer
-                input(type="hidden" value=data[i].id )
-                button.add(onclick=`addtocart(${data[i].id})`) Add to cart
-              - }
+               .cards
+                 img(src='../img/'+data[i].name+'.png' alt='')
+                 div
+                   span.t1 #{data[i].name}
+                   hr
+                   span #{data[i].price}kr
+                   span #{data[i].description}
+                 a.rm(href='#{data[i].name}') Läs mer
+                 input(type="hidden" value=data[i].id )
+                 span
+                  button.add(onclick=`addtocart(${data[i].id})`) Add to cart
+               - }
 
 footer-component
 

@@ -18,11 +18,3 @@ VALUES
 SELECT * FROM cart_items;
 
 --@block
-INSERT INTO cart_items (product_id) SELECT id FROM produkt WHERE id=2;
-
---@block
-ALTER TABLE cart_items
-MODIFY COLUMN modified smallint;
-
---@block
-DELETE FROM cart_items;

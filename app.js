@@ -16,6 +16,8 @@ var BaspaketRouter = require('./routes/Baspaket');
 var PremiumPaketRouter = require('./routes/PremiumPaket');
 var WebhostingRouter = require('./routes/Webhosting');
 var addToCart = require('./routes/add_to_cart');
+var login = require('./routes/login');
+var register = require('./routes/register');
 
 var app = express();
 
@@ -50,6 +52,8 @@ app.use('/Baspaket', BaspaketRouter);
 app.use('/PremiumPaket', PremiumPaketRouter);
 app.use('/Webhosting', WebhostingRouter);
 app.use('/add', addToCart);
+app.use('/login', login);
+app.use('/register', register);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
