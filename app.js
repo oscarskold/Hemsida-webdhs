@@ -5,6 +5,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var flash = require('express-flash');
 var session = require('express-session');
+var bodyParser = require('body-parser')
 
 
 var HomepageRouter = require('./routes/Homepage');
@@ -14,17 +15,17 @@ var checkoutRouter = require('./routes/checkout');
 var BaspaketRouter = require('./routes/Baspaket');
 var PremiumPaketRouter = require('./routes/PremiumPaket');
 var WebhostingRouter = require('./routes/Webhosting');
-var cartRouter = require('./SQL/cart/cart_conf');
-var loginRouter = require('./routes/login');
+var addToCart = require('./routes/add_to_cart');
 
 var app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
-// app.engine('jade', require('jade').__express);
-// app.engine('html', require('ejs').renderFile)
-// app.set('view engine', 'ejs');
+
+//middle-ware
+app.use(bodyParser.urlencoded({ extended: false}));
+app.use(bodyParser.json())
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -48,8 +49,7 @@ app.use('/checkout', checkoutRouter);
 app.use('/Baspaket', BaspaketRouter);
 app.use('/PremiumPaket', PremiumPaketRouter);
 app.use('/Webhosting', WebhostingRouter);
-app.use('/cart', cartRouter)
-app.use('/login', loginRouter)
+app.use('/add', addToCart);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

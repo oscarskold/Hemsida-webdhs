@@ -25,4 +25,4 @@ ALTER TABLE cart_items
 MODIFY COLUMN modified smallint;
 
 --@block
-DELETE FROM cart_items WHERE product_id=1;
+DELETE FROM cart_items;

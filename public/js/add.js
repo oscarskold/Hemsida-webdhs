@@ -1,15 +1,17 @@
-//mysql
-var con = require('../../SQL/cart/config/database.js');
-// var Connection = mysql.createConnection(con);
-var express = require('express');
-var router = express.Router();
-
-function addtocart(prod_id){
-  con.query("INSERT INTO cart_items (product_id) SELECT id FROM produkt WHERE id="+prod_id+";", function(err, result){
-  console.log(result)
-  // con.query()
-  alert('(:')
-});
-  }
-
-addtocart(3)
+function addtocart(id){
+  fetch("/add", {
+    method: 'POST', // *GET, POST, PUT, DELETE, etc.
+    mode: 'cors', // no-cors, *cors, same-origin
+    cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+    credentials: 'same-origin', // include, *same-origin, omit
+    headers: {
+      'Content-Type': 'application/json'
+      // 'Content-Type': 'application/x-www-form-urlencoded',
+    },
+    redirect: 'follow', // manual, *follow, error
+    referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+    body: JSON.stringify({
+      id: id
+    }) // body data type must match "Content-Type" header
+  });
+  };

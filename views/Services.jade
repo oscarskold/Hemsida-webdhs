@@ -29,10 +29,8 @@ html(lang='en')
                   span #{data[i].price}kr
                   span #{data[i].description}
                 a.rm(href='#{data[i].name}') Läs mer
-                form()
-                - id = data[i].id 
-                  button.add(onclick="addtocart(id)") Add to cart
-                  //type='submit' name='add' value=data[i].id href='./add' 
+                input(type="hidden" value=data[i].id )
+                button.add(onclick=`addtocart(${data[i].id})`) Add to cart
               - }
 
 footer-component
