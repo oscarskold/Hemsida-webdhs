@@ -1,0 +1,12 @@
+* {
+    background-repeat: no-repeat;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    /* color: #9C9C9C; */
+}
