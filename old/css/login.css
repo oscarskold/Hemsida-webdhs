@@ -23,7 +23,6 @@ body {
 
 .card {
     top: 100px;
-    grid-column-start: 3;
     grid-column: span 1;
     grid-row: span 3;
     background-color: white;
