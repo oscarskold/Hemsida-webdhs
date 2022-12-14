@@ -6,7 +6,7 @@ html(lang='en')
     meta(name='viewport' content='width=device-width, initial-scale=1.0')
     link(rel='stylesheet' href='../css/header.css')
     link(rel='stylesheet' href='../css/footer.css')
-    link(rel='stylesheet' href='../css/login.css')
+    link(rel='stylesheet' href='../css/register.css')
     link(rel='preconnect' href='https://fonts.googleapis.com')
     link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
     link(href='https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap' rel='stylesheet')
@@ -18,17 +18,19 @@ html(lang='en')
   body
     nav-component
     .grid-wrapper
-      .login
-        h1 Logga in
-        form(action='/routes/login.js')
+      .register
+        h1 Registrera dig
+        form(action='/routes/register.js')
           p
             label(for='username')
               img(src='../img/user.png' alt='')
             input#username(type='text' name='username' placeholder='Skriv in ditt användarnamn här' required='')
           p
+            label(for='email')
+              img(src='../img/mail.png' alt='')
+            input#email(type='email' name='email' placeholder='Skriv din email här' required='')
+          p
             label(for='password')
               img(src='../img/lock.png' id='' alt='')
             input#password(type='password' name='password' placeholder='Skriv in ditt lösenord här' required='')
-          input(type='submit' value='Logga in')
-        p
-          a(href='register') Har du inte registrerat dig? Klicka här
+          input(type='submit' value='Registrera dig')
