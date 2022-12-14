@@ -39,6 +39,7 @@ class Header extends HTMLElement {
   
 customElements.define('nav-component', Header);
 
+//
 const navSlide = () => {
     const burger = document.querySelector('.burger')
     const nav = document.querySelector('.navbar_links')
@@ -48,7 +49,7 @@ const navSlide = () => {
         //Toggle Nav
         nav.classList.toggle('nav-active');   
         
-        //Animate Links
+        //Animate Links linjer anitmation
         navLinks.forEach((link, index) => {
             if (link.style.animation){
                 link.style.animation = ''
@@ -66,6 +67,7 @@ const header = document.querySelector('.header')
 
 navSlide();
 
+// nav animation obs. ya bort om kund ej vil ha fade
 const nav = document.querySelector('nav');
 
         window.addEventListener('scroll', () => {

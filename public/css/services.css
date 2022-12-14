@@ -1,3 +1,4 @@
+/* copy to all */
 * {
     background-repeat: no-repeat;
 }
@@ -14,6 +15,7 @@ nav {
     background-color: #252525;
 }
 
+/* Grid for cards */
 .grid-wrapper {
     display: grid;
     grid-template-columns: repeat(12,1fr);
@@ -26,11 +28,6 @@ nav {
     grid-gap: 50px;
 }
 
-#s1 {
-    grid-column: span 12;
-    grid-row: span 1;
-}
-
 .cards {
     grid-column: span 4;
     grid-row: span 2;
@@ -41,6 +38,7 @@ nav {
     font-size: 20px;
 }
 
+/* Linjen i cards */
 .cards hr {
     height: 1px;
     background-color: black;
@@ -79,27 +77,41 @@ nav {
     grid-row: span 2;
 }
 
+/* read more */
 .rm {
     border: none;
     background-color: white;
     /* border-radius: 10px; */
     background-color: #004aad;
     color: white;
+    /* size of button */
     padding: 10px 35px;
     font-size: 15px;
     transition: all 0.3s ease-in-out;
 }
 
+
 .add{
+    display: inline-flex;
     border: none;
-    margin-top: 15px;
+    margin-top: 20px;
     background-color: white;
-    /* border-radius: 10px; */
     background-color: #004aad;
     color: white;
-    padding: 10px 35px;
+    text-align: center;
+    /* size of button */
+    padding: 10px 25px;
     font-size: 15px;
-    /* transition: all 0.3s ease-in-out;  */
+    transition: all 0.3s ease-in-out;
+}
+
+.add img{
+    width: 28px;
+    height: 28px;
+}
+
+.add p{
+    padding-top: 5px;
 }
 
 
@@ -111,24 +123,6 @@ nav {
 .add:hover{
     cursor: pointer;
     background-color: #38b6ff;
-}
-
-.prod3 {
-    background-color: #F64A00;
-}
-
-.prod3:hover {
-    background-color: #FFB000;
-    color: white;
-}
-
-.prod2 {
-    background-color: #84009F;
-}
-
-.prod2:hover{
-    background-color: #AA00FF;
-    color: white;
 }
 
 @media screen and (max-width:1100px) {

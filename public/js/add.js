@@ -1,3 +1,4 @@
+//RÖR EJ
 function addtocart(id){
   fetch("/add", {
     method: 'POST', // *GET, POST, PUT, DELETE, etc.
