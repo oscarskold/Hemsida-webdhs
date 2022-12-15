@@ -7,10 +7,11 @@ class Header extends HTMLElement {
       this.innerHTML = `
       <nav>
       <div class="logo nav-pos">
-          <a href="/"><img src="../img/logo-white.png" alt=""><h3>Web-DHS</h3></a>
+          <a href="Homepage.html"><img src="../img/logo-white.png" alt=""><h3>Web-DHS</h3></a>
       </div>
       <div class="r-side">
-          <a href="checkout" class="nav-items"><img src="../img/shoppingcart.png" alt=""></a>
+      <a href="login" class="nav-items">Login</a>    
+      <a href="checkout" class="nav-items"><img src="../img/shoppingcart.png" alt=""></a>
           <div class="burger right nav-items">
               <div class="line1"></div>
               <div class="line2"></div>
@@ -19,7 +20,7 @@ class Header extends HTMLElement {
       </div>    
       <ul class="navbar_links nav">
           <li>
-              <a href="/">Start</a>
+              <a href="Homepage">Start</a>
           </li>
           <li>
               <a href="About">Om oss</a>
@@ -39,7 +40,6 @@ class Header extends HTMLElement {
   
 customElements.define('nav-component', Header);
 
-//
 const navSlide = () => {
     const burger = document.querySelector('.burger')
     const nav = document.querySelector('.navbar_links')
@@ -49,7 +49,7 @@ const navSlide = () => {
         //Toggle Nav
         nav.classList.toggle('nav-active');   
         
-        //Animate Links linjer anitmation
+        //Animate Links
         navLinks.forEach((link, index) => {
             if (link.style.animation){
                 link.style.animation = ''
@@ -67,7 +67,6 @@ const header = document.querySelector('.header')
 
 navSlide();
 
-// nav animation obs. ya bort om kund ej vil ha fade
 const nav = document.querySelector('nav');
 
         window.addEventListener('scroll', () => {
