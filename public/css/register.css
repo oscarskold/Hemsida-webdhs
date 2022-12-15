@@ -45,6 +45,8 @@ body {
 }
 
 .register form {
+    display: inline-block;
+    justify-content: center;
     padding-top: 50px;
 }
 
