@@ -54,6 +54,7 @@ h2 {
     font-weight: 700;
 }
 
+/*texterna över*/
 #a2 h2,#a3 h2 {
     font-weight: 400;
     color: #3A3A3A;
@@ -84,6 +85,7 @@ h2 {
     text-align: center;
 }
 
+/*bilderna på folket*/
 #members img {
     width: 250px;
     height: 250px;
@@ -92,17 +94,21 @@ h2 {
     object-fit: cover;
 }
 
+/*texten för*/
 #members h2 {
     font-weight: 400;
     color: #3A3A3A;
     margin-top: 10px;
+
 }
 
+/*kontaktgrejen*/
 #members h3 {
     color: #3A3A3A;
     margin-top: 10px;
 }
 
+/*mailen*/
 #members a {
     color: #3A3A3A;
 }
@@ -111,6 +117,7 @@ h2 {
     margin-top: 150px;
 }
 
+/*mobilgrejer håll tassarna borta*/
 
 @media screen and (max-width:1100px) {
     

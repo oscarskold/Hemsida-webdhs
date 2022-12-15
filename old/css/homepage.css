@@ -1,3 +1,4 @@
+/*naven och footern har en js fil INGEN ANNANSTANS*/
 * {
     background-repeat: no-repeat;
 }
@@ -25,7 +26,7 @@ body {
         -ms-user-select: none; 
             user-select: none; 
 }
-
+/*den feta bannern*/
 #banner {
     object-position: center;
     grid-column: span 13;
@@ -63,12 +64,14 @@ h2 {
     /* background: linear-gradient(to bottom, white 0%, white 60%, #2C4251 40%, #2C4251 100%); */
 }
 
+/*rubriken*/
 #s1 h1 {
     padding-top: 0px;
     font-size: 3em;
     padding-bottom: 5px;
 }
 
+/*underrubrik*/
 #s1 h2 {
     text-align: center;
     padding-top: 30px;
@@ -96,6 +99,7 @@ h2 {
     margin-top: 200px;
 }
 
+/*texten*/
 #s2 h2 {
     text-align: center;
     font-weight: 400;
@@ -103,6 +107,7 @@ h2 {
 
 }
 
+/*TELEFON GREJER BACKA NU!!!!!!*/
 @media screen and (max-width:1100px) {
     
     #s1 h1 {
