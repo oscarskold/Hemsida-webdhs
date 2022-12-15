@@ -13,6 +13,7 @@ html(lang='en')
     link(href='https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap' rel='stylesheet')
     script(src='../js/nav.js' type='text/javascript' defer='')
     script(src='../js/footer.js' type='text/javascript' defer='')
+    script(src='../js/login_register.js' type='text/javascript' defer='')
     link(rel='shortcut icon' href='../img/Logo.png')
     title Web-DHS
   body
@@ -24,13 +25,13 @@ html(lang='en')
           p
             label(for='username')
               img(src='../img/user.png' alt='')
-            input#username(type='text' name='username' placeholder='Skriv in ditt användarnamn här' required='')
+            input#username(type='text' name='username' placeholder='Skriv in ditt användarnamn här' required='' value=username)
           p
             label(for='email')
               img(src='../img/mail.png' alt='')
-            input#email(type='email' name='email' placeholder='Skriv din email här' required='')
+            input#email(type='email' name='email' placeholder='Skriv din email här' required='' value=email)
           p
             label(for='password')
               img(src='../img/lock.png' id='' alt='')
-            input#password(type='password' name='password' placeholder='Skriv in ditt lösenord här' required='')
-          input(type='submit' value='Registrera dig')
+            input#password(type='password' name='password' placeholder='Skriv in ditt lösenord här' required='' value=password)
+          button(type='submit' onclick=`register(${username}, ${email}, ${password})`)

@@ -87,7 +87,7 @@ a{
 
 }
 
-.login form input[type="submit"] {
+.login form button {
     padding: 15px 35px;
     margin-top: 20px;
     background-color: #004aad;

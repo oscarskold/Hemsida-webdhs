@@ -4,7 +4,8 @@ var express = require('express');
 var router = express.Router();
 
 router.post('/', function(req, res, next) {
-  req.body.id
+  req.headers.user
+  req.headers.pass
   con.query("", function(err, result){
     if (err){
       throw err
@@ -12,8 +13,8 @@ router.post('/', function(req, res, next) {
       console.log(result)
     }   
    });
-  console.log(req.body.id);
-  res.send("Success!")
+  console.log(  req.headers.user, req.headers.pass);
+  res.send(  req.headers.user, req.headers.pass)
 });
 
 module.exports = router;

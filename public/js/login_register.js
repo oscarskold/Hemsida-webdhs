@@ -1,5 +1,5 @@
-function login(id){
-    fetch("/login", {
+function login(username, password){
+    fetch("/loginconf", {
       method: 'POST', // *GET, POST, PUT, DELETE, etc.
       mode: 'cors', // no-cors, *cors, same-origin
       cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
@@ -11,14 +11,14 @@ function login(id){
       redirect: 'follow', // manual, *follow, error
       referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
       body: JSON.stringify({
-        mail: mail,
-        password: password
+        user: username,
+        pass: password
       }) // body data type must match "Content-Type" header
     });
     };
 
-function register(id){
-    fetch("/register", {
+function register(username, email, password){
+    fetch("/registerconf", {
         method: 'POST', // *GET, POST, PUT, DELETE, etc.
         mode: 'cors', // no-cors, *cors, same-origin
         cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
@@ -30,7 +30,9 @@ function register(id){
         redirect: 'follow', // manual, *follow, error
         referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
         body: JSON.stringify({
-        id: id
+          user: username,
+          email: email,
+          pass: password
         }) // body data type must match "Content-Type" header
     });
     };

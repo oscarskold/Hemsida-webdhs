@@ -17,7 +17,9 @@ var PremiumPaketRouter = require('./routes/PremiumPaket');
 var WebhostingRouter = require('./routes/Webhosting');
 var addToCart = require('./routes/add_to_cart');
 var loginpage = require('./routes/loginpage');
+var loginconf = require('./routes/loginconf')
 var registerpage = require('./routes/registerpage');
+var registerconf = require('./routes/registerconf');
 
 var app = express();
 
@@ -53,7 +55,9 @@ app.use('/PremiumPaket', PremiumPaketRouter);
 app.use('/Webhosting', WebhostingRouter);
 app.use('/add', addToCart);
 app.use('/login', loginpage);
+app.use('/loginconf', loginconf);
 app.use('/register', registerpage);
+app.use('/registerconf', registerconf);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
