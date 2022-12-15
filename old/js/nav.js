@@ -2,7 +2,8 @@ class Header extends HTMLElement {
     constructor() {
       super();
     }
-  
+  /*WOW detta är naven ALLTSÅ MENYN TILL HÖGER burger grejen!!!*/
+  /*Här kan det vara smart att kanske ändra lite grejer, eller hålla tassarna borta*/
     connectedCallback() {
       this.innerHTML = `
       <nav>

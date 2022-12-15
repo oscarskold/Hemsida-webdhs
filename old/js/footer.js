@@ -2,7 +2,9 @@ class Footer extends HTMLElement {
     constructor() {
       super();
     }
-  
+  /*jag fattar inte riktigt hur de här fungerar*/
+  /*men här kan man byta texterna och sånt som står i footern det är ju bra :)*/
+  /*längst ner finns lite kontakt grejer som är smarta att kunna byta ut*/
     connectedCallback() {
       this.innerHTML = `
       <footer class="footer-grid" id="footer">
