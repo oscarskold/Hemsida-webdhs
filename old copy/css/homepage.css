@@ -124,19 +124,20 @@ h2 {
 
 }
 
-.left {
+.tex-left {
     text-align: left;
 }
 
-.left h2 {
+.text-left h2 {
     float: left;
 }
 
-.right {
+.text-right {
+    margin-top: 10px;
     text-align: right;
 }
 
-.right h2 {
+.text-right h2 {
     float: right;
 }
 
@@ -178,7 +179,6 @@ h2 {
       opacity: 1;
     }
 }
-  
 
 @media screen and (max-width:1100px) {
     
