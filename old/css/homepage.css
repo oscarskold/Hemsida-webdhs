@@ -29,7 +29,7 @@ body {
 #banner {
     object-position: center;
     grid-column: span 13;
-    grid-row: span 5;
+    grid-row: span 6;
     background-image: url(../img/banner.jpg);
     background-position: center;
     background-size: cover;
@@ -43,6 +43,27 @@ body {
     text-align: center;
 }
 
+.banner-btn {
+    text-align: center;
+    position: relative;
+    top: 40%;
+}
+
+.banner-btn a {
+    padding: 15px 45px;
+    color: #ffffff;
+    border: solid #ffffff 2px;
+    background-color: transparent;
+    font-size: 30px;
+    font-weight: 900;
+    font-family: 'Source Sans Pro', sans-serif;
+    text-transform: uppercase;
+}
+
+.banner-btn a:hover {
+    color: #ffffff;
+    border: solid #ffffff 4px;
+}
 
 /* #banner:hover {
     opacity: 0.8;
