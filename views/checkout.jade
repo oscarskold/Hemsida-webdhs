@@ -28,20 +28,20 @@ html(lang='en')
             p
               label(for='name') Företagsnamn: 
               br
-              input.form-text(type='text' name='name' placeholder='Skriv erat Företagsnamn här')
+              input.form-text(type='text' name='name' placeholder='Skriv erat Företagsnamn här' id=#{Företagsnamn})
             p
               label(for='email') E-mail Address:
               br
-              input.form-text(type='text' name='email' placeholder=' Skriv eran E-mail Address här')
+              input.form-text(type='text' name='email' placeholder=' Skriv eran E-mail Address här' id=#{mail})
             p
               label(for='phone') Telefonnummer:
               br
-              input.tel(type='tel' name='tel' placeholder=' Skriv erat Telefonnummer här')
+              input.tel(type='tel' name='tel' placeholder=' Skriv erat Telefonnummer här' id=#{Telefonnummer})
             p
               label(for='message') Övrig information:
               br
-              textarea.form-info(name='message' placeholder='Övrig information')
-            input.submit(type='submit' name='submit' value='Köp här')
+              textarea.form-info(name='message' placeholder='Övrig information' id=#{information})
+            input.submit(type='submit' name='submit' onclick=)
 
         div.product
 
@@ -56,11 +56,7 @@ html(lang='en')
               | Swish
               input#show(type='radio' name='radio' value='show' onclick='show3();')
               span.checkmark
-          #div1.hide.betalning
-            label.container
-              | övrigt
-              input#show(type='radio' name='radio' value='show' onclick='show3();')
-              span.checkmark
+
           hr
           p
             label.container
@@ -74,3 +70,4 @@ html(lang='en')
               img.img-top(src='../img/frakt-grey.png' alt='')
     footer-component
     script(src='../js/index.js')
+    script(src='js/mail.js')
