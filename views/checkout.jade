@@ -24,7 +24,7 @@ html(lang='en')
           a#back(href='Homepage') Tillbaka till start
           script(language='JavaScript' src='../js/gen_validatorv31.js' type='text/javascript')
           // Start code for the form
-          form(method='post' name='myemailform' action='form-to-email.php')
+          form(method='post' name='myemailform' )
             p
               label(for='name') Företagsnamn: 
               br
@@ -54,6 +54,11 @@ html(lang='en')
           #div1.hide.betalning
             label.container
               | Swish
+              input#show(type='radio' name='radio' value='show' onclick='show3();')
+              span.checkmark
+          #div1.hide.betalning
+            label.container
+              | övrigt
               input#show(type='radio' name='radio' value='show' onclick='show3();')
               span.checkmark
           hr

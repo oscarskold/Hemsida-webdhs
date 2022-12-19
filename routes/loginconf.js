@@ -4,17 +4,18 @@ var express = require('express');
 var router = express.Router();
 
 router.post('/', function(req, res, next) {
-  req.headers.user
-  req.headers.pass
-  con.query("", function(err, result){
-    if (err){
-      throw err
-    } else{
-      console.log(result)
-    }   
-   });
-  console.log(  req.headers.user, req.headers.pass);
-  res.send(  req.headers.user, req.headers.pass)
+  req.body.username = user;
+  req.body.password = pass;
+  // // con.query("", function(err, result){
+  // //   if (err){
+  // //     throw err
+  // //   } else{
+  // //     console.log(result)
+  // //   }   
+  // //  });
+  console.log(user, pass);
+  // res.send(req.body.username, req.body.password)
+  res.send('(:in')
 });
 
 module.exports = router;
