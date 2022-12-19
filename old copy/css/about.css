@@ -113,29 +113,16 @@ h2 {
     margin-top: 150px;
 }
 
-.tex-left {
-    text-align: left;
-}
-
-.text-left h2 {
-    float: left;
-}
-
-.text-right {
-    margin-top: 10px;
-    text-align: right;
-}
-
-.text-right h2 {
-    float: right;
+.text-center {
+    text-align: center;
 }
 
 .active.fade-left {
-    animation: fade-left 1s ease-in;
+    animation: fade-left 0.5s ease-in;
 }
 
 .active.fade-right {
-    animation: fade-right 1s ease-in;
+    animation: fade-right 0.5s ease-in;
 }
 
 .reveal {
