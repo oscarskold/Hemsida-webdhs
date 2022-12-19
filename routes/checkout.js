@@ -1,13 +1,27 @@
+//mysql
+var con = require('../SQL/cart/config/database.js');
+
 var express = require('express');
 var router = express.Router();
 
-function add(){
-  console.log('add(:')
-}
-
-/* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('checkout', { title: '' });
+  
+  con.query('SELECT id, product_id FROM cart_items ORDER BY id', function(err, result){
+
+
+    if (err){
+      res.render('checkout', {
+        data: ''
+        })
+      console.log('not connected', err)
+
+    } else{
+      res.render('checkout', {data: result})
+
+      console.log('(:');
+    }
+  });
+
 });
 
 module.exports = router;

@@ -28,20 +28,35 @@ html(lang='en')
             p
               label(for='name') Företagsnamn: 
               br
-              input.form-text(type='text' name='name' placeholder='Skriv erat Företagsnamn här' id=#{Företagsnamn})
+              input.form-text(type='text' name='name' placeholder='Skriv erat Företagsnamn här' id=`#{Företagsnamn}`)
             p
               label(for='email') E-mail Address:
               br
-              input.form-text(type='text' name='email' placeholder=' Skriv eran E-mail Address här' id=#{mail})
+              input.form-text(type='text' name='email' placeholder=' Skriv eran E-mail Address här' id=`#{mail}`)
             p
               label(for='phone') Telefonnummer:
               br
-              input.tel(type='tel' name='tel' placeholder=' Skriv erat Telefonnummer här' id=#{Telefonnummer})
+              input.tel(type='tel' name='tel' placeholder=' Skriv erat Telefonnummer här' id=`#{Telefonnummer}`)
             p
               label(for='message') Övrig information:
               br
-              textarea.form-info(name='message' placeholder='Övrig information' id=#{information})
+              textarea.form-info(name='message' placeholder='Övrig information' id=`#{information}`)
             input.submit(type='submit' name='submit' onclick=)
+          
+          -for(var i = 0; i < data.length; i++){
+                 img(src='../img/'+data[i].name+'.png' alt='')
+                 div
+                   span #{data[i].id}
+                   hr
+                   span #{data[i].product_id}kr
+                   span #{data[i].description}
+                 a(href='#{data[i].name}') Läs mer
+                 input(type="hidden" value=data[i].id )
+                 span
+                  button(onclick=`remove(${data[i].product_id})`)
+                    p remove
+          - }
+
 
         div.product
 
@@ -70,4 +85,5 @@ html(lang='en')
               img.img-top(src='../img/frakt-grey.png' alt='')
     footer-component
     script(src='../js/index.js')
+    script(src='../js/remove.js')
     script(src='js/mail.js')

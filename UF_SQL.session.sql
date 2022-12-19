@@ -18,3 +18,7 @@ VALUES
 SELECT * FROM cart_items;
 
 --@block
+SELECT id, product_id FROM cart_items ORDER BY id
+
+--@block
+DELETE FROM cart_items WHERE product_id=1;
