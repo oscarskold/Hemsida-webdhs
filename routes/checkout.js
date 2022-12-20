@@ -10,6 +10,10 @@ router.get('/', function(req, res, next) {
   con.query('SELECT product_id FROM cart_items ORDER BY id', function(err, result){
     if (err){
       console.log('not connected', err)
+      res.render('checkout', {
+        data: '',
+        productid: ''
+      })
     } else{
       
       if(result != ''){
@@ -40,7 +44,6 @@ router.get('/', function(req, res, next) {
        console.log('(:');
     }
   });
-
 });
 
 module.exports = router;
