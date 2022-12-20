@@ -24,6 +24,8 @@ nav {
 }
 
 .checkout {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
     grid-column: span 2;
     box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
     margin-bottom: 100px;
@@ -48,6 +50,7 @@ nav {
 }
 
 form {
+    grid-column: span 1;
     padding-top: 10px;
 }
 
@@ -211,5 +214,6 @@ textarea {
 }
 
 .product{
+    grid-column: span 1;
     background-color: #38b6ff;
 }
