@@ -11,8 +11,11 @@ html(lang='en')
     link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
     link(href='https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap' rel='stylesheet')
     link(href='https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap' rel='stylesheet')
+    link(href='https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Source+Sans+Pro:wght@900&display=swap' rel='stylesheet')
+    link(rel='preconnect' href='https://fonts.googleapis.com')
     script(src='../js/nav.js' type='text/javascript' defer='')
     script(src='../js/footer.js' type='text/javascript' defer='')
+    script(src='../js/reveal.js' defer='')
     link(rel='shortcut icon' href='../img/Logo.png')
     title Web-DHS
   body
@@ -20,16 +23,21 @@ html(lang='en')
     main
       .grid-wrapper
         #banner.noselect
-          #banner_pic
+          .banner-btn
+            a(href='Services') Köp här
         #s1
           h1 Web-DHS UF
-          h2 Bättre lösning för UF Företag
+          h2 Stilrena och prisvärda hemsidor för UF-företag
           hr.hrline(color='lightgrey')
         #s2
-          h1 Varför behöver ett UF en hemsida?
-          h2
-            | En bra, lättförståelig och smart hemsida är A och O när det kommer till modern marknadsföring och försäljning.
-            | I våran mer internetbaserade värld är en bra hemsida som den nya butiken.
-            | En hemsida är också mycket lättare att kontrollera än en Instagram eller Facebook sida.
-            | På en hemsida kan man visa mer information snabbare och lättare för användaren.
+          .text-left.reveal.fade-left
+            h1 Varför behöver ett företag en hemsida?
+            h2
+              | En bra, lättförståelig och smart hemsida är A och O när det kommer till modern marknadsföring och försäljning.
+              | I våran mer internetbaserade värld är en bra hemsida som den nya butiken.
+              | En hemsida är också mycket lättare att kontrollera än en Instagram eller Facebook sida.
+              | På en hemsida kan man visa mer information snabbare och lättare för användaren.
+          .text-right.reveal.fade-right
+            h1 Oscar fick hjärnsläpp på rubriken
+            h2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci numquam veritatis exercitationem doloremque ea provident dolor reiciendis, debitis quis unde, placeat labore modi id tempora velit nisi ut aliquam. Voluptatibus?
     footer-component

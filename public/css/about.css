@@ -23,7 +23,7 @@ nav {
 }
 
 h2 {
-    max-width: 45%;
+    max-width: 50%;
     margin: 0 auto;
 }
 
@@ -72,16 +72,17 @@ h2 {
     font-weight: 700;
 }
 
-
 #m-h1 {
-    font-size: 50px;
+    font-size: 64px;
     font-weight: 700;
+    text-align: center;
 }
 
 #members {
     grid-column: span 12;
     grid-row: span 24;
-    text-align: center;
+    width: 90%;
+    margin: 0 auto;
 }
 
 #members img {
@@ -96,6 +97,7 @@ h2 {
     font-weight: 400;
     color: #3A3A3A;
     margin-top: 10px;
+    margin: 0 auto;
 }
 
 #members h3 {
@@ -111,6 +113,48 @@ h2 {
     margin-top: 150px;
 }
 
+.text-center {
+    text-align: center;
+}
+
+.active.fade-left {
+    animation: fade-left 1s ease-in;
+}
+
+.active.fade-right {
+    animation: fade-right 1s ease-in;
+}
+
+.reveal {
+    position: relative;
+    opacity: 0;
+}
+  
+.reveal.active {
+    opacity: 1;
+}
+
+@keyframes fade-left {
+    0% {
+      transform: translateX(-100px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+}
+
+@keyframes fade-right {
+    0% {
+      transform: translateX(100px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+}
 
 @media screen and (max-width:1100px) {
     

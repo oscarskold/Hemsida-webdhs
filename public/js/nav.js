@@ -7,7 +7,7 @@ class Header extends HTMLElement {
       this.innerHTML = `
       <nav>
       <div class="logo nav-pos">
-          <a href="Homepage.html"><img src="../img/logo-white.png" alt=""><h3>Web-DHS</h3></a>
+          <a href="/"><img src="../img/logo-white.png" alt=""><h3>Web-DHS</h3></a>
       </div>
       <div class="r-side">
       <a href="login" class="nav-items">Login</a>    

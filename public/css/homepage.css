@@ -34,13 +34,34 @@ body {
     background-position: center;
     background-size: cover;
     transition: all .3s ease-in-out;
-    background-attachment: fixed;
 }
 
 #banner h1 {
     font-size: 100px;
     padding-top: 100px;
     text-align: center;
+}
+
+.banner-btn {
+    text-align: center;
+    position: relative;
+    top: 40%;
+}
+
+.banner-btn a {
+    padding: 15px 45px;
+    color: #ffffff;
+    border: solid #ffffff 2px;
+    background-color: transparent;
+    font-size: 30px;
+    font-weight: 900;
+    font-family: 'Source Sans Pro', sans-serif;
+    text-transform: uppercase;
+}
+
+.banner-btn a:hover {
+    color: #ffffff;
+    border: solid #ffffff 4px;
 }
 
 /* #banner:hover {
@@ -86,26 +107,87 @@ h2 {
 #s2 {
     grid-column: span 12;
     grid-row: span 7;
+    width: 90%;
+    margin: 0 auto;
     /* background-color: #F5F5F5; */
 }
 
 #s2 h1 {
     font-size: 60px;
-    text-align: center;
     margin-top: 200px;
 }
 
 #s2 h2 {
-    text-align: center;
     font-weight: 400;
     color: #3A3A3A;
 
 }
 
-@media screen and (max-width:1100px) {
+.text-left {
+    text-align: left;
+}
+
+.text-left h2 {
+    float: left;
+}
+
+.text-right {
+    margin-top: 10px;
+    text-align: right;
+}
+
+.text-right h2 {
+    float: right;
+}
+
+.active.fade-left {
+    animation: fade-left 1s ease-in;
+}
+
+.active.fade-right {
+    animation: fade-right 1s ease-in;
+}
+
+.reveal {
+    position: relative;
+    opacity: 0;
+}
+  
+.reveal.active {
+    opacity: 1;
+}
+
+@keyframes fade-left {
+    0% {
+      transform: translateX(-100px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+}
+
+@keyframes fade-right {
+    0% {
+      transform: translateX(100px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+}
+
+@media screen and (max-width:1200px) {
     
     #s1 h1 {
         font-size: 90px;
+    }
+
+    #s2 {
+        grid-column: span 12;
+        grid-row: span 8;
     }
 
     #s2 h1 {
@@ -115,6 +197,15 @@ h2 {
     h2 {
         max-width: 75%;
         margin: 0 auto;
+    }
+
+}
+
+@media screen and (max-width:900px) {
+    
+    #s2 {
+        grid-column: span 12;
+        grid-row: span 10;
     }
 
 }

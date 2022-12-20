@@ -68,6 +68,11 @@ form {
     border-radius: 5px;
 }
 
+.tel:focus {
+    outline: none;
+    border: 2px solid #38b6ff;
+}
+
 .form-text {
     width: 350px;
     height: 40px;

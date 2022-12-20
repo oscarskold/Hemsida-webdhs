@@ -15,6 +15,7 @@ html(lang='en')
     link(href='https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap' rel='stylesheet')
     script(src='../js/nav.js' type='text/javascript' defer='')
     script(src='../js/footer.js' type='text/javascript' defer='')
+    script(src='../js/reveal.js' defer='')
     link(rel='shortcut icon' href='../img/Logo.png')
     title Web-DHS
   body
@@ -43,7 +44,7 @@ html(lang='en')
           | När ett köp utav våran tjänst uppstår kommer våran kundsupport ta kontakt med kunden och regelbundet uppdatera processen.
       #members
         h1#m-h1 Vårat Team
-        div
+        .text-center.reveal.fade-left
           img(src='../img/Oscar.png' alt='')
           h1 VD - Oscar Sköld
           h2
@@ -54,20 +55,20 @@ html(lang='en')
           h3
             | Contact - 
             a(href='mailto:oscar.skold@web-dhs.se') oscar.skold@web-dhs.se
-        div
+        .text-center.reveal.fade-right
           img.about-img(src='../img/Oskar.png' alt='')
           h1 Vice VD / CFO - Oskar Sanengen
           h2
             | Oskar Sanengens roller i företaget innebär att han är Oscar Skölds högra hand och har hand om företagets ekonomi.
             | Som CFO sköter Oskar Finansieringen, budgeten, bokföringen och faktureringen inom företaget.
             | Oskar är målmedveten om att sköta företagets ekonomi på ett så effektivt sätt som möjligt.
-          h3
+          h3.pepe
             | Contact - 
             a(href='mailto:oskar.sanengen@web-dhs.se') oskar.sanengen@web-dhs.se
-        div
+        .text-center.reveal.fade-left
           img(src='../img/Noah.png' alt='')
           h1 Head of Marketing / Lead Designer - Noah Lagerström
-          h2 
+          h2
             | Noah Lagerström är våran Head of Marketing and Lead Designer.
             | Hans uppgift är att sköta företagets sociala medier och marknadsföring.
             | Som Lead Designer ansvarar Noah över utseendet och innehållet av hemsidorna.
@@ -75,7 +76,7 @@ html(lang='en')
           h3
             | Contact - 
             a(href='mailto:noah.lagerstrom@web-dhs.se') noah.lagerstrom@web-dhs.se
-        div 
+        .text-center.reveal.fade-right
           img(src='../img/Melker.png' alt='')
           h1 Head of Communication - Melker Adolfsson
           h2
@@ -84,7 +85,7 @@ html(lang='en')
           h3
             | Contact - 
             a(href='mailto:kontakt@web-dhs.se') kontakt@web-dhs.se
-        div
+        .text-center.reveal.fade-left
           img(src='../img/Vilgot.png' alt='')
           h1 Head of Purchases - Vilgot Thyrén
           h2
@@ -96,4 +97,3 @@ html(lang='en')
             | Contact - 
             a(href='mailto:vilgot.thyren@web-dhs.se') vilgot.thyren@web-dhs.se
     footer-component
-    script(src='../js/burger.js')
