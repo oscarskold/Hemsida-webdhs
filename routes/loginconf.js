@@ -10,7 +10,7 @@ router.post('/', function(req, res, next) {
   // //   if (err){
   // //     throw err
   // //   } else{
-  // //     console.log(result)
+  // //     console.log(result) 
   // //   }   
   // //  });
   console.log(user, pass);

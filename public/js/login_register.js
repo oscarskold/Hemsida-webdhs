@@ -15,7 +15,7 @@ function login(username, password){
         password: password
       }) // body data type must match "Content-Type" header
     });
-    };
+    }; 
 
 function register(username, email, password){
     fetch("/registerconf", {

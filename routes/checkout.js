@@ -23,7 +23,7 @@ router.get('/', function(req, res, next) {
             })
             console.log(err)
           } else{
-            console.log(productid)
+            console.log(productid) 
             res.render('checkout', {
               data: result,
               productid: productid
