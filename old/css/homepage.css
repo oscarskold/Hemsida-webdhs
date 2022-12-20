@@ -65,9 +65,16 @@ body {
     border: solid #ffffff 4px;
 }
 
-/* #banner:hover {
-    opacity: 0.8;
-} */
+.down-btn {
+    text-align: right;
+    padding-right: 1%;
+    position: relative;
+    top: 90%;
+}
+
+.down-btn a {
+    color: #ffffff;
+}
 
 h2 {
     max-width: 50%;
@@ -81,7 +88,6 @@ h2 {
     padding-top: 100px;
     font-size: 3em;
     font-family: sans-serif;
-    /* background: linear-gradient(to bottom, white 0%, white 60%, #2C4251 40%, #2C4251 100%); */
 }
 
 #s1 h1 {
@@ -116,6 +122,7 @@ h2 {
 #s2 h1 {
     font-size: 60px;
     margin: 0 auto;
+    margin-top: 200px;
 }
 
 #s2 h2 {
