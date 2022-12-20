@@ -53,10 +53,10 @@ html(lang='en')
             a(href='#{data[i].name}') Läs mer
             input(type="hidden" value=data[i].id )
             span
-            form(onSubmit=`remove(${productid})` action="/checkout?" ) 
-             input(type="submit" placeholder="remove" onclick=`remove(${productid})`)
+            //- form(onSubmit=`remove(${productid})` action="/checkout?" ) 
+            input(type="submit" placeholder="remove" onclick=`remove(${productid})`)
         - }
-
+ 
 
         div.product
 

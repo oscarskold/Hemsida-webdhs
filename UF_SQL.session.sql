@@ -22,4 +22,12 @@ SELECT id, product_id FROM cart_items ORDER BY id
 
 
 --@block
-SELECT id, name, description, price FROM produkt WHERE id=1
+CREATE USER 'oskar'@'localhost' IDENTIFIED BY 'Sämst123';
+
+--@block
+CREATE TABLE customers(
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    user_name VARCHAR(255) NOT NULL,
+    user_name VARCHAR(255) NOT NULL,
+
+)
