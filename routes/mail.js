@@ -5,13 +5,13 @@ var transporter = nodemailer.createTransport({
     port: 465,
     secure: true,
     auth: {
-        user: 'vilgot.thyren@gmail.com',
-        pass: 'xrqexvqcwibyrxqo',
+        user: 'exempel@gmail.com',
+        pass: 'exempel pas',
     }
 });
 
 var mailOptions = {
-    from: 'vilgot.thyren@gmail.com',
+    from: 'exempel@gmail.com',
     to: 'Kontakt@web-dhs.se',
     subject: 'test test',
     text: 'Noda är dålig och änkel!!!'
