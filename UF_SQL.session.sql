@@ -18,3 +18,8 @@ VALUES
 SELECT * FROM cart_items;
 
 --@block
+SELECT id, product_id FROM cart_items ORDER BY id
+
+
+--@block
+SELECT id, name, description, price FROM produkt WHERE id=1

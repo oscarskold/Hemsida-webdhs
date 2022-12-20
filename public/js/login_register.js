@@ -11,8 +11,8 @@ function login(username, password){
       redirect: 'follow', // manual, *follow, error
       referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
       body: JSON.stringify({
-        user: username,
-        pass: password
+        username: username,
+        password: password
       }) // body data type must match "Content-Type" header
     });
     };
@@ -30,9 +30,9 @@ function register(username, email, password){
         redirect: 'follow', // manual, *follow, error
         referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
         body: JSON.stringify({
-          user: username,
+          username: username,
           email: email,
-          pass: password
+          password: password
         }) // body data type must match "Content-Type" header
     });
     };

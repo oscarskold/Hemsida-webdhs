@@ -20,7 +20,7 @@ class Header extends HTMLElement {
       </div>    
       <ul class="navbar_links nav">
           <li>
-              <a href="Homepage">Start</a>
+              <a href="/">Start</a>
           </li>
           <li>
               <a href="About">Om oss</a>

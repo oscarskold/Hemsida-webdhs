@@ -16,6 +16,7 @@ var BaspaketRouter = require('./routes/Baspaket');
 var PremiumPaketRouter = require('./routes/PremiumPaket');
 var WebhostingRouter = require('./routes/Webhosting');
 var addToCart = require('./routes/add_to_cart');
+var remove = require('./routes/remove');
 var loginpage = require('./routes/loginpage');
 var loginconf = require('./routes/loginconf')
 var registerpage = require('./routes/registerpage');
@@ -58,6 +59,7 @@ app.use('/login', loginpage);
 app.use('/loginconf', loginconf);
 app.use('/register', registerpage);
 app.use('/registerconf', registerconf);
+app.use('/remove', remove);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
