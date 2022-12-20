@@ -1,5 +1,9 @@
 //RÖR EJ
-function remove(product_id){
+function relod_remove(productid){
+  remove(productid);
+}
+
+function remove(productid){
   fetch("/remove", {
     method: 'POST', // *GET, POST, PUT, DELETE, etc.
     mode: 'cors', // no-cors, *cors, same-origin
@@ -12,7 +16,8 @@ function remove(product_id){
     redirect: 'follow', // manual, *follow, error
     referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
     body: JSON.stringify({
-      product_id: product_id
+      productid: productid
     }) // body data type must match "Content-Type" header
   });
+  return true;
   };

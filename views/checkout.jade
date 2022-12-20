@@ -44,17 +44,17 @@ html(lang='en')
             input.submit(type='submit' name='submit' onclick=)
           
           -for(var i = 0; i < data.length; i++){
-                 img(src='../img/'+data[i].name+'.png' alt='')
-                 div
-                   span #{data[i].id}
-                   hr
-                   span #{data[i].product_id}kr
-                   span #{data[i].description}
-                 a(href='#{data[i].name}') Läs mer
-                 input(type="hidden" value=data[i].id )
-                 span
-                  button(onclick=`remove(${data[i].product_id})`)
-                    p remove
+            //- img(src='../img/'+data[i].name+'.png' alt='')
+            div
+              span #{data[i].name}
+              hr
+              span #{data[i].price} kr
+              span #{data[i].description}
+            a(href='#{data[i].name}') Läs mer
+            input(type="hidden" value=data[i].id )
+            span
+            form(onSubmit=`remove(${productid})` action="/checkout?" ) 
+             input(type="submit" placeholder="remove" onclick=`remove(${productid})`)
           - }
 
 
@@ -85,5 +85,5 @@ html(lang='en')
               img.img-top(src='../img/frakt-grey.png' alt='')
     footer-component
     script(src='../js/index.js')
-    script(src='../js/remove.js')
+    script(src='js/remove.js')
     script(src='js/mail.js')
