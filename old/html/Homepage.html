@@ -12,10 +12,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Source+Sans+Pro:wght@900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <script src="../js/nav.js" type="text/javascript" defer></script>
     <script src="../js/footer.js" type="text/javascript" defer></script>
     <script src="../js/reveal.js" defer></script>
+    <script src="../js/slider.js" defer></script>
     <link rel="shortcut icon" href="../img/Logo.png"/>
     <title>Web-DHS</title>
 </head>
@@ -24,19 +26,60 @@
     <nav-component></nav-component>
         
     <main>
-        <div class="grid-wrapper">
-            <div id="banner" class="noselect">
-                <div class="banner-btn">
-                    <a href="Services.html">Köp här</a>
+        <div class="slides">
+
+            <input type="radio" name="radio-btn" id="radio1">
+            <input type="radio" name="radio-btn" id="radio2">
+            <input type="radio" name="radio-btn" id="radio3">
+
+
+            <div class="slide first">
+                <img src="../img/register-background.png" alt="">
+                <div class="slide-title">
+                    <h1>Web-DHS UF</h1>
+                    <h2>Stilrena och prisvärda hemsidor för UF-företag</h2>
                 </div>
                 <div class="down-btn">
                     <a href="#s2"><img src="../img/icons8-down-arrow-30.png" alt="">Ner</a>
                 </div>
             </div>
+            <div class="slide">
+                <img src="../img/banner.png" alt="">
+                <div class="slide-btn">
+                  <a href="Services.html">Våra Produkter</a>
+                </div>
+                <div class="down-btn">
+                    <a href="#s2"><img src="../img/icons8-down-arrow-30.png" alt="">Ner</a>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="../img/computer.png" alt="">
+                <div class="slide-btn">
+                    <button>Kolla in detta!</button>
+                </div>
+                <div class="down-btn">
+                    <a href="#s2"><img src="../img/icons8-down-arrow-30.png" alt="">Ner</a>
+                </div>
+            </div>
+            
+            <div class="navigation-auto">
+                <div class="auto-btn1"></div>
+                <div class="auto-btn2"></div>
+                <div class="auto-btn3"></div>
+            </div>
+            
+        </div>
+        
+        <div class="navigation-manual">
+            <label for="radio1" class="manual-btn"></label>
+            <label for="radio2" class="manual-btn"></label>
+            <label for="radio3" class="manual-btn"></label>
+          </div>
+    </div>
+        <div class="grid-wrapper">
             <div id="s1">
-                <h1>Web-DHS UF</h1>
+                <!-- <h1>Web-DHS UF</h1> -->
 
-                <h2>Stilrena och prisvärda hemsidor för UF-företag</h2>
                 
                 <hr class="hrline" color="lightgrey">
 

@@ -13,6 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <script src="../js/nav.js" type="text/javascript" defer></script>
     <script src="../js/footer.js" type="text/javascript" defer></script>
+    <script src="../js/slider.js" type="text/javascript" defer></script>
     <link rel="shortcut icon" href="../img/Logo.png"/>
     <title>Web-DHS</title>
 </head>
@@ -20,43 +21,92 @@
 
     <nav-component></nav-component>
 
-    <main class="grid-wrapper">
-        <div id="s1">
+    <main>
+        <div class="slides">
+
+            <input type="radio" name="radio-btn" id="radio1">
+            <input type="radio" name="radio-btn" id="radio2">
+            <input type="radio" name="radio-btn" id="radio3">
+
+
+            <div class="slide first">
+                <img src="../img/register-background.png" alt="">
+                <div class="slide-btn">
+                    <button>Kolla!</button>
+                </div>
+                <div class="down-btn">
+                    <a href="#s-cards"><img src="../img/icons8-down-arrow-30.png" alt="">Ner</a>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="../img/banner.png" alt="">
+                <div class="slide-btn">
+                  <button>Kolla här!</button>
+                </div>
+                <div class="down-btn">
+                    <a href="#s-cards"><img src="../img/icons8-down-arrow-30.png" alt="">Ner</a>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="../img/computer.png" alt="">
+                <div class="slide-btn">
+                    <button>Kolla in detta!</button>
+                </div>
+                <div class="down-btn">
+                    <a href="#s-cards"><img src="../img/icons8-down-arrow-30.png" alt="">Ner</a>
+                </div>
+            </div>
             
-        </div>
-        <div class="cards">
-            <img src="../img/basp.png" alt="">
-            <div>
-                <span class="t1">Baspaket</span>
-                <hr>
-                <span>299kr</span>
-                <span class="card-info">Vårat billigaste alternativ, här ingår även en fri månad Hosting</span>
+            <div class="navigation-auto">
+                <div class="auto-btn1"></div>
+                <div class="auto-btn2"></div>
+                <div class="auto-btn3"></div>
             </div>
-            <a class="rm" href="product1.html">Läs mer</a>
-        </div>
-        <div class="cards">
-            <img src="../img/premp.png" alt="">
-            <div>
-                <span class="t1">Premiumpaket</span>
-                <hr>
-                <span>Från 399kr</span>
-                <span class="card-info">Personligt gjord hemsida, mer möjlighet för förändring</span>
-            </div>
-            <a class="rm prod2" href="product2.html">Läs mer</a>
-        </div>
-        <div class="cards">
-            <img src="../img/webh.png" alt="">
-            <div>
-                <span class="t1">Webhosting</span>
-                <hr>
-                <span>49kr/månad</span>
-                <span class="card-info">Månadsavgift på 49kr, här ingår snabb och aktiv support</span>
-            </div>
-            <a class="rm prod3" href="product3.html">Läs mer</a>
+            
         </div>
         
-        <div id="s2">
+        <div class="navigation-manual">
+            <label for="radio1" class="manual-btn"></label>
+            <label for="radio2" class="manual-btn"></label>
+            <label for="radio3" class="manual-btn"></label>
+          </div>
+    </div>
+    <div class="grid-wrapper" id="s-cards">
+
+            <div class="cards">
+                <img src="../img/basp.png" alt="">
+                <div>
+                    <span class="t1">Baspaket</span>
+                    <hr>
+                    <span>299kr</span>
+                    <span class="card-info">Vårat billigaste alternativ, här ingår även en fri månad Hosting</span>
+                </div>
+                <a class="rm" href="product1.html">Läs mer</a>
+            </div>
+            <div class="cards">
+                <img src="../img/premp.png" alt="">
+                <div>
+                    <span class="t1">Premiumpaket</span>
+                    <hr>
+                    <span>Från 399kr</span>
+                    <span class="card-info">Personligt gjord hemsida, mer möjlighet för förändring</span>
+                </div>
+                <a class="rm prod2" href="product2.html">Läs mer</a>
+            </div>
+            <div class="cards">
+                <img src="../img/webh.png" alt="">
+                <div>
+                    <span class="t1">Webhosting</span>
+                    <hr>
+                    <span>49kr/månad</span>
+                    <span class="card-info">Månadsavgift på 49kr, här ingår snabb och aktiv support</span>
+                </div>
+                <a class="rm prod3" href="product3.html">Läs mer</a>
+            </div>
             
+            <div id="s2">
+                
+            </div>
         </div>
     </main>
 
