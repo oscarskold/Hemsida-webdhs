@@ -15,10 +15,12 @@ html(lang='en')
     script(src='../js/nav.js' type='text/javascript' defer='')
     script(src='../js/footer.js' type='text/javascript' defer='')
     script(src='js/add.js' type='text/javascript' defer='')
-    title Web-DHS h
+    script(src='../js/slider.js' defer='')
+    title Web-DHS 
   body
     nav-component
-    main.grid-wrapper
+    main
+      div.grid-wrapper
         //RÖR KANSKE EJ
         - for (var i=0; i<data.length; i++){
                .cards

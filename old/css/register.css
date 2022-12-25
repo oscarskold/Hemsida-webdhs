@@ -20,7 +20,7 @@ body {
 .grid-wrapper {
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    grid-auto-rows: minmax(150px,auto);
+    grid-auto-rows: minmax(100px,auto);
     margin: 0 auto;
     width: 75%;
     margin-top: 100px;
@@ -29,9 +29,8 @@ body {
 .register {
     grid-column: span 1;
     grid-column-start: 2;
-    grid-row: span 4;
+    grid-row: span 5;
     background-color: white;
-    z-index: 99;
     text-align: center;
     box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
 }
@@ -46,16 +45,27 @@ body {
 }
 
 .register form {
+    display: inline-block;
+    justify-content: center;
     padding-top: 50px;
 }
 
 .register form label {
+    display: inline-flex;
+    flex-direction: row;
     background-color: #004aad;
     color: #ffffff;
-    padding: 15px 15px;
+    padding: 10px 15px;
+    padding-bottom: -10px;
+}
+
+.login form img{
+    width: 30px;
+    height: 30px;
 }
 
 p {
+    display: flex;
     margin-top: 20px;
 }
 
@@ -63,7 +73,7 @@ p {
     width: 310px;
     height: 50px;
     border: 1px solid #dee0e4;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
     padding: 0 15px;
 }
 
@@ -73,7 +83,7 @@ p {
 
 }
 
-.register form input[type="submit"] {
+.register form button {
     padding: 15px 35px;
     margin-top: 20px;
     background-color: #004aad;
