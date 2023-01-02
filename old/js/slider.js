@@ -4,4 +4,4 @@ setInterval(() => {
     counter++;
     if (counter > 3)
         counter = 1;
-}, 75000);
+}, 7500);

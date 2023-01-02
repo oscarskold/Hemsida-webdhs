@@ -10,6 +10,10 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+a {
+    text-decoration: none;
+}
+
 #s1 {
     grid-column: span 12;
     grid-row: span 1;

@@ -11,6 +11,10 @@ body {
     /* color: #9C9C9C; */
 }
 
+a {
+    text-decoration: none;
+}
+
 nav {
     background-color: #252525    ;
 }
