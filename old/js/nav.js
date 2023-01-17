@@ -29,7 +29,7 @@ class Header extends HTMLElement {
               <a href="Services.html">Tjänster</a>
           </li>
           <li>
-              <a href="#footer">Kontakt</a>
+              <a href="#footer" class="contact">Kontakt</a>
           </li>
       </ul>
       
@@ -44,6 +44,7 @@ const navSlide = () => {
     const burger = document.querySelector('.burger')
     const nav = document.querySelector('.navbar_links')
     const navLinks = document.querySelectorAll('.navbar_links li')
+    const contact = document.querySelector('.contact')
 
     burger.addEventListener('click', () => {
         //Toggle Nav
@@ -60,6 +61,21 @@ const navSlide = () => {
         //Burger Animation             
         burger.classList.toggle('toggle');    
     });
+
+    contact.addEventListener('click', () =>{
+
+        nav.classList.toggle('nav-active');
+
+        navLinks.forEach((link, index) => {
+            if (link.style.animation){
+                link.style.animation = ''
+            } else{
+                link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.3}s`;
+            }
+        });
+
+        burger.classList.toggle('toggle');    
+    })
 
 }
 
