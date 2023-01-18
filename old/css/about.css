@@ -32,7 +32,6 @@ h2 {
     grid-row: span 6;
     text-align: center;
     margin-top: 100px;
-
 }
 #a1 h1 {
     font-size: 70px;
@@ -107,6 +106,7 @@ h2 {
 
 #members a {
     color: #3A3A3A;
+    text-decoration: none;
 }
 
 #members div {
@@ -119,6 +119,10 @@ h2 {
 
 .text-left h2 {
     float: left;
+}
+
+.text-center {
+    text-align: center;
 }
 
 .text-right {

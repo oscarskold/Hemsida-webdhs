@@ -235,7 +235,6 @@ textarea {
 }
 
 .showcase {
-    margin-left: 25%;
     margin-top: 10px;
 }
 
@@ -255,4 +254,16 @@ textarea {
 
 .price {
     font-weight: 700;
+}
+
+@media screen and (max-width: 1100px) {
+
+    .form {
+        grid-column: span 6;
+    }
+
+    .product {
+        grid-column: span 6;
+    }
+
 }
