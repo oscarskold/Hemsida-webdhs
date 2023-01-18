@@ -64,6 +64,34 @@ a {
     border: solid #ffffff 4px;
 }
 
+
+
+
+
+.heading{
+    background-color: #E9ECEF;
+    font-size: 60px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 0px;
+    padding-top: 80px;
+    font-family: sans-serif;
+}
+
+.subheading{
+    background-color: #E9ECEF;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 25px;
+    font-style: italic;
+    color: rgba(0, 0, 0, 0.406);
+    padding-left: 80px;
+    padding-right: 80px;
+}
+
 .slide img{
     width: 100%;
     height: 700px;
