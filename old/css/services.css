@@ -10,6 +10,10 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+nav {
+    background-color: #252525;
+}
+
 a {
     text-decoration: none;
 }
@@ -74,7 +78,7 @@ a {
     display: flex;
     justify-content: center;
     text-align: center;
-    padding-top: 100px;
+    padding-top: 120px;
     font-family: sans-serif;
 }
 
