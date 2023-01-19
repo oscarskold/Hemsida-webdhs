@@ -72,6 +72,8 @@ form {
     font-size: 20px;
     text-indent: 5px;
     border-radius: 5px;
+    border-color: #252525;
+    border: 1px solid;
 }
 
 .tel:focus {
@@ -87,6 +89,8 @@ form {
     font-size: 20px;
     text-indent: 5px;
     border-radius: 5px;
+    border-color: #252525;
+    border: 1px solid;
 }
 
 .form-text:focus {
@@ -101,6 +105,8 @@ form {
     font-size: 20px;
     font-family: 'Roboto', sans-serif;
     border-radius: 5px;
+    border-color: #252525;
+    border: 1px solid;
 }
 
 .form-info:focus {
