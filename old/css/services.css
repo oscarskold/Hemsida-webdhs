@@ -74,12 +74,12 @@ a {
 
 .heading{
     background-color: #E9ECEF;
-    font-size: 70px;
+    font-size: 100px;
     display: flex;
     justify-content: center;
     text-align: center;
     padding-top: 120px;
-    font-family: sans-serif;
+    font-family: 'Quicksand', sans-serif;
 }
 
 .subheading{
@@ -88,6 +88,7 @@ a {
     display: flex;
     justify-content: center;
     text-align: center;
+    font-family: 'Quicksand', sans-serif;
     font-size: 25px;
     font-style: italic;
     color: rgba(0, 0, 0, 0.406);
