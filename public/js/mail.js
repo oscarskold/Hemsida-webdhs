@@ -1,3 +1,3 @@
-mail = require('../../routes/mail.js');
+// mail = require('../../routes/mail.js');
 
-function send_mail()
+// function send_mail()

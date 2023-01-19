@@ -4,16 +4,17 @@ var express = require('express');
 var router = express.Router();
 
 router.post('/', function(req, res, next) {
-  req.body.id
-  con.query("", function(err, result){
+  req.body.username
+  // req.body.email
+  // req.body.password
+  con.query('CREATE DATABASE'+username+';'+' CREATE TABLE'+username+'.cart_items SELECT * FROM shopping_cart.cart_items;', function(err, result){
     if (err){
       throw err
     } else{
       console.log(result) 
     }   
    });
-  console.log(req.body.id);
-  res.send("Success!")
+  console.log();
 });
 
 module.exports = router;

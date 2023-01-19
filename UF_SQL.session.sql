@@ -1,5 +1,4 @@
-
-
+USE oskar;
 --@block
 USE WEBDHS;
 --@block
@@ -12,7 +11,8 @@ VALUES
     ('PremiumPaket', 'Personligt gjord hemsida mer möjligheter för förendring', '399', '2022-12-02', '2022-12-02'),
     ('Webhosting', 'Månadsavgift här ingår snabb akrtiv support', '49', '2022-12-02', '2022-12-02');
 
-
+--@block
+SELECt * FROM produkt
 
 --@block
 SELECT * FROM cart_items;
@@ -20,14 +20,17 @@ SELECT * FROM cart_items;
 --@block
 SELECT id, product_id FROM cart_items ORDER BY id
 
-
 --@block
 CREATE USER 'oskar'@'localhost' IDENTIFIED BY 'Sämst123';
 
 --@block
-CREATE TABLE customers(
-    id INT PRIMARY KEY AUTO_INCREMENT,
-    user_name VARCHAR(255) NOT NULL,
-    user_name VARCHAR(255) NOT NULL,
 
-)
+CREATE DATABASE oskar; CREATE TABLE oskar.cart_items SELECT * FROM shopping_cart.cart_items;
+
+--@block
+mysqldump 
+-uroot -p 
+--routines 
+--triggers 
+--flush-privileges 
+--all-databases > MySQLData.sql
