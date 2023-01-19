@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/services.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <script src="../js/nav.js" type="text/javascript" defer></script>
+    <script src="../js/footer.js" type="text/javascript" defer></script>
+    <script src="../js/slider.js" type="text/javascript" defer></script>
+    <link rel="shortcut icon" href="../img/Logo.png"/>
+    <title>Web-DHS</title>
+</head>
+<body>
+
+    <nav-component></nav-component>
+
+    <main>
+        <div class="slides">
+
+            <input type="radio" name="radio-btn" id="radio1">
+            <input type="radio" name="radio-btn" id="radio2">
+            <input type="radio" name="radio-btn" id="radio3">
+
+
+            <div class="slide first">
+                <img src="../img/register-background.png" alt="">
+                <div class="slide-btn">
+                    <button>Kolla!</button>
+                </div>
+                <div class="down-btn">
+                    <a href="#s-cards"><img src="../img/icons8-down-arrow-30.png" alt="">Ner</a>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="../img/banner.png" alt="">
+                <div class="slide-btn">
+                  <button>Kolla här!</button>
+                </div>
+                <div class="down-btn">
+                    <a href="#s-cards"><img src="../img/icons8-down-arrow-30.png" alt="">Ner</a>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="../img/computer.png" alt="">
+                <div class="slide-btn">
+                    <button>Kolla in detta!</button>
+                </div>
+                <div class="down-btn">
+                    <a href="#s-cards"><img src="../img/icons8-down-arrow-30.png" alt="">Ner</a>
+                </div>
+            </div>
+            
+            <div class="navigation-auto">
+                <div class="auto-btn1"></div>
+                <div class="auto-btn2"></div>
+                <div class="auto-btn3"></div>
+            </div>
+            
+        </div>
+        
+        <div class="navigation-manual">
+            <label for="radio1" class="manual-btn"></label>
+            <label for="radio2" class="manual-btn"></label>
+            <label for="radio3" class="manual-btn"></label>
+        </div>
+
+        <!-- RÖR KANSKE EJ -->
+        
+            <% for (var i=0; i<data.length; i++){ %>
+            <div class="cards">
+                <img src="../img/<%=data[i].name%>.png" alt="">
+                <div>
+                    <span class="t1"><%=data[i].name%></span>
+                    <hr>
+                    <span><%=data[i].price%></span>
+                    <span class="card-info"><%data[i].description%>
+                <a class="rm" href="<%-data[i].name%>">Läs mer</a>
+                <button id="add"onclick='addtocart(<%cartItemsString%>)'> Add to cart
+                 <img src="../img/add-cart.png" alt="">   
+                <!-- button.add(onclick=``)
+                    img(src="../img/add-cart.png")
+                    p Add to cart -->
+            </div>
+            <%}%>
+        
+
+
+    </main>
+
+    <footer-component></footer-component>
+
+</body>
+</html>

@@ -15,7 +15,9 @@ router.get('/', function(req, res, next) {
       console.log('not connected', err)
 
     } else{
-      res.render('Services', {data: result})
+      res.render('Services', {
+        data: result
+      })
 
       console.log('(:');
     }
