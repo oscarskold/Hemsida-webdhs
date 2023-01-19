@@ -22,10 +22,12 @@ nav {
     margin: 0 auto;
 }
 
-h2 {
+p {
     max-width: 50%;
     margin: 0 auto;
+    font-size: 1.5em;
 }
+
 
 #a1 {
     grid-column: span 12;
@@ -53,7 +55,7 @@ h2 {
     font-weight: 700;
 }
 
-#a2 h2,#a3 h2 {
+#a2 p,#a3 h2 {
     font-weight: 400;
     color: #3A3A3A;
     margin-top: 10px;
