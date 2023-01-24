@@ -191,6 +191,12 @@ p {
         grid-row: span 24;
     }    
 
+    p {
+        max-width: 80%;
+        margin: 0 auto;
+        font-size: 1.5em;
+    }
+
 }
 
 @media screen and (max-width:750px) {
