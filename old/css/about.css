@@ -81,7 +81,7 @@ p {
 
 #members {
     grid-column: span 12;
-    grid-row: span 24;
+    grid-row: span 22;
     width: 90%;
     margin: 0 auto;
 }
@@ -99,6 +99,7 @@ p {
     color: #3A3A3A;
     margin-top: 10px;
     margin: 0 auto;
+    max-width: 50%;
 }
 
 #members h3 {
@@ -188,6 +189,12 @@ p {
         grid-column: span 12;
         grid-row: span 24;
     }    
+
+    p {
+        max-width: 80%;
+        margin: 0 auto;
+        font-size: 1.5em;
+    }
 
 }
 
