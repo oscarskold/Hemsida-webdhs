@@ -37,6 +37,10 @@ a {
     display: flex;
 }
 
+.slides a {
+    text-decoration: none;
+}
+
 .slides input{
     display: none;
 }
@@ -226,6 +230,10 @@ a {
 
 .cards span {
     display: block;
+}
+
+.cards a {
+    text-decoration: none;
 }
 
 .card-info {
