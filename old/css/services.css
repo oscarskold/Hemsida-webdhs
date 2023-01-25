@@ -28,6 +28,10 @@ body {
     display: flex;
 }
 
+.slides a {
+    text-decoration: none;
+}
+
 .slides input{
     display: none;
 }
@@ -191,6 +195,10 @@ body {
 
 .cards span {
     display: block;
+}
+
+.cards a {
+    text-decoration: none;
 }
 
 .card-info {
