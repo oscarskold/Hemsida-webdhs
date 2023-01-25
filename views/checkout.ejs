@@ -61,23 +61,20 @@
             <h1>Produkter</h1>
             </div>
 
-
-
-
-
-
-
                 <script>
-                    item = []
+                    var item = []
                 for(var i = 0; i<=localStorage.length; i++ ) {
-                    var key = localStorage.getItem(i)
-                    if(key){
-                        item.push(JSON.parse(key))
+                    var key = localStorage.key(i)
+                    var prod = localStorage.getItem(key)
+                    if(prod){
+                        item.push(JSON.parse(prod))
+                        console.log(i + ' i')
                         }
                 }  
+                console.log(item)
+                console.log(item.length + ' item.length')
                 var product = document.querySelector('#product') 
                 for(var j = 0; j < item.length; j++){
-                    console.log(item[j])
                     var productElement = document.createElement("div")
                     productElement.innerHTML = `
                     <div class="showcase">

@@ -3,10 +3,10 @@ function addtocart(obj){
 
 
   // Check if the item is already in the cart
-  var existingItem = localStorage.getItem(obj.id);
-  if (existingItem){
-     alert('Alredy in cart');
-  } else{
+  // var existingItem = localStorage.getItem(obj.id);
+  // if (existingItem){
+  //    alert('Alredy in cart');
+  // } else{
 
   var objStr = JSON.stringify(obj)
   console.log(objStr)
@@ -30,6 +30,6 @@ function addtocart(obj){
 
 
   
-  }  
+  // }  
 };
 
