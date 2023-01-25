@@ -7,7 +7,7 @@ html {
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Quicksand', sans-serif;
     background-image: url(../img/register-background.png);
     background-size: 100%;
     object-fit: cover;
@@ -20,16 +20,16 @@ body {
 .grid-wrapper {
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    grid-auto-rows: minmax(150px,auto);
+    grid-auto-rows: minmax(100px,auto);
     margin: 0 auto;
-    width: 90%;
+    width: 75%;
     margin-top: 100px;
 }
 
 .register {
     grid-column: span 1;
     grid-column-start: 2;
-    grid-row: span 4;
+    grid-row: span 5;
     background-color: white;
     text-align: center;
     box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);

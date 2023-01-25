@@ -35,4 +35,4 @@ function register(username, email, password){
           password: password
         }) // body data type must match "Content-Type" header
     });
-    };
+    }; 

@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="../js/nav.js" type="text/javascript" defer></script>
     <script src="../js/footer.js" type="text/javascript" defer></script>
     <link rel="shortcut icon" href="../img/Logo.png"/>
@@ -26,17 +27,22 @@
             <form action="/routes/register.js">
                 <p>    
                     <label for="username"><img src="../img/user.png" alt=""></label>
-                    <input type="text" name="username" placeholder="Skriv in ditt användarnamn här" id="username" required>
+                    <input type="text" name="username" placeholder="Användarnamn" id="username" required>
                 </p>
                 
                 <p>
                     <label for="email"><img src="../img/mail.png" alt=""></label>
-                    <input type="email" name="email" placeholder="Skriv din email här" id="email" required>
+                    <input type="email" name="email" placeholder="Email" id="email" required>
                 </p>
 
                 <p>    
                     <label for="password"><img src="../img/lock.png" id="" alt=""></label>
-                    <input type="password" name="password" placeholder="Skriv in ditt lösenord här" id="password" required>
+                    <input type="password" name="password" placeholder="Lösenord" id="password" required>
+                </p>
+
+                <p>    
+                    <label for="password"><img src="../img/lock.png" id="" alt=""></label>
+                    <input type="password" name="password" placeholder="Bekräfta Lösenord" id="password" required>
                 </p>
                 <button type="submit">Registrera dig</button>
             </form>

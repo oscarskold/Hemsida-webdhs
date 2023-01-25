@@ -22,23 +22,23 @@
 
     <div class="grid-wrapper">
         <div class="checkout">
-            <div id="title">Web-DHS Kassa</div>
             <div class="form">
+                <div id="title">Web-DHS Kassa</div>
                 <a id="back" href="Homepage.html">Tillbaka till start</a>
                 <script language="JavaScript" src="../js/gen_validatorv31.js" type="text/javascript"></script>
                 <!-- Start code for the form-->
                 <form method="post" name="myemailform" action="form-to-email.php">
                     <p>
                         <label for='name'>Företagsnamn: </label><br>
-                        <input class="form-text" type="text" name="name" placeholder="Skriv erat Företagsnamn här">
+                        <input class="form-text" type="text" name="name" placeholder="Företagsnamn">
                     </p>
                     <p>
                         <label for='email'>E-mail Address:</label><br>
-                        <input class="form-text" type="text" name="email" placeholder=" Skriv eran E-mail Address här">
+                        <input class="form-text" type="text" name="email" placeholder=" E-mail">
                     </p>
                     <p>
                         <label for='phone'>Telefonnummer:</label><br>
-                        <input class="tel" type="tel" name="tel" placeholder=" Skriv erat Telefonnummer här">
+                        <input class="tel" type="tel"" name="tel" placeholder="Telefonnummer">
                     </p>
                     <p>
                         <label for='message'>Övrig information:</label> <br>
@@ -57,18 +57,21 @@
                 </script>
             </div>
             <div class="product">
+                <h1>Produkter</h1>
                 <div class="showcase">
                     <div class="card">
                         <img src="../img/bas.png" alt="">
                         <span>Baspaket</span>
-                        <span>299kr</span>
+                        <span>kort text</span>
+                        <span class="price">299kr</span>
                     </div>
-                    <div>
-                        
-                    </div>
+                <div class="total">
+                    <span class="price">Total</span>
+                    <span>total</span>
+                </div>        
                 </div>
             </div>
-            <div>
+            <!-- <div class="checkbox">
                 <p>
                     <label class="container">Betalning
                         <input type="radio" name="radio" value="show" id="show" onclick="show2();">
@@ -96,7 +99,7 @@
                         <img src="../img/frakt-grey.png" class="img-top" alt="">
                     </a>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
 

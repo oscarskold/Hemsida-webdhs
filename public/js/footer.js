@@ -12,7 +12,7 @@ class Footer extends HTMLElement {
           <h4 class="h4a">Priser</h4>
           <hr>
           <ul>
-              <li><a href="Services">Våra Produkter</a></li>
+              <li><a href="Services.html">Våra Produkter</a></li>
               <li><a href="">Betalning</a></li>
           </ul>
       </div>
@@ -20,9 +20,9 @@ class Footer extends HTMLElement {
           <h4 class="h4a">Om</h4>
           <hr>
           <ul>
-              <li><a href="About#a2">Vad vi gör</a></li>
-              <li><a href="About#members">Vårat Team</a></li>
-              <li><a href="About#a3">Hur vi fungerar</a></li>
+              <li><a href="About.html#a2">Vad vi gör</a></li>
+              <li><a href="About.html#tp">Vårat Team</a></li>
+              <li><a href="About.html#a3">Hur vi fungerar</a></li>
           </ul>
       </div>
       <div id="footer-contact">

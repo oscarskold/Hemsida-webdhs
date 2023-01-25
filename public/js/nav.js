@@ -23,13 +23,13 @@ class Header extends HTMLElement {
               <a href="/">Start</a>
           </li>
           <li>
-              <a href="About">Om oss</a>
+              <a href="about">Om oss</a>
           </li>
           <li>
-              <a href="Services">Tjänster</a>
+              <a href="services">Tjänster</a>
           </li>
           <li>
-              <a href="#footer">Kontakt</a>
+              <a href="#footer" class="contact">Kontakt</a>
           </li>
       </ul>
       
@@ -44,6 +44,7 @@ const navSlide = () => {
     const burger = document.querySelector('.burger')
     const nav = document.querySelector('.navbar_links')
     const navLinks = document.querySelectorAll('.navbar_links li')
+    const contact = document.querySelector('.contact')
 
     burger.addEventListener('click', () => {
         //Toggle Nav
@@ -61,6 +62,21 @@ const navSlide = () => {
         burger.classList.toggle('toggle');    
     });
 
+    contact.addEventListener('click', () =>{
+
+        nav.classList.toggle('nav-active');
+
+        navLinks.forEach((link, index) => {
+            if (link.style.animation){
+                link.style.animation = ''
+            } else{
+                link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.3}s`;
+            }
+        });
+
+        burger.classList.toggle('toggle');    
+    })
+
 }
 
 const header = document.querySelector('.header')
@@ -70,7 +86,7 @@ navSlide();
 const nav = document.querySelector('nav');
 
         window.addEventListener('scroll', () => {
-            if (window.scrollY >= 500) {
+            if (window.scrollY >= 50) {
                 nav.classList.add('active_nav');
             } else {
                 nav.classList.remove('active_nav');

@@ -21,7 +21,7 @@ class Footer extends HTMLElement {
           <hr>
           <ul>
               <li><a href="About.html#a2">Vad vi gör</a></li>
-              <li><a href="About.html#members">Vårat Team</a></li>
+              <li><a href="About.html#tp">Vårat Team</a></li>
               <li><a href="About.html#a3">Hur vi fungerar</a></li>
           </ul>
       </div>

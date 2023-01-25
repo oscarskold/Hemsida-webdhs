@@ -10,6 +10,7 @@ body{
 
 
 nav {
+    font-family: 'Roboto', sans-serif;
     position: fixed;
     top: 0;
     width: 100%;
@@ -115,7 +116,7 @@ nav a:hover {
     color: whitesmoke;
 }
 
-li, a {
+nav li, nav a {
     text-decoration: none;
     font-size: 20px;
 }
