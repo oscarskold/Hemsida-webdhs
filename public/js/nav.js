@@ -7,11 +7,11 @@ class Header extends HTMLElement {
       this.innerHTML = `
       <nav>
       <div class="logo nav-pos">
-          <a href="Homepage.html"><img src="../img/logo-white.png" alt=""><h3>Web-DHS</h3></a>
+          <a href="/"><img src="../img/logo-white.png" alt=""><h3>Web-DHS</h3></a>
       </div>
       <div class="r-side">
-      <a href="login.html" class="nav-items">Login</a>    
-      <a href="checkout.html" class="nav-items"><img src="../img/shoppingcart.png" alt=""></a>
+      <a href="login" class="nav-items">Login</a>    
+      <a href="checkout" class="nav-items"><img src="../img/shoppingcart.png" alt=""></a>
           <div class="burger right nav-items">
               <div class="line1"></div>
               <div class="line2"></div>
@@ -20,13 +20,13 @@ class Header extends HTMLElement {
       </div>    
       <ul class="navbar_links nav">
           <li>
-              <a href="Homepage.html">Start</a>
+              <a href="/">Start</a>
           </li>
           <li>
-              <a href="About.html">Om oss</a>
+              <a href="about">Om oss</a>
           </li>
           <li>
-              <a href="Services.html">Tjänster</a>
+              <a href="services">Tjänster</a>
           </li>
           <li>
               <a href="#footer" class="contact">Kontakt</a>

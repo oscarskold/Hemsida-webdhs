@@ -56,22 +56,52 @@
                 frmvalidator.addValidation("email","email","Please enter a valid email address"); 
                 </script>
             </div>
-            <div class="product">
-                <h1>Produkter</h1>
-                <div class="showcase">
-                    <div class="card">
-                        <img src="../img/bas.png" alt="">
-                        <span>Baspaket</span>
-                        <span>kort text</span>
-                        <span class="price">299kr</span>
-                    </div>
-                <div class="total">
-                    <span class="price">Total</span>
-                    <span>total</span>
-                </div>        
-                </div>
+
+            <div id="product">
+            <h1>Produkter</h1>
             </div>
-                  //-<div class="checkbox"> 
+
+
+
+
+
+
+
+                <script>
+                    item = []
+                for(var i = 0; i<=localStorage.length; i++ ) {
+                    var key = localStorage.getItem(i)
+                    if(key){
+                        item.push(JSON.parse(key))
+                        }
+                }  
+                var product = document.querySelector('#product') 
+                for(var j = 0; j < item.length; j++){
+                    console.log(item[j])
+                    var productElement = document.createElement("div")
+                    productElement.innerHTML = `
+                    <div class="showcase">
+                        <div class="card">
+                        <img src="/img/${item[j].name}.png" alt="">
+                        <span>${item[j].name}</span>
+                        <span>${item[j].description}</span>
+                        <span class="price">${item[j].price} kr</span>
+                        </div>
+                        <button onclick="rm(${item[j].id})">rm</button>
+                        </div>        
+                        </div>
+                            `;
+                        product.appendChild(productElement)
+                }
+
+                    function rm(id){
+                        localStorage.removeItem(id)
+                        location.reload()
+                    }
+
+                </script>
+
+                  <div class="checkbox"> 
                 <p>
                     <label class="container">Betalning
                         <input type="radio" name="radio" value="show" id="show" onclick="show2();">
