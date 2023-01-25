@@ -7,7 +7,6 @@ html {
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
     /* color: #9C9C9C; */
 }
 
@@ -49,11 +48,14 @@ nav {
 }
 
 .text {
+    font-family: 'Roboto', sans-serif;
     grid-column: span 1;
     grid-row: span 4;
     width: 90%;
     margin: 0 auto;
 }
+
+.breadtext {font-family: 'Quicksand', sans-serif;}
 
 h1 {
     font-weight: bold;
@@ -112,9 +114,9 @@ p {
 
     .image {
         grid-column: span 2;
-        grid-row: span 4;
-        padding-top: 100px;
-        padding-bottom: 40px;
+        grid-row: span 3;
+        padding-top: 40px;
+        padding-bottom: 60px;
       }
         
       .text {

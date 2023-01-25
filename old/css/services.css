@@ -23,6 +23,7 @@ a {
     grid-row: span 1;
 }
 
+/*
 .slider{
     width: 100%;
     height: 700px;
@@ -66,30 +67,6 @@ a {
     cursor: pointer;
     color: #ffffff;
     border: solid #ffffff 4px;
-}
-
-.heading{
-    background-color: #E9ECEF;
-    font-size: 70px;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    padding-top: 120px;
-    font-family: sans-serif;
-}
-
-.subheading{
-    background-color: #E9ECEF;
-    padding-bottom: 20px;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    font-size: 25px;
-    font-style: italic;
-    color: rgba(0, 0, 0, 0.406);
-    padding-left: 80px;
-    padding-right: 80px;
-    margin-bottom: 75px;
 }
 
 .slide img{
@@ -178,6 +155,32 @@ a {
 .down-btn img {
     width: 30px;
     height: 30px;
+}
+*/
+
+.heading{
+    background-color: #E9ECEF;
+    font-size: 100px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-top: 120px;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.subheading{
+    background-color: #E9ECEF;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 25px;
+    font-style: italic;
+    color: rgba(0, 0, 0, 0.406);
+    padding-left: 80px;
+    padding-right: 80px;
+    margin-bottom: 75px;
 }
 
 .grid-wrapper {
