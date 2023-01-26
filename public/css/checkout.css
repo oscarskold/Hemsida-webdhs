@@ -268,7 +268,7 @@ textarea {
     .form {
         grid-column: span 8;
         max-width: 100%;
-        padding-bottom: 30px;
+        padding-bottom: 50px;
         width: 100%;
     }
 
@@ -277,7 +277,6 @@ textarea {
         grid-template-columns: repeat(6,1fr);
         width: 90%;
         margin-bottom: 20px;
-        display: flex;
     }
 
     form{padding-left: 10px; ;}
@@ -300,9 +299,6 @@ textarea {
         grid-template-columns: repeat(3,1fr);
         width: 100%;
     }   
-
-    .submit{
-        align-items: center;
-    }
+    
 
 }
