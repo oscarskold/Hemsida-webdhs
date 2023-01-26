@@ -1,0 +1,21 @@
+"Table","Create Table"
+"cart_items","CREATE TABLE `cart_items` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `product_id` int NOT NULL,
+  `quantity` smallint DEFAULT NULL,
+  `user_id` smallint DEFAULT NULL,
+  `created` smallint DEFAULT NULL,
+  `modified` smallint DEFAULT NULL,
+  PRIMARY KEY (`id`)
+)
+
+
+"Table","Create Table"
+"orders","CREATE TABLE `orders` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) DEFAULT NULL,
+  `email` varchar(255) NOT NULL,
+  `packet` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `email` (`email`)
+)

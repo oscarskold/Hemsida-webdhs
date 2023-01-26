@@ -5,17 +5,17 @@ var router = express.Router();
 
 router.post('/', function(req, res, next) {
   var user = req.body.username
-  req.body.email
-  req.body.password
-  con.query(`CREATE DATABASE ${user};`, function(err, result){
+  var email = req.body.email
+  var password = req.body.password
+  con.query(`CREATE DATABASE IF NOT EXISTS ${user};`, function(err, result){
     if (err){
       throw err
     } else{
-      con.query(`CREATE TABLE ${user}.cart_items SELECT * FROM shopping_cart.cart_items;`, function(err, result){
+      con.query(`CREATE TABLE IF NOT EXISTS ${user}.cart_items SELECT * FROM webdhs.cart_items;`, function(err, result){
         if (err){
           throw err
         } else{
-          console.log(result)
+          con.query(`CREATE USER IF NOT EXISTS '${user}'@'%' IDENTIFIED WITH mysql_native_password BY '${password}';`)
         }
       })
     }   

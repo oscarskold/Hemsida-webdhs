@@ -1,6 +1,6 @@
 USE oskar;
 --@block
-USE WEBDHS;
+USE webdhs;
 --@block
 use shopping_cart;
 
@@ -34,3 +34,6 @@ mysqldump
 --triggers 
 --flush-privileges 
 --all-databases > MySQLData.sql
+
+--@block
+SHOW CREATE TABLE webdhs.orders;

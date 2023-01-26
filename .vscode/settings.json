@@ -13,6 +13,20 @@
             "username": "root",
             "password": "Admin",
             "connectionTimeout": 15
+        },
+        {
+            "mysqlOptions": {
+                "authProtocol": "xprotocol"
+            },
+            "previewLimit": 50,
+            "server": "212.247.67.219",
+            "port": 33060,
+            "driver": "MySQL",
+            "name": "webdhs_vps",
+            "database": "webdhs",
+            "username": "DBadmin",
+            "password": "j59rtVCbYdjHLACb2 ",
+            "connectionTimeout": 15
         }
     ]
 }
