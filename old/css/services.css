@@ -37,6 +37,10 @@ a {
     display: flex;
 }
 
+.slides a {
+    text-decoration: none;
+}
+
 .slides input{
     display: none;
 }
@@ -228,6 +232,10 @@ a {
     display: block;
 }
 
+.cards a {
+    text-decoration: none;
+}
+
 .card-info {
     color: #3A3A3A;
 }
@@ -278,8 +286,21 @@ a {
 
 @media screen and (max-width:1100px) {
 
+    html{overflow-x: hidden;}
+
+    .grid-wrapper{margin: 0; ;}
+
+    hr.hrline{margin-bottom: 50px;}
+
     .cards {
         grid-column: span 12;
+        max-width:50%;
+        margin-left: 57.75px;
     }
 
+    .heading{font-size: 40px;
+        padding-bottom: 25px;}
+
+    .subheading{font-size: 22px;}
+    
 }

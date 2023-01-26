@@ -74,12 +74,12 @@ a {
 
 .heading{
     background-color: #E9ECEF;
-    font-size: 70px;
+    font-size: 100px;
     display: flex;
     justify-content: center;
     text-align: center;
     padding-top: 120px;
-    font-family: sans-serif;
+    font-family: 'Quicksand', sans-serif;
 }
 
 .subheading{
@@ -298,11 +298,24 @@ a {
     background-color: #38b6ff;
 }
 @media screen and (max-width:1100px) {
+   
+    html{overflow-x: hidden;}
+
+    .grid-wrapper{margin: 0; ;}
+
+    hr.hrline{margin-bottom: 50px;}
 
     .cards {
         grid-column: span 12;
+        max-width:50%;
+        margin-left: 57.75px;
     }
 
+    .heading{font-size: 40px;
+        padding-bottom: 25px;}
+
+    .subheading{font-size: 22px;}
+    
 }
 
 
