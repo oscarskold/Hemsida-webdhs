@@ -231,7 +231,7 @@ p {
         grid-column: span 12;
         grid-row: span 28;
     }
-
+    
 }
 
 @media screen and (max-width:450px) {
