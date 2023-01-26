@@ -15,7 +15,15 @@ router.post('/', function(req, res, next) {
         if (err){
           throw err
         } else{
-          con.query(`CREATE USER IF NOT EXISTS '${user}'@'%' IDENTIFIED WITH mysql_native_password BY '${password}';`)
+          con.query(`CREATE USER IF NOT EXISTS '${user}'@'%' IDENTIFIED WITH mysql_native_password BY '${password}';`,function(err, result){
+            if (err){
+              throw err
+            } else{
+                res.render('Homepage', { title: '' });
+            }
+
+          })
+
         }
       })
     }   
