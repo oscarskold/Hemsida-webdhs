@@ -99,7 +99,7 @@ form {
 }
 
 .form-info {
-    min-width: 400px;
+    width: 400px;
     min-height: 150px;
     margin-top: 5px;
     font-size: 20px;
@@ -264,12 +264,41 @@ textarea {
 
 @media screen and (max-width: 1100px) {
 
+
     .form {
-        grid-column: span 6;
+        grid-column: span 8;
+        max-width: 100%;
+        padding-bottom: 50px;
+        width: 100%;
     }
 
-    .product {
-        grid-column: span 6;
+    .checkout {
+        display: grid;
+        grid-template-columns: repeat(6,1fr);
+        width: 90%;
+        margin-bottom: 20px;
     }
+
+    form{padding-left: 10px; ;}
+
+    .form-text {
+        max-width: 95%;
+    }
+
+    .tel {
+        max-width: 95%;
+    }
+
+    .form-info{
+        max-width: 95%;
+    }
+
+    .grid-wrapper{
+        padding-top: 90px;
+        grid-column: span 3;
+        grid-template-columns: repeat(3,1fr);
+        width: 100%;
+    }   
+    
 
 }
