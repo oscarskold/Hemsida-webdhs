@@ -27,7 +27,13 @@ router.post('/', function(req, res, next) {
             if (err){
               throw err
             } else{
-                res.render('Homepage', { title: '' });
+              con.query(`INSERT INTO users (user_name, user_email, user_password) VALUES ('${user}', '${email}', '${password}');`, function(err, result){
+                if (err){
+                  throw err
+                } else{
+                  res.redirect('/')
+                }
+              })
             }
 
           })
