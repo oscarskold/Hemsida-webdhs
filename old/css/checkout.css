@@ -244,10 +244,6 @@ textarea {
     margin-top: 10px;
 }
 
-.showcase div {
-    display: block;
-}
-
 .card {
     margin: 10px;
     border-bottom: #969696 solid 1px;
@@ -259,6 +255,7 @@ textarea {
 }
 
 .price {
+    float: right;
     font-weight: 700;
 }
 
