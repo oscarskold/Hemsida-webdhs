@@ -2,6 +2,7 @@
 var con = require('../SQL/cart/config/database.js');
 var express = require('express');
 var router = express.Router();
+var crypto = require('crypto')
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -9,10 +10,11 @@ router.get('/', function(req, res, next) {
 });
 
 
-router.post('/register', function(req, res, next) {
+router.post('/', function(req, res, next) {
   var user = req.body.username
   var email = req.body.email
   var password = req.body.password
+  var hash = crypto.createHash('SHA256')
   con.query(`CREATE DATABASE IF NOT EXISTS ${user};`, function(err, result){
     if (err){
       throw err

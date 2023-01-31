@@ -1,8 +1,8 @@
 //mysql
 var con = require('../SQL/cart/config/database.js');
 var express = require('express');
-const { request, response } = require('../app.js');
 var router = express.Router();
+var crypto = require('crypto')
 
 
 /* GET home page. */
@@ -13,9 +13,11 @@ router.get('/', function(req, res, next) {
 router.post('/login', function(req, res, next) {
   var user  = req.body.username
   var password = req.body.password
+  var hash = crypto.createHash('SHA256')
+  hash.update(password)
 
   if(user && password){
-    con.query(`SELECT * FROM users WHERE user_email = ${user}`, function(err, data){
+    con.query(`SELECT * FROM users WHERE user_name = ${user}`, function(err, data){
       if (err){
         throw err
       } else{
