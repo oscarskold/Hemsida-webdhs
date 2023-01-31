@@ -112,7 +112,7 @@ p {
 
 #members {
     grid-column: span 12;
-    grid-row: span 22;
+    grid-row: span 24;
     padding-top: 200px;
     width: 90%;
     margin: 0 auto;
