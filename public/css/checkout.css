@@ -46,7 +46,8 @@ nav {
 #back {
     color: #696969;
     padding-top: 10px;
-    padding-left: 20px;
+    margin-left: 20px;
+    text-decoration: none;
 }
 
 #back:hover {

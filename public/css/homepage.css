@@ -10,8 +10,6 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-
-
 .noselect {
     -webkit-touch-callout: none; 
     -webkit-user-select: none; 
@@ -356,7 +354,9 @@ body {
         margin-bottom: 200px; }
 
 
-    #s1{max-height: 0%;}
+    #s1 {
+        max-height: 0%;
+    }
 
     #s1 h1 {
         font-size: 90px;
@@ -400,8 +400,6 @@ body {
         padding: 10px;
     }
 
-    
-    
 }
 
 @media screen and (max-width: 550px) {

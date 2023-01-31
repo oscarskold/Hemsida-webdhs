@@ -7,7 +7,7 @@ html {
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     /* color: #9C9C9C; */
 }
 
@@ -23,11 +23,11 @@ nav {
 }
 
 p {
-    max-width: 50%;
-    margin: 0 auto;
     font-size: 1.5em;
+    font-weight: 400;
+    color: #3A3A3A;
+    margin-top: 10px;
 }
-
 
 #a1 {
     grid-column: span 12;
@@ -35,9 +35,11 @@ p {
     text-align: center;
     margin-top: 100px;
 }
+
 #a1 h1 {
     font-size: 70px;
     font-weight: 900;
+    color: #3A3A3A;
 }
 
 #a-logo {
@@ -46,31 +48,60 @@ p {
 
 #a2 {
     grid-column: span 12;
-    grid-row: span 3;
-    text-align: center;
+    grid-row: span 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-#a2 h1 {
+.left-text {
+    float: left;
+    padding-left: 5%;
+    padding-right: 2%;
+}
+
+
+.left-text h1 {
     font-size: 50px;
-    font-weight: 700;
+    font-weight: 500;
+    color: #3A3A3A;
 }
 
-#a2 p,#a3 h2 {
-    font-weight: 400;
+.right-image {
+    padding-right: 5%;
+}
+
+.right-image img {
+    max-width: 100%;
+    float: right;
+}
+
+.right-text {
+    padding-left: 2%;
+    padding-right: 5%;
+    float: left;
+    width: 200%;
+}
+
+.right-text h1 {
+    font-size: 50px;
+    font-weight: 500;
     color: #3A3A3A;
-    margin-top: 10px;
+}
+
+.left-image img {
+    max-width: 100%;
+    padding-left: 5%;
+    float: left;
 }
 
 #a3 {
     grid-column: span 12;
-    grid-row: span 4;
-    text-align: center;
-}
-
-#a3 h1 {
-    padding-top: 100px;
-    font-size: 50px;
-    font-weight: 700;
+    grid-row: span 6;
+    padding-top: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #m-h1 {
@@ -81,7 +112,8 @@ p {
 
 #members {
     grid-column: span 12;
-    grid-row: span 22;
+    grid-row: span 24;
+    padding-top: 200px;
     width: 90%;
     margin: 0 auto;
 }

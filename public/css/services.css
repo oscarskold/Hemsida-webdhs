@@ -68,8 +68,46 @@ a {
     border: solid #ffffff 4px;
 }
 
+.services {
+    padding-top: 50px;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
 
+.hrline {
+    margin-top: 200px;
+}
 
+.banner {
+    position: relative;
+}
+
+.banner img {
+    object-fit: cover;
+    width: 100%;
+    height: 760px;
+}
+
+.banner-text {
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+}
+
+.banner-text h1 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 900;
+    font-size: 70px;
+    color: #ffffff;
+}
+
+.banner-text h2 {
+    font-size: 2rem;
+    color: #ffffff;
+    font-weight: 100;
+    font-style: italic;
+}
 
 
 .heading{
@@ -190,9 +228,9 @@ a {
     grid-auto-rows: minmax(150px,auto);
     margin: 0 auto;
     margin-top: 75px;
-    margin-left: 100px;
-    margin-right: 100px;
-    grid-gap: 50px;
+    margin-left: 5%;
+    margin-right: 5%;
+    grid-gap: 2%;
 }
 
 .cards {
@@ -301,14 +339,16 @@ a {
    
     html{overflow-x: hidden;}
 
-    .grid-wrapper{margin: 0; ;}
-
     hr.hrline{margin-bottom: 50px;}
 
+    .grid-wrapper {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
     .cards {
-        grid-column: span 12;
-        max-width:50%;
-        margin-left: 57.75px;
+        grid-column: span 6;
+        max-width:100%;
     }
 
     .heading{font-size: 40px;
