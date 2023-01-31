@@ -6,6 +6,7 @@ var logger = require('morgan');
 var flash = require('express-flash');
 var session = require('express-session');
 var bodyParser = require('body-parser')
+var genuuid = require('uuid')
 
 
 var HomepageRouter = require('./routes/Homepage');
@@ -17,12 +18,28 @@ var PremiumPaketRouter = require('./routes/PremiumPaket');
 var WebhostingRouter = require('./routes/Webhosting');
 var addToCart = require('./routes/add_to_cart');
 var remove = require('./routes/remove');
-var loginpage = require('./routes/loginpage');
+var login = require('./routes/login');
 var loginconf = require('./routes/loginconf')
-var registerpage = require('./routes/registerpage');
+var register = require('./routes/register');
 var registerconf = require('./routes/registerconf');
 
 var app = express();
+
+var oneDay = 1000 * 60 * 60 *24;
+
+app.use(session(
+  { name: 'sessionCookie',
+    genid: function(req){
+      console.log('session id created');},
+      secret: 'webdhs',
+      resave: true,
+      saveUninitialized: true,
+      cookie: { 
+        secure: false, 
+        maxAge: oneDay
+      }
+  }))
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -55,9 +72,9 @@ app.use('/Baspaket', BaspaketRouter);
 app.use('/PremiumPaket', PremiumPaketRouter);
 app.use('/Webhosting', WebhostingRouter);
 app.use('/add', addToCart);
-app.use('/login', loginpage);
+app.use('/login', login);
 app.use('/loginconf', loginconf);
-app.use('/register', registerpage);
+app.use('/register', register);
 app.use('/registerconf', registerconf);
 app.use('/remove', remove);
 
@@ -76,5 +93,13 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
+// router.get('/logout', function(req, res, next){
+
+//   req.session.destroy();
+
+//   res.redirect("/");
+
+// });
 
 module.exports = app;
