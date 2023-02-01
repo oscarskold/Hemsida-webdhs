@@ -57,7 +57,7 @@
                 </script>
             </div>
 
-            <div id="product">
+            <div id="product" class="product">
             <h1>Produkter</h1>
             </div>
 
@@ -79,10 +79,11 @@
                         <div class="card">
                         <img src="/img/${item[j].name}.png" alt="">
                         <span>${item[j].name}</span>
-                        <span>${item[j].description}</span>
+                        <br>
+                        <span class="description">${item[j].description}</span>
                         <span class="price">${item[j].price} kr</span>
                         </div>
-                        <button onclick="rm(${item[j].id})">rm</button>
+                        <button class="rm" onclick="rm(${item[j].id})">X</button>
                         </div>        
                         </div>
                             `;

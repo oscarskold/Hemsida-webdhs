@@ -11,7 +11,10 @@ class Header extends HTMLElement {
       </div>
       <div class="r-side">
       <a href="login" class="nav-items">Login</a>    
-      <a href="checkout" class="nav-items"><img src="../img/shopping-cart.svg" alt=""></a>
+      <a href="checkout" class="nav-items">
+      <img src="../img/shopping-cart.svg" alt="">
+      <span class="cart-indicator"></span>
+      </a>
           <div class="burger right nav-items">
               <div class="line1"></div>
               <div class="line2"></div>

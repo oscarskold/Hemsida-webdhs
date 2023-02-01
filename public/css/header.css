@@ -54,6 +54,11 @@ nav {
     color: black;
 }
 
+.indication {
+    font-size: 15px;
+    background-color: red;
+}
+
 .r-side {
     display: flex;
     align-items: center;
