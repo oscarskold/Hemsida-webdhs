@@ -108,6 +108,7 @@ form {
     border-radius: 5px;
     border-color: #252525;
     border: 1px solid;
+    text-indent: 0px;
 }
 
 .form-info:focus {
