@@ -97,3 +97,48 @@ p {
   background-color: #004ad0;
     transition: background-color 0.2s;
 }
+
+
+@media screen and (max-width:1100px) {
+    .register{ 
+        grid-column: span 8;
+        max-width: 100%;
+        padding-bottom: 50px;
+        width: 100%;
+        grid-row: span 6;
+    }
+    
+    form{
+        max-width: 100%;
+        padding: 10px;    
+    }
+    
+    label{
+        margin-top: 50px;
+    }
+    
+    .grid-wrapper{
+        padding-top: 0px;
+        grid-column: span 3;
+        grid-template-columns: repeat(3,1fr);
+        width: 90%;
+        margin-bottom: 0px;
+    }   
+    
+    input{
+        margin-top: 50px;
+    }
+    
+    .register form button{
+        margin-top: 50px;
+        font-size: 20px;
+        margin-bottom: 20px;}
+    
+    
+    body{    background-image: url(../img/);}
+    
+    nav {
+        background-color: #252525;
+    }
+    
+    }
