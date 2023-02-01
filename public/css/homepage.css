@@ -97,6 +97,7 @@ body {
     object-fit: cover;
 }
 
+
 .navigation-manual{
     position: absolute;
     width: 100%;
@@ -350,10 +351,8 @@ body {
         grid-template-columns: repeat(3,1fr);
         grid-auto-rows: minmax(350px,auto);
         row-gap: 50px;
-        margin-bottom: 200px;
-        
-    }
-    
+        margin-bottom: 200px; }
+
 
     #s1 {
         max-height: 0%;

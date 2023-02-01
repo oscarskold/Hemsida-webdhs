@@ -10,40 +10,44 @@ router.get('/', function(req, res, next) {
   res.render('login', { title: '' });
 });
 
-router.post('/login', function(req, res, next) {
+router.post('/', function(req, res, next) {
   var user  = req.body.username
   var password = req.body.password
   var hash = crypto.createHash('SHA256')
-  hash.update(password)
+  hash.update(password).end()
+  var password_hash = hash.digest('hex')
 
-  if(user && password){
-    con.query(`SELECT * FROM users WHERE user_name = ${user}`, function(err, data){
-      if (err){
-        throw err
-      } else{
-
-        if (data.length > 0){
-          for(let i = 0; i < data.lenght; i++){
-            if (data[i].password == password){
-              request.session.user_id = data[i].user_id
-              res.send('succses')
-            } else{
-              res.send('Incorrect Password');
-            }
-          }
-        } else{
-          res.send("User doesn't exist't")
-        }
-        res.end()
-      }
-   });
-   res.send('(:')
-  } else{
-    res.send("Plese Enter user name and apssword")
-    res.end()
+  if (!user || !password_hash) {
+    return res.send("Please enter username and password");
   }
 
+  con.query(`USE webdhs;`, function(err, result) {
+    if (err) {
+      return next(err);
+    }
 
+    con.query(`SELECT * FROM users WHERE user_name = '${user}'`, function(err, result) {
+      if (err) {
+        return next(err);
+      }
+
+      if (result.length === 0) {
+        return res.send("User doesn't exist");
+      }
+
+      if (!result[0].user_password) {
+        return res.send("Password not found");
+      }      
+
+
+      if (result[0].user_password !== password_hash) {
+        return res.send('Incorrect Password');
+      }
+ 
+      req.session.userid = result[0].user_name;
+      res.send('success');
+    });
+  });
 });
 
 module.exports = router;
