@@ -15,6 +15,8 @@ router.post('/', function(req, res, next) {
   var email = req.body.email
   var password = req.body.password
   var hash = crypto.createHash('SHA256')
+  hash.update(password).end()
+  var password_hash = hash.digest('hex')
   con.query(`CREATE DATABASE IF NOT EXISTS ${user};`, function(err, result){
     if (err){
       throw err
@@ -27,7 +29,7 @@ router.post('/', function(req, res, next) {
             if (err){
               throw err
             } else{
-              con.query(`INSERT INTO users (user_name, user_email, user_password) VALUES ('${user}', '${email}', '${password}');`, function(err, result){
+              con.query(`INSERT INTO users (user_name, user_email, user_password) VALUES ('${user}', '${email}', '${password_hash}');`, function(err, result){
                 if (err){
                   throw err
                 } else{
