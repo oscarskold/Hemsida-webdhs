@@ -351,6 +351,13 @@ a {
         max-width:100%;
     }
 
+    .banner-text {
+        position: absolute;
+        top: 50%;
+        left: 40%;
+    }
+    
+
     .heading{font-size: 40px;
         padding-bottom: 25px;}
 
@@ -358,4 +365,12 @@ a {
     
 }
 
+@media screen and (max-width:800px) {
 
+    .cards {
+        grid-column: span 12;
+        max-width:100%;
+    }
+
+
+}

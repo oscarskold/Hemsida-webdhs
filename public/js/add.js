@@ -2,6 +2,17 @@
 function addtocart(obj){
 
 
+  let itemCount = 0;
+  itemCount++;
+
+
+function removeItem() {
+    itemCount--;
+}
+
+document.querySelector('.cart-indicator').textContent = itemCount;
+
+
   var objStr = JSON.stringify(obj)
   localStorage.setItem(obj.id, objStr);
 

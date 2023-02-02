@@ -14,6 +14,7 @@ class Header extends HTMLElement {
       <a href="checkout" class="nav-items">
       <img src="../img/shopping-cart.svg" alt="">
       <span class="cart-indicator"></span>
+
       </a>
           <div class="burger right nav-items">
               <div class="line1"></div>
