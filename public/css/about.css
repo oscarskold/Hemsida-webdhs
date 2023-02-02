@@ -212,11 +212,36 @@ p {
     
     #a1{
         grid-column: span 12;
-        grid-row: span 4;}
+        grid-row: span 4;
+        
+    }
 
     h2 {
         max-width: 75%;
         margin: 0 auto;
+    }
+
+    #a2, #a3 {
+        margin-top: 20%;
+        max-width: 100%;
+        display: 0;
+        display: grid;
+    }
+
+    .right-image, .left-image{
+        grid-column: span 4;
+        grid-row: span 4;
+        float: none;
+        max-width: 100%;
+        padding: 5%;
+    }
+
+    .left-text, .right-text{
+        float: none;
+        max-width: 100%;
+        grid-row: span 2;
+        padding: 0%;
+        text-align: center;
     }
 
     .grid-wrapper {
@@ -232,8 +257,10 @@ p {
     }
 
     #members {
+        padding-top: 10%;
         grid-column: span 12;
         grid-row: span 24;
+        margin-bottom: 15%;
         }    
 
     p {
