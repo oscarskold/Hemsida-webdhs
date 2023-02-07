@@ -242,6 +242,7 @@ p {
         grid-row: span 2;
         padding: 0%;
         text-align: center;
+        font-size: 13px;
     }
 
     .grid-wrapper {
