@@ -62,7 +62,7 @@
                     <%var cartItemsString = JSON.stringify(data[i])%>
 
                     <span>
-                    <button class="add"onclick='addtocart(<%-cartItemsString%>)'>
+                    <button class="add"onclick='addtocart(<%-cartItemsString%>, <%-login%>)'>
                         <img src="../img/add-cart.png" alt=""> 
                         <p>Add to cart</p>
                     </span>
