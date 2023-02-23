@@ -23,6 +23,7 @@ var loginconf = require('./routes/loginconf')
 var register = require('./routes/register');
 var registerconf = require('./routes/registerconf');
 var user = require('./routes/users');
+var profile = require('./routes/profile');
 
 var app = express();
 
@@ -79,6 +80,7 @@ app.use('/register', register);
 app.use('/registerconf', registerconf);
 app.use('/remove', remove);
 app.use('/user', user);
+app.use('/profile', profile);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

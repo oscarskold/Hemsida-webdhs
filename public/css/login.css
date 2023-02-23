@@ -108,45 +108,49 @@ input[type="password"]::placeholder:focus {
 }
 
 @media screen and (max-width:1100px) {
-.login{ 
-    grid-column: span 8;
-    max-width: 100%;
-    padding-bottom: 50px;
-    width: 100%;
-    grid-row: span 6;
-}
 
-form{
-    max-width: 100%;
-    padding: 10px;
+    .login { 
+        grid-column: span 8;
+        max-width: 100%;
+        padding-bottom: 50px;
+        width: 100%;
+        grid-row: span 6;
+    }
 
-}
+    form {
+        max-width: 100%;
+        padding: 10px;
+    }
 
-label{
-    margin-top: 50px;
-}
+    label {
+        margin-top: 50px;
+    }
 
-.grid-wrapper{
-    padding-top: 0px;
-    grid-column: span 3;
-    grid-template-columns: repeat(3,1fr);
-    width: 90%;
-    margin-bottom: 0px;
-}   
+    .grid-wrapper {
+        padding-top: 0px;
+        grid-column: span 3;
+        grid-template-columns: repeat(3,1fr);
+        width: 90%;
+        margin-bottom: 0px;
+    }   
 
-input{
-    font-size: 15px;
-    margin-top: 50px;
-}
+    input {
+        font-size: 15px;
+        margin-top: 50px;
+    }
 
-.login form button{
-    margin-top: 20%;}
+    .login form button {
+        margin-top: 20%;
+    }
 
 
-body{    background-image: url(../img/);}
+    body {    
+        background-image: none;
+        background-color: #f3f4f6;
+    }
 
-nav {
-    background-color: #252525;
-}
+    nav {
+        background-color: #252525;
+    }
 
 }

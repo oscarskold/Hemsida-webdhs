@@ -14,6 +14,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <script src="../js/nav.js" type="text/javascript" defer></script>
     <script src="../js/footer.js" type="text/javascript" defer></script>
+    <script src="../js/add.js" type="text/javascript" defer></script>
     <link rel="shortcut icon" href="../img/Logo.png"/>
     <title>Web-DHS</title>
 </head>
@@ -34,8 +35,9 @@
                 Detta är alltså ett paket för dem som vill ha en specifik hemsida och full kontroll över hela upplägget. Startpriset här är 399kr men beroende på tid och kostnad kan det höjas.
                 Tillsammans med hemsidan får man med ett domännamn (webbadress). I detta paket innehåller även en gratis månad av Web Hosting och support från vår kundtjänst.</p>
             <p class="p-bottom"></p>
-            <a class="buy" href="404">Köp här</a>
-        </div>
+            <%var cartItemsString = JSON.stringify(data)%>
+            <button class="buy"onclick='addtocart(<%-cartItemsString%>)'>Köp här
+            </div>
     </div>
     
     <footer-component></footer-component>

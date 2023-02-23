@@ -67,12 +67,13 @@
                     var key = localStorage.key(i)
                     var prod = localStorage.getItem(key)
                     if(prod){
+                        console.log(prod)
                         item.push(JSON.parse(prod))
                         }
                 }
-
                 var product = document.querySelector('#product') 
                 for(var j = 0; j < item.length; j++){
+                    console.log(item)
                     var productElement = document.createElement("div")
                     productElement.innerHTML = `
                     <div class="showcase">

@@ -1,7 +1,6 @@
 //RÖR EJ
 function addtocart(obj){
 
-
   let itemCount = 0;
   itemCount++;
 
@@ -15,6 +14,8 @@ document.querySelector('.cart-indicator').textContent = itemCount;
 
   var objStr = JSON.stringify(obj)
   localStorage.setItem(obj.id, objStr);
+  console.log(objStr)
+
 
   // fetch("/add", {
   //     method: 'POST', // *GET, POST, PUT, DELETE, etc.
