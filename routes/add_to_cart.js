@@ -6,17 +6,19 @@ var router = express.Router();
 
 
 router.post('/', function(req, res, next) {
-  req.body.id
-   res.send('8:')
-//   con.query("INSERT INTO cart_items (product_id) SELECT id FROM produkt WHERE id="+req.body.id+";", function(err, result){
-//     if (err){
-//       throw err
-//     } else{
-//       console.log(result)
-//     }   
-//    });
-//   // console.log(req.body.id);
-//   // res.send("Success!")
-});
-
+  var product = req.body.obj;
+  var user = req.session.userid
+  console.log(product)
+  con.query(`USE DATABASE ${user}`,function(err, result){
+    con.query(`INSERT INTO cart_items (product_id) SELECT id FROM produkt WHERE id=${product[0].id};`, function(err, result){
+      if (err){
+      throw err
+      } else{
+      console.log(result)
+      }   
+      });
+      console.log(req.body.id);
+    });
+  });
 module.exports = router;
+  

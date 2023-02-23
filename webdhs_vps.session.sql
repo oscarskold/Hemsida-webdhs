@@ -3,6 +3,12 @@
 USE webdhs;
 
 --@block
+USE test;
+
+--@block
+SELECT * FROM test.cart_items;
+
+--@block
 CREATE TABLE produkt;
 
 --@block
@@ -58,3 +64,6 @@ DELETE FROM users WHERE user_name = 'test';
 
 --@block
 ALTER TABLE users modify 
+
+--@block
+UPDATE products SET description = 'Detta är vår månadsavgift, här ingår snabb och aktiv support' WHERE id = 3;

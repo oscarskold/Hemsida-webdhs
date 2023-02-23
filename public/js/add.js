@@ -1,5 +1,5 @@
 //RÖR EJ
-function addtocart(obj){
+function addtocart(obj, login){
 
   let itemCount = 0;
   itemCount++;

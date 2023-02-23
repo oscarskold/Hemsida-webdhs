@@ -2,6 +2,7 @@
 var con = require('../SQL/cart/config/database.js');
 // var Connection = mysql.createConnection(con);
 var express = require('express');
+const session = require('express-session');
 var router = express.Router();
 
 
@@ -15,11 +16,17 @@ router.get('/', function(req, res, next) {
       console.log('not connected', err)
 
     } else{
+      var login
+      if (req.session.userid == undefined){
+        login = false;
+      } else{
+        login = true;
+      }
       res.render('Services', {
-        data: result
+        data: result,
+        login: login
       })
 
-      console.log('(:');
     }
   });
 });

@@ -29,19 +29,12 @@ var app = express();
 
 var oneDay = 1000 * 60 * 60 *24;
 
-app.use(session(
-  { name: 'sessionCookie',
-    genid: function(req){
-      console.log('session id created');},
-      secret: 'webdhs',
-      resave: true,
-      saveUninitialized: true,
-      cookie: { 
-        secure: false, 
-        maxAge: oneDay
-      }
-  }))
-
+app.use(session({
+  secret: "thisismysecrctekeyfhrgfgrfrty84fwir767",
+  saveUninitialized: true,
+  cookie: { maxAge: oneDay },
+  resave: false 
+}));
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -57,14 +50,12 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(flash())
-app.use(
-    session({
-      secret: '123@abc',
-      resave: false,
-      saveUninitialized: true,
-      cookie: { maxAge: 6000},
-    }),
-)
+app.use(session({
+  secret: "thisismysecrctekeyfhrgfgrfrty84fwir767",
+  saveUninitialized: true,
+  cookie: { maxAge: oneDay },
+  resave: false 
+}));
 
 app.use('/', HomepageRouter);
 app.use('/Services', ServicesRouter);
