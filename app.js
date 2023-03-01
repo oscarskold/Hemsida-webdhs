@@ -18,6 +18,13 @@ var cartRouter = require('./SQL/cart/cart_conf');
 
 var app = express();
 
+
+const PORT = parseInt(process.env.PORT || '3001');
+
+app.listen(PORT, () => {
+  console.log('Server running on port', PORT);
+});
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
