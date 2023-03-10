@@ -40,7 +40,7 @@ module.exports = router;
   }
 
   res.send("Error user not found");
-});
+
 
 router.post('/', function(req, res, next) {
 

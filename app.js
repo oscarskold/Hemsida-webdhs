@@ -9,13 +9,13 @@ var bodyParser = require('body-parser')
 var genuuid = require('uuid')
 
 
-var HomepageRouter = require('./routes/Homepage');
-var ServicesRouter = require('./routes/Services');
-var AboutRouter = require('./routes/About');
+var HomepageRouter = require('./routes/homepage');
+var ServicesRouter = require('./routes/services');
+var AboutRouter = require('./routes/about');
 var checkoutRouter = require('./routes/checkout');
-var BaspaketRouter = require('./routes/Baspaket');
-var PremiumPaketRouter = require('./routes/PremiumPaket');
-var WebhostingRouter = require('./routes/Webhosting');
+var BaspaketRouter = require('./routes/baspaket');
+var PremiumPaketRouter = require('./routes/premiumpaket');
+var WebhostingRouter = require('./routes/webhosting');
 var addToCart = require('./routes/add_to_cart');
 var remove = require('./routes/remove');
 var login = require('./routes/login');
@@ -58,12 +58,12 @@ app.use(session({
 }));
 
 app.use('/', HomepageRouter);
-app.use('/Services', ServicesRouter);
-app.use('/About', AboutRouter);
+app.use('/services', ServicesRouter);
+app.use('/about', AboutRouter);
 app.use('/checkout', checkoutRouter);
-app.use('/Baspaket', BaspaketRouter);
-app.use('/PremiumPaket', PremiumPaketRouter);
-app.use('/Webhosting', WebhostingRouter);
+app.use('/baspaket', BaspaketRouter);
+app.use('/premiumPaket', PremiumPaketRouter);
+app.use('/webhosting', WebhostingRouter);
 app.use('/add', addToCart);
 app.use('/login', login);
 app.use('/loginconf', loginconf);
