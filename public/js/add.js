@@ -1,18 +1,13 @@
 //RÖR EJ
 function addtocart(obj, login){
-
-
+  var prodid = obj.id
+  console.log(obj.id)
   let itemCount = 0;
   itemCount++;
 
-
-// function removeItem() {
-//     itemCount--;
-// }
-
   document.querySelector('.cart-indicator').textContent += itemCount;
   
-  if (login == true){
+  if (login){
     fetch("/add", {
     method: 'POST', // *GET, POST, PUT, DELETE, etc.
     mode: 'cors', // no-cors, *cors, same-origin
@@ -25,8 +20,8 @@ function addtocart(obj, login){
     redirect: 'follow', // manual, *follow, error
     referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
     body: JSON.stringify({
-    prod: obj
-    }) // body data type must match "Content-Type" header
+    id: prodid
+    }) // body data type must match "Content-Type" header 
     });
 
 

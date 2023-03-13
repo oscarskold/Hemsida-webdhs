@@ -8,8 +8,6 @@ USE test;
 --@block
 SELECT * FROM test.cart_items;
 
---@block
-CREATE TABLE produkt;
 
 --@block
 INSERT INTO products (name, description, price, created, modified) 
