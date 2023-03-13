@@ -13,7 +13,7 @@ class Footer extends HTMLElement {
           <hr>
           <ul>
               <li><a href="Services">Våra Produkter</a></li>
-              <li><a href="">Betalning</a></li>
+              <li><a href="checkout">Betalning</a></li>
           </ul>
       </div>
       <div id="footer-about">    

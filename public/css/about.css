@@ -121,7 +121,7 @@ p {
 #members img {
     width: 250px;
     height: 250px;
-    border: solid black 2px;
+    border: solid #3A3A3A 2px;
     border-radius: 300px; 
     object-fit: cover;
 }
