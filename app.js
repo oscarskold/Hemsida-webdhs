@@ -6,7 +6,6 @@ var logger = require('morgan');
 var flash = require('express-flash');
 var session = require('express-session');
 var bodyParser = require('body-parser')
-var genuuid = require('uuid')
 
 
 var HomepageRouter = require('./routes/homepage');
@@ -24,17 +23,11 @@ var register = require('./routes/register');
 var registerconf = require('./routes/registerconf');
 var user = require('./routes/users');
 var profile = require('./routes/profile');
+var ordering = require('./routes/ordering');
 
 var app = express();
 
 var oneDay = 1000 * 60 * 60 *24;
-
-app.use(session({
-  secret: "thisismysecrctekeyfhrgfgrfrty84fwir767",
-  saveUninitialized: true,
-  cookie: { maxAge: oneDay },
-  resave: false 
-}));
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -72,7 +65,8 @@ app.use('/registerconf', registerconf);
 app.use('/remove', remove);
 app.use('/user', user);
 app.use('/profile', profile);
-
+app.use('/ordering', ordering);
+ 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
@@ -91,10 +85,11 @@ app.use(function(err, req, res, next) {
 
 // router.get('/logout', function(req, res, next){
 
-//   req.session.destroy();
+// req.session.destroy();
 
-//   res.redirect("/");
+//  res.redirect("/");
 
 // });
 
 module.exports = app;
+ 

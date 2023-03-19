@@ -26,7 +26,7 @@
                 <div id="title">Web-DHS Kassa</div>
                 <a id="back" href="services">Tillbaka till produkter</a>
 
-                <form method="post" name="myemailform" action="">
+                <form method="post" action="/ordering" name="myemailform" >
                     <p>
                         <label for='name'>Företagsnamn: </label><br>
                         <input class="form-text" type="text" name="name" placeholder="Företagsnamn">
@@ -42,6 +42,9 @@
                     <p>
                         <label for='message'>Övrig information:</label> <br>
                         <textarea class="form-info" name="message" placeholder="Övrig information"></textarea>
+                    </p>
+                    <p>
+                        <input id="prod" name="" hidden>
                     </p>
                     <input class="submit" type="submit" name='submit' value="Köp här">
                 </form>
@@ -82,14 +85,12 @@
                         product.appendChild(productElement)
                 }
 
-
-                    return item;
                 
                 function rm(id){
                         localStorage.removeItem(id)
                         location.reload()
                     }
-                    document.getElementsByClassName('submit').value = items();
+                    document.getElementsById('prod').name = item
                 </script>
 
                   <div class="checkbox"> 
