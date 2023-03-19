@@ -21,10 +21,10 @@ router.post('/', function(req, res, next){
     //         pass: 'bqqfkcemkutcibhl',
     //     }
     // });
-
+ 
     // //Define the email options
     // var mailOptions = {
-    //     from: `${email}`,
+    //     from: `${email}`, 
     //     to: 'Kontakt@web-dhs.se',
     //     subject: `${name}`+` product`,
     //     text: `${message}`
@@ -44,4 +44,4 @@ router.post('/', function(req, res, next){
 
 })
 
-   
+module.exports = router  
