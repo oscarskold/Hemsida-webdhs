@@ -49,8 +49,6 @@ router.post('/', function(req, res, next) {
       // If the old password is correct, create an object with the new user data
       var updatedUser = {
         username: req.body.username,
-        first_name: req.body.first_name,
-        last_name: req.body.last_name,
         email: req.body.email,
         password: req.body.password
       }

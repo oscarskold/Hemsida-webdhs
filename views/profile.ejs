@@ -25,14 +25,20 @@
 
     <div id="wrapper">
 
-        <h1>Hej <%-data.user_name%></h1>
+    <div id="title">
+        <h1>Username: <%=data[0].user_name%></h1>
+        <h1>Password: <%=data[0].password%></h1>
+    </div>
         <div id="profile-form">
             <input type="text" name="Name" placeholder="Ditt användarnamn">
             <input type="email" name="E-mail" placeholder="Din Mail">
             <input type="password" name="password-old" placeholder="Ditt gamla lösenord">
             <input type="password" name="password-new" placeholder="Ditt nya lösenord">
             <input type="password" name="password-confirm" placeholder="bekräfta ditt nya lösenord">
-        </div>    
+            <button onclick="location.reload()">Reload</button>
+
+        </div>
+
 
     </div>
 
