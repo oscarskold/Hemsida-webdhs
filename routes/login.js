@@ -45,7 +45,8 @@ router.post('/', function(req, res, next) {
       }
       req.session.userid = user;
       console.log( "!!"+user)
-      res.redirect('/Services')
+      res.redirect('/profile');
+
     });
   });
 });
