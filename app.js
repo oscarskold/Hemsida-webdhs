@@ -65,13 +65,10 @@ app.use('/registerconf', registerconf);
 app.use('/remove', remove);
 app.use('/user', user);
 app.use('/profile', profile);
-<<<<<<< HEAD
 
 
-=======
 app.use('/ordering', ordering);
  
->>>>>>> e4d2b5fb481463bb67cfa1412d8cf17cf2501765
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
