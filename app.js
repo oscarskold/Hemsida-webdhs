@@ -6,16 +6,15 @@ var logger = require('morgan');
 var flash = require('express-flash');
 var session = require('express-session');
 var bodyParser = require('body-parser')
-var genuuid = require('uuid')
 
 
-var HomepageRouter = require('./routes/Homepage');
-var ServicesRouter = require('./routes/Services');
-var AboutRouter = require('./routes/About');
+var HomepageRouter = require('./routes/homepage');
+var ServicesRouter = require('./routes/services');
+var AboutRouter = require('./routes/about');
 var checkoutRouter = require('./routes/checkout');
-var BaspaketRouter = require('./routes/Baspaket');
-var PremiumPaketRouter = require('./routes/PremiumPaket');
-var WebhostingRouter = require('./routes/Webhosting');
+var BaspaketRouter = require('./routes/baspaket');
+var PremiumPaketRouter = require('./routes/premiumpaket');
+var WebhostingRouter = require('./routes/webhosting');
 var addToCart = require('./routes/add_to_cart');
 var remove = require('./routes/remove');
 var login = require('./routes/login');
@@ -24,17 +23,11 @@ var register = require('./routes/register');
 var registerconf = require('./routes/registerconf');
 var user = require('./routes/users');
 var profile = require('./routes/profile');
+var ordering = require('./routes/ordering');
 
 var app = express();
 
 var oneDay = 1000 * 60 * 60 *24;
-
-app.use(session({
-  secret: "thisismysecrctekeyfhrgfgrfrty84fwir767",
-  saveUninitialized: true,
-  cookie: { maxAge: oneDay },
-  resave: false 
-}));
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -58,12 +51,12 @@ app.use(session({
 }));
 
 app.use('/', HomepageRouter);
-app.use('/Services', ServicesRouter);
-app.use('/About', AboutRouter);
+app.use('/services', ServicesRouter);
+app.use('/about', AboutRouter);
 app.use('/checkout', checkoutRouter);
-app.use('/Baspaket', BaspaketRouter);
-app.use('/PremiumPaket', PremiumPaketRouter);
-app.use('/Webhosting', WebhostingRouter);
+app.use('/baspaket', BaspaketRouter);
+app.use('/premiumPaket', PremiumPaketRouter);
+app.use('/webhosting', WebhostingRouter);
 app.use('/add', addToCart);
 app.use('/login', login);
 app.use('/loginconf', loginconf);
@@ -72,8 +65,13 @@ app.use('/registerconf', registerconf);
 app.use('/remove', remove);
 app.use('/user', user);
 app.use('/profile', profile);
+<<<<<<< HEAD
 
 
+=======
+app.use('/ordering', ordering);
+ 
+>>>>>>> e4d2b5fb481463bb67cfa1412d8cf17cf2501765
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
@@ -92,10 +90,11 @@ app.use(function(err, req, res, next) {
 
 // router.get('/logout', function(req, res, next){
 
-//   req.session.destroy();
+// req.session.destroy();
 
-//   res.redirect("/");
+//  res.redirect("/");
 
 // });
 
 module.exports = app;
+ 
