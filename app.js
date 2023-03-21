@@ -65,8 +65,6 @@ app.use('/registerconf', registerconf);
 app.use('/remove', remove);
 app.use('/user', user);
 app.use('/profile', profile);
-
-
 app.use('/ordering', ordering);
  
 // catch 404 and forward to error handler

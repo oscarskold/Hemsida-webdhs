@@ -22,7 +22,7 @@ router.get('/:username', function(req, res, next) {
       // If the query returned zero rows, send an error message
       res.send('Error user not found');
     }
-  });
+  }); 
 });
 
 router.post('/', function(req, res, next) {
@@ -103,4 +103,3 @@ router.post('/', function(req, res, next) {
   });
 
 module.exports = router;
-``

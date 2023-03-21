@@ -44,9 +44,7 @@ router.post('/', function(req, res, next) {
         return res.send('Incorrect Password');
       }
       req.session.userid = user;
-      console.log( "!!"+user)
-      res.redirect('/profile');
-
+      res.redirect('/profile')
     });
   });
 });

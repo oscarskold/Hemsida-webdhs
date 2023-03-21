@@ -6,12 +6,12 @@ var router = express.Router();
 
 
 router.post('/', function(req, res, next) {
-  var productid = req.body.id
+  var prodid = req.body.prodid
   var user = req.session.userid
 
-  res.send(req.body.id)
-  console.log(productid)
-    con.query(`INSERT INTO ${user}.cart_items (product_id) SELECT id FROM products WHERE id=${productid};`, function(err, result){
+  console.log(req.body.id,'bodyid')
+  console.log(prodid,'productid')
+    con.query(`INSERT INTO ${user}.cart_items (product_id) SELECT id FROM products WHERE id=${prodid};`, function(err, result){
       if (err){
       throw err
       } else{

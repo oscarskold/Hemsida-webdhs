@@ -19,8 +19,10 @@ router.get('/', function(req, res, next) {
       var login
       if (req.session.userid == undefined){
         login = false;
+        console.log(login)
       } else{
         login = true;
+        console.log(login)
       }
       res.render('Services', {
         data: result,
