@@ -50,6 +50,9 @@ app.use(session({
   resave: false 
 }));
 
+
+
+
 app.use('/', HomepageRouter);
 app.use('/services', ServicesRouter);
 app.use('/about', AboutRouter);
@@ -65,11 +68,15 @@ app.use('/registerconf', registerconf);
 app.use('/remove', remove);
 app.use('/user', user);
 app.use('/profile', profile);
+app.post('/update-profile', function(req, res) {
+  // Handle the form submission here
+});
 app.use('/ordering', ordering);
+
  
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
-  next(createError(404));
+  next(createError(404)); //line 79
 });
 
 // error handler

@@ -1,103 +1,57 @@
-var con = require('../SQL/cart/config/database.js');
-const fs = require('fs');
-var express = require('express');
-var router = express.Router();
-var crypto = require('crypto');
+const con = require('../SQL/cart/config/database.js');
+const express = require('express');
+const router = express.Router();
 
-
-/* GET home page. */
+// GET user profile page
 router.get('/:username', function(req, res, next) {
-  // Use the database connection object to query the "users" table for the user with username "odir"
   con.query('SELECT * FROM users WHERE username = ?', [req.params.username], function (err, result) {
     if (err) {
-      // If there was an error with the query, send an error message
       res.send('Error when retrieving from database');
       return;
     }
 
     if (result.length > 0) {
-      // If the query returned at least one row, render the "profile" page with the user's data
-      res.render('profile', result[0]);
+      res.render('profile', { data: result });
     } else {
-      // If the query returned zero rows, send an error message
       res.send('Error user not found');
     }
   }); 
 });
 
-router.post('/', function(req, res, next) {
-  // Use the database connection object to query the "users" table for the user with id "00000000"
-  con.query('SELECT * FROM users WHERE id = ?', ['00000000'], function (err, result) {
+// POST update user profile
+router.post('/update-profile', function(req, res, next) {
+  const userId = req.session.userid;
+  const oldPassword = req.body.password_old;
+  const newPassword = req.body.password_new;
+  const confirmPassword = req.body.password_confirm;
+
+  con.query('SELECT * FROM users WHERE id = ?', [userId], function (err, result) {
     if (err) {
-      // If there was an error with the query, send an error message
       res.send('Error when retrieving from database');
       return;
     }
 
-    var actualUser = null;
+    const actualUser = result[0];
 
-    if (result.length > 0) {
-      // If the query returned at least one row, set actualUser to the first row of the result
-      actualUser = result[0];
-    }
-
-    if (actualUser.password != req.body.old_password) {
-      // If the old password entered by the user does not match the actual user's password, render the "profile" page with an error message
-      res.render('profile',
-        Object.assign(actualUser, { errorMsg: "Old password is wrong. Please try again!" }));
+    if (oldPassword !== actualUser.password) {
+      res.render('profile', { errorMsg: "Old password is wrong. Please try again!", data: [actualUser] });
+    } else if (newPassword !== confirmPassword) {
+      res.render('profile', { errorMsg: "New password and confirm password do not match. Please try again!", data: [actualUser] });
     } else {
-      // If the old password is correct, create an object with the new user data
-      var updatedUser = {
-        username: req.body.username,
-        email: req.body.email,
-        password: req.body.password
-      }
-
-      // Use the addUser function to update the user data in the database
-      addUser("00000000", updatedUser, function (err) {
+      con.query('UPDATE users SET user_name = ?, email = ?, password = ? WHERE id = ?', [req.body.user_name, req.body.email, newPassword, userId], function (err, result) {
         if (err) {
-          // If there was an error updating the database, send an error message
           res.send('Error when updating database');
           return;
         }
 
-        // If the update was successful, render the "profile" page with a success message
-        res.render('profile',
-          Object.assign(updatedUser, { errorMsg: "Profile info update!" }));
+        actualUser.user_name = req.body.user_name;
+        actualUser.email = req.body.email;
+        actualUser.password = newPassword;
+
+        res.render('profile', { successMsg: "Profile info updated!", data: [actualUser] });
       });
     }
   });
 });
-
-function addUser(id, userToAdd, callback) {
-  // Use the database connection object to update the "users" table with the new user data
-  con.query('UPDATE users SET ? WHERE id = ?', [userToAdd, id], function (err, result) {
-    if (err) {
-      // If there was an error updating the database, call the callback function with the error
-      callback(err);
-    } else {
-      // If the update was successful, call the callback function with no error
-      callback(null);
-    }
-  });
-}
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  var user = req.session.userid
-  con.query (`SELECT * FROM users WHERE user_name='${user}'`, function(err, result){
-    if (err){
-      throw err
-    } else {
-      console.log(result)
-      res.render('profile', { title: '', data: result });
-    }
-  })
-});
-
-module.exports = router;
-
-router.post('/', function(req, res, next) {
-
-  });
 
 module.exports = router;
