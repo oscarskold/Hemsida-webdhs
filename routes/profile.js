@@ -1,12 +1,12 @@
-const con = require('../SQL/cart/config/database.js');
-const express = require('express');
-const router = express.Router();
+var con = require('../SQL/cart/config/database.js');
+var express = require('express');
+var router = express.Router();
 
 // GET user profile page
-router.get('/:username', function(req, res, next) {
-  con.query('SELECT * FROM users WHERE username = ?', [req.params.username], function (err, result) {
+router.get('/', function(req, res, next) {
+  con.query('SELECT * FROM users WHERE user_name = ?', [req.params.user_name], function (err, result) {
     if (err) {
-      res.send('Error when retrieving from database');
+      res.status(500).send(err.message);
       return;
     }
 
@@ -20,10 +20,10 @@ router.get('/:username', function(req, res, next) {
 
 // POST update user profile
 router.post('/update-profile', function(req, res, next) {
-  const userId = req.session.userid;
-  const oldPassword = req.body.password_old;
-  const newPassword = req.body.password_new;
-  const confirmPassword = req.body.password_confirm;
+  var userId = req.session.userid;
+  var oldPassword = req.body.password_old;
+  var newPassword = req.body.password_new;
+  var confirmPassword = req.body.password_confirm;
 
   con.query('SELECT * FROM users WHERE id = ?', [userId], function (err, result) {
     if (err) {
@@ -31,7 +31,7 @@ router.post('/update-profile', function(req, res, next) {
       return;
     }
 
-    const actualUser = result[0];
+    var actualUser = result[0];
 
     if (oldPassword !== actualUser.password) {
       res.render('profile', { errorMsg: "Old password is wrong. Please try again!", data: [actualUser] });
