@@ -23,7 +23,9 @@ var register = require('./routes/register');
 var registerconf = require('./routes/registerconf');
 var user = require('./routes/users');
 var profile = require('./routes/profile');
+var profileRouter = require('./routes/profile');
 var ordering = require('./routes/ordering');
+
 
 var app = express();
 
@@ -34,6 +36,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 //middle-ware
+app.use('/profile', profileRouter);
 app.use(bodyParser.urlencoded({ extended: false}));
 app.use(bodyParser.json())
 

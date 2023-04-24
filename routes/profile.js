@@ -5,10 +5,9 @@ var crypto = require('crypto')
 
 // GET user profile page
 router.get('/', function(req, res, next) {
-  var user = req.params.username;
-  con.query(`SELECT * FROM users WHERE username = ${user}`, function (err, result) {
+  con.query('SELECT * FROM users WHERE user_name = ?', [req.params.user_name], function (err, result) {
     if (err) {
-      res.send('Error when retrieving from database');
+      res.status(500).send(err.message);
       return;
     }
 
