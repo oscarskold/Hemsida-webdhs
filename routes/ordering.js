@@ -1,15 +1,19 @@
 var nodemailer = require('nodemailer');
 var express = require('express');
-const bodyParser = require('body-parser');
+const app = express();
+var bodyParser = require('body-parser');
 var router = express.Router();
+
+
+ app.use(bodyParser.urlencoded({ extended: true }));
 
 router.post('/', function(req, res, next){
      var name = req.body.name
-     var email = req.body.name
+     var email = req.body.email
      var message = req.body.message
-     var item = req.body.prod
+     const item = req.body.item
 
-    res.send(name, email, message, item)
+    console.log(name+' name '+ email+' email ' + message+' message '+ JSON.stringify(item)+' item ')
      
      // //Create a transporter object with a default sender
     // const transporter = nodemailer.createTransport({

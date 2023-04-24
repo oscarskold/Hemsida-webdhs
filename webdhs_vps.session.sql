@@ -6,7 +6,7 @@ USE webdhs;
 USE test;
 
 --@block
-SELECT * FROM test.cart_items;
+SELECT * FROM webdhs.users where user_name = "test";
 
 
 --@block

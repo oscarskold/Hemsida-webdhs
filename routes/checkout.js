@@ -10,7 +10,8 @@ router.get('/', function(req, res, next) {
   })
   var user = req.session.userid;
 
-  con.query(`SELECT product_id FROM ${user}.cart_items ORDER BY id`, function(err, result){
+  if(user != undefined){
+    con.query(`SELECT product_id FROM ${user}.cart_items ORDER BY id`, function(err, result){
       if (err){
         console.log('not connected', err)
         res.render('checkout', {
@@ -47,6 +48,7 @@ router.get('/', function(req, res, next) {
          console.log('(:');
       }
     });
+  }
 });
 
 module.exports = router;

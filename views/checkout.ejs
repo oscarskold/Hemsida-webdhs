@@ -37,14 +37,14 @@
                     </p>
                     <p>
                         <label for='phone'>Telefonnummer:</label><br>
-                        <input class="tel" type="tel"" name="tel" placeholder="Telefonnummer">
+                        <input class="tel" type="tel" name="tel" placeholder="Telefonnummer">
                     </p>
                     <p>
                         <label for='message'>Övrig information:</label> <br>
                         <textarea class="form-info" name="message" placeholder="Övrig information"></textarea>
                     </p>
                     <p>
-                        <input id="prod" name="" hidden>
+                        <input id="prod" name="item" value="" hidden>
                     </p>
                     <input class="submit" type="submit" name='submit' value="Köp här">
                 </form>
@@ -60,14 +60,15 @@
                 for(var i = 0; i<=localStorage.length; i++ ) {
                     var key = localStorage.key(i)
                     var prod = localStorage.getItem(key)
-                    if(prod){
-                        console.log(JSON.parse(prod),'hhhh')
+                    if(prod != `honey:core-sdk:*`){
+                        localStorage.removeItem(`honey:core-sdk:*`)
                         item.push(JSON.parse(prod))
                         }
+
                 }
-                var product = document.getElementById('#product') 
+                var product = document.querySelector('#product') 
                 for(var j = 0; j < item.length; j++){
-                    console.log(item,'kkj')
+
                     var productElement = document.createElement("div")
                     productElement.innerHTML = `
                     <div class="showcase">
@@ -83,14 +84,16 @@
                         </div>
                             `;
                         product.appendChild(productElement)
-                }
 
+                }
+                
+                document.getElementsById('prod').value = item;
                 
                 function rm(id){
                         localStorage.removeItem(id)
                         location.reload()
                     }
-                    document.getElementsById('prod').name = item
+                     
                 </script>
 
                   <div class="checkbox"> 

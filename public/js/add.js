@@ -28,7 +28,8 @@ function addtocart(obj, login){
   } else{
     console.log("KKKL")
     var objStr = JSON.stringify(obj)
-    localStorage.setItem(obj.id, objStr);
+    var objStrid = JSON.stringify(obj.id)
+    localStorage.setItem(objStrid, objStr);
   }
 
   // }  
