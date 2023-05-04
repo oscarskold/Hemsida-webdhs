@@ -30,6 +30,8 @@ var klipptid = require('./routes/klipptid');
 
 var app = express();
 
+const PORT = parseInt(process.env.PORT || '3001');
+
 var oneDay = 1000 * 60 * 60 *24;
 
 // view engine setup
@@ -93,6 +95,10 @@ app.use(function(err, req, res, next) {
   // render the error page
   res.status(err.status || 500);
   res.render('error');
+});
+
+app.listen(PORT, () => {
+  console.log('Server running on port', PORT);
 });
 
 // router.get('/logout', function(req, res, next){
