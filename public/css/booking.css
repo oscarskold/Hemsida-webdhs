@@ -1,0 +1,41 @@
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 100px;
+        margin-left: 50px;
+    }
+    
+    label {
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+    
+    input[type="text"],
+    input[type="email"],
+    input[type="date"],
+    textarea {
+        margin-top: 5px;
+        margin-left: 10px;
+        padding: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        width: 300px;
+        max-width: 100%;
+    }
+    
+    button[type="submit"] {
+        margin-top: 10px;
+        margin-left: 10px;
+        padding: 5px 10px;
+        border: none;
+        border-radius: 5px;
+        background-color: #007bff;
+        color: #fff;
+        cursor: pointer;
+        
+    }
+
+    nav {
+        background-color: #252525;
+    }

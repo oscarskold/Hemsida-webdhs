@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/booking.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <script src="../js/nav.js" type="text/javascript" defer></script>
+    <script src="../js/footer.js" type="text/javascript" defer></script>
+    <link rel="shortcut icon" href="../img/Logo.png"/>
+    <title>Web-DHS</title>
+</head>
+<body>
+
+    <nav-component></nav-component>
+
+    <div>
+        <form action="/bookings" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name">
+        
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+        
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date">
+        
+            <label for="message">Message:</label>
+            <textarea id="message" name="message"></textarea>
+        
+            <button type="submit">Send</button>
+        </form>
+    </div>
+
+    <footer-component></footer-component>
+
+</body>
+</html>

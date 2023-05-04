@@ -66,11 +66,25 @@
                         <img src="../img/add-cart.png" alt=""> 
                         <p>Add to cart</p>
                     </span>
-                    </div>
+                </div>
             <%}%>
+
+            <% for (var i=0; i<bookingdata.length; i++){ %>
+                <div class="cards">
+                    <img src="../img/<%=bookingdata[i].name%>.png" alt="">
+                    <div>
+                        <span class="t1"><%=bookingdata[i].name%></span>
+                        <hr>
+                        <span><%=bookingdata[i].price%>kr</span>
+                        <span class="card-info"><%=bookingdata[i].description%></span>
+                        </div>
+                    <a class="rm" href="<%-bookingdata[i].name%>">Läs mer</a>
+                <%}%>
+
+                <div id="s2">
+
+                </div>
             
-            <div id="s2">
-                
             </div>
         </div>
     </main>

@@ -25,6 +25,7 @@ var user = require('./routes/users');
 var profile = require('./routes/profile');
 var profileRouter = require('./routes/profile');
 var ordering = require('./routes/ordering');
+var klipptid = require('./routes/klipptid');
 
 
 var app = express();
@@ -71,6 +72,7 @@ app.use('/registerconf', registerconf);
 app.use('/remove', remove);
 app.use('/user', user);
 app.use('/profile', profile);
+app.use('/klipptid', klipptid)
 app.post('/update-profile', function(req, res) {
   // Handle the form submission here
 });

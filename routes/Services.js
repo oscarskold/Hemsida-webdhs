@@ -24,10 +24,20 @@ router.get('/', function(req, res, next) {
         login = true;
         console.log(login)
       }
+  //hihi jag ändrade!!!!!!!!!!!!!!!!!!!!!!!!!!!!!    
+  con.query('SELECT id, name, description, price FROM bookings ORDER BY id', function(err, bookres){
+    if (err){
       res.render('Services', {
-        data: result,
-        login: login
+        data: ''
       })
+      console.log('not connected', err)
+    }
+    res.render('Services', {
+      data: result,
+      login: login,
+      bookingdata: bookres
+    })
+  })
 
     }
   });
