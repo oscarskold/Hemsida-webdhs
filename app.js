@@ -7,14 +7,13 @@ var flash = require('express-flash');
 var session = require('express-session');
 var bodyParser = require('body-parser')
 
-
-var HomepageRouter = require('./routes/homepage');
-var ServicesRouter = require('./routes/services');
-var AboutRouter = require('./routes/about');
+var HomepageRouter = require('./routes/Homepage');
+var ServicesRouter = require('./routes/Services');
+var AboutRouter = require('./routes/About');
 var checkoutRouter = require('./routes/checkout');
-var BaspaketRouter = require('./routes/baspaket');
-var PremiumPaketRouter = require('./routes/premiumpaket');
-var WebhostingRouter = require('./routes/webhosting');
+var BaspaketRouter = require('./routes/Baspaket');
+var PremiumPaketRouter = require('./routes/Premiumpaket');
+var WebhostingRouter = require('./routes/Webhosting');
 var addToCart = require('./routes/add_to_cart');
 var remove = require('./routes/remove');
 var login = require('./routes/login');
@@ -30,7 +29,6 @@ var bookings = require('./routes/bookings');
 
 
 var app = express();
-
 
 var oneDay = 1000 * 60 * 60 *24;
 
@@ -55,9 +53,6 @@ app.use(session({
   cookie: { maxAge: oneDay },
   resave: false 
 }));
-
-
-
 
 app.use('/', HomepageRouter);
 app.use('/services', ServicesRouter);
@@ -97,7 +92,6 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
-
 
 // router.get('/logout', function(req, res, next){
 

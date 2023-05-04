@@ -19,7 +19,7 @@ router.post('/', function(req, res, next) {
             if (err){
               throw err
             } else{
-                res.render('Homepage', { title: '' });
+                res.render('homepage', { title: '' });
             }
 
           })

@@ -10,7 +10,7 @@ router.get('/', function(req, res, next) {
   //ÄNDRA INTE FÖR I HELVETE!!!!!!!!!!!!!!!
   con.query('SELECT id, name, description, price FROM products ORDER BY id', function(err, result){
     if (err){
-      res.render('Services', {
+      res.render('services', {
         data: ''
         })
       console.log('not connected', err)
