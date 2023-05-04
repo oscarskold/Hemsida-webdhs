@@ -24,6 +24,9 @@ router.get('/', function(req, res, next) {
         login = true;
         console.log(login)
       }
+
+
+
       res.render('Services', {
         data: result,
         login: login

@@ -25,7 +25,7 @@ SET description = 'hi'
 WHERE id = 3;
 
 --@block
-CREATE TABLE cart_items (
+CREATE TABLE cart_items(
   id int NOT NULL AUTO_INCREMENT,
   product_id int NOT NULL,
   quantity smallint DEFAULT NULL,
