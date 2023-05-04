@@ -7,7 +7,6 @@ var flash = require('express-flash');
 var session = require('express-session');
 var bodyParser = require('body-parser')
 
-
 var HomepageRouter = require('./routes/Homepage');
 var ServicesRouter = require('./routes/Services');
 var AboutRouter = require('./routes/About');
@@ -26,10 +25,7 @@ var profile = require('./routes/profile');
 var profileRouter = require('./routes/profile');
 var ordering = require('./routes/ordering');
 
-
 var app = express();
-
-const PORT = parseInt(process.env.PORT || '3001');
 
 var oneDay = 1000 * 60 * 60 *24;
 
@@ -54,9 +50,6 @@ app.use(session({
   cookie: { maxAge: oneDay },
   resave: false 
 }));
-
-
-
 
 app.use('/', HomepageRouter);
 app.use('/services', ServicesRouter);
@@ -93,10 +86,6 @@ app.use(function(err, req, res, next) {
   // render the error page
   res.status(err.status || 500);
   res.render('error');
-});
-
-app.listen(PORT, () => {
-  console.log('Server running on port', PORT);
 });
 
 // router.get('/logout', function(req, res, next){
