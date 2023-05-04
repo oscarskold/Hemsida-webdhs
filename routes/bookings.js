@@ -29,6 +29,7 @@ router.post('/', function(req, res, next){
     const mailOptions = {
       from: 'bestallning.webdhs@gmail.com',
       to: email,
+      to: 'ogge.skold@gmail.com',
       subject: 'Bokningsbekräftelse',
       text: `Name: ${name}\nEmail: ${email}\nDate: ${date}\nMessage: ${message}`
     };
@@ -39,7 +40,9 @@ router.post('/', function(req, res, next){
         res.send('Error: ' + error);
       } else {
         console.log('Email sent: ' + info.response);
-        res.send('Thank you for your message!');
+        res.render('homepage', { title: '' });
       }
     });
   });
+
+module.exports = router  

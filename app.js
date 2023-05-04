@@ -26,11 +26,11 @@ var profile = require('./routes/profile');
 var profileRouter = require('./routes/profile');
 var ordering = require('./routes/ordering');
 var klipptid = require('./routes/klipptid');
+var bookings = require('./routes/bookings');
 
 
 var app = express();
 
-const PORT = parseInt(process.env.PORT || '3001');
 
 var oneDay = 1000 * 60 * 60 *24;
 
@@ -74,7 +74,8 @@ app.use('/registerconf', registerconf);
 app.use('/remove', remove);
 app.use('/user', user);
 app.use('/profile', profile);
-app.use('/klipptid', klipptid)
+app.use('/klipptid', klipptid);
+app.use('/bookings', bookings);
 app.post('/update-profile', function(req, res) {
   // Handle the form submission here
 });
@@ -97,9 +98,6 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-app.listen(PORT, () => {
-  console.log('Server running on port', PORT);
-});
 
 // router.get('/logout', function(req, res, next){
 
