@@ -15,8 +15,9 @@ router.post('/', function(req, res, next){
     var email = req.body.email
     var message = req.body.message
     var date = req.body.date
+    // var document = req.body.bookings_name
 
-  
+    
     // Send the email
     const transporter = nodemailer.createTransport({
       service: 'gmail',
@@ -29,9 +30,9 @@ router.post('/', function(req, res, next){
     const mailOptions = {
       from: 'bestallning.webdhs@gmail.com',
       to: email,
-      to: 'ogge.skold@gmail.com',
+      cc: 'kontakt@web-dhs.se',
       subject: 'Bokningsbekräftelse',
-      text: `Name: ${name}\nEmail: ${email}\nDate: ${date}\nMessage: ${message}`
+      text: `Klipptid:\nNamn: ${name}\nEmail: ${email}\nDate: ${date}\nMessage: ${message}`
     };
   
     transporter.sendMail(mailOptions, (error, info) => {
