@@ -24,13 +24,13 @@ class Header extends HTMLElement {
       </div>    
       <ul class="navbar_links nav">
 
-                              
-      <input type="text" id="myInput">
-      <button onclick="checkValue()">Check Value</button>
-      <button onclick="removeHighlight()">Remove Highlight</button>
-
+    <div class="search">                        
+      <input type="text" id="myInput" name="search" placeholder="sök..." >
+      <placeholder>
+      <button onclick="checkValue()">Sök</button>
+      <button onclick="removeHighlight()">Ta bort markeringar</button>
       <p id="result"></p>
-
+    </div>
           <li>
               <a href="/">Start</a>
           </li>
@@ -111,21 +111,29 @@ const nav = document.querySelector('nav');
 function checkValue() {
     // Get the input value entered by the user
     var input = document.getElementById("myInput").value;
-  
+    if (input === '') {
+        return false; // Return without performing any search
+      }
+
     // Loop through each element in the document
-    document.querySelectorAll("*").forEach(function(element) {
+    document.querySelectorAll("div, h1, h2, h3, p").forEach(function (element) {
       // Check if the element's text content includes the input value
       var regex = new RegExp(input, "gi");
-      if (element.innerHTML.match(regex)) {
-        // If the input value is found, highlight the matching text
-        var highlightedContent = element.innerHTML.replace(regex, '<span class="highlight">$&</span>');
+      if (
+        element.innerHTML.match(regex) &&
+        !hasImageDescendant(element) &&
+        !hasAnchorDescendant(element)
+      ) {
+        // If the input value is found and there are no img or anchor tags descendants, highlight the matching text
+        var highlightedContent = element.innerHTML.replace(
+          regex,
+          '<span class="highlight">$&</span>'
+        );
         element.innerHTML = highlightedContent;
       } else {
-        // If the input value is not found, remove any highlighting
-        element.querySelectorAll(".highlight").forEach(function(highlight) {
-          var parent = highlight.parentNode;
-          parent.replaceChild(highlight.firstChild, highlight);
-          parent.normalize();
+        // If the input value is not found or there are img or anchor tags descendants, remove any highlighting
+        element.querySelectorAll(".highlight").forEach(function (highlight) {
+          highlight.outerHTML = highlight.innerHTML;
         });
       }
     });
@@ -135,15 +143,53 @@ function checkValue() {
   
     // Update the result text
     var result = document.getElementById("result");
-    result.textContent = count + " match" + (count == 1 ? "" : "es") + " found.";
-  
+    result.textContent = "";
+    result.textContent = "";
+    if (count === 0) {
+      result.textContent = "No matches found.";
+    } else {
+      result.textContent = count + " matchningar" + (count === 1 ? "" : "");
+    }
+    
+
     // Close the navigation menu
     closeNav();
   
     return false; // Prevent form submission behavior
+
+    
   }
   
-  document.getElementById("myInput").addEventListener("keydown", function(event) {
+  // Function to check if an element has img tag descendants
+  function hasImageDescendant(element) {
+    var images = element.getElementsByTagName("img");
+    return images.length > 0;
+  }
+  
+  // Function to check if an element has anchor tag descendants
+  function hasAnchorDescendant(element) {
+    var anchors = element.getElementsByTagName("a");
+    return anchors.length > 0;
+  }
+  
+  function removeHighlight() {
+    document.querySelectorAll(".highlight").forEach(function (highlight) {
+      highlight.outerHTML = highlight.innerHTML;
+    });
+  
+    // Update the result text
+    
+    var result = document.getElementById("result");
+    result.textContent = "markeringar borttagna";
+    
+  
+    document.getElementById("myInput").value = "";
+    document.getElementById("result").textContent = "";
+
+    return false; // Prevent form submission behavior
+  }
+  
+  document.getElementById("myInput").addEventListener("keydown", function (event) {
     if (event.key === "Enter") {
       event.preventDefault();
       checkValue();

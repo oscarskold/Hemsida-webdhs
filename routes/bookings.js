@@ -33,7 +33,7 @@ router.post('/', function(req, res, next){
       to: email,
       cc: 'kontakt@web-dhs.se',
       subject: 'Bokningsbekräftelse',
-      text: `${bookings_name}\nNamn: ${name}\nEmail: ${email}\nDate: ${date}\nBokad tid: ${time}\nMessage: ${message}`
+      text: `${bookings_name}\nNamn: ${name}\nEmail: ${email}\nDatum: ${date}\nBokad tid: ${time}\n'Meddelande': ${message}`
     };
   
     transporter.sendMail(mailOptions, (error, info) => {

@@ -22,10 +22,58 @@ nav {
     z-index: 1;
 }
 
-/* Highlight color */
+/* search */
+
+.search{
+justify-content: center;
+align-items: center;
+margin-left: 10%;
+margin-right: 10%;
+display: flex;
+align-items: center;
+flex-direction: column;
+font-size: 15px;
+
+}
+
+input {
+border: 0;
+background-color: white;
+padding: 5%;
+border-radius: 10px;
+margin-bottom: 3%;
+}
+
+input:visited{
+background-color: aqua;
+}
+
+.search button{
+    border: none;
+    margin-top: 2%;
+    background-color: #252525;
+    color: white;
+    text-align: center;
+    padding: 5%;
+    transition: all 0.3s ease-in-out;
+    cursor:pointer;
+
+}
+
+.search button:hover{
+    cursor: pointer;
+    background-color: #38b6ff;
+}
+
+#result{color: white;
+font: bold;
+}
+
+#myInput {hej;}
+
 .highlight {
     background-color: yellow;
-  }
+}
   
 .navbar_links {
     position: absolute;
