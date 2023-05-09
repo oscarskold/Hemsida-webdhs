@@ -28,7 +28,7 @@ class Header extends HTMLElement {
       <input type="text" id="myInput" name="search" placeholder="sök..." >
       <placeholder>
       <button onclick="checkValue()">Sök</button>
-      <button onclick="removeHighlight()">ta bort markeringar</button>
+      <button onclick="removeHighlight()">Ta bort markeringar</button>
       <p id="result"></p>
     </div>
           <li>
@@ -114,7 +114,7 @@ function checkValue() {
     if (input === '') {
         return false; // Return without performing any search
       }
-    
+
     // Loop through each element in the document
     document.querySelectorAll("div, h1, h2, h3, p").forEach(function (element) {
       // Check if the element's text content includes the input value
@@ -143,12 +143,21 @@ function checkValue() {
   
     // Update the result text
     var result = document.getElementById("result");
-    result.textContent = count + " matchingar" + (count == 1 ? "" : "");
-  
+    result.textContent = "";
+    result.textContent = "";
+    if (count === 0) {
+      result.textContent = "No matches found.";
+    } else {
+      result.textContent = count + " matchningar" + (count === 1 ? "" : "");
+    }
+    
+
     // Close the navigation menu
     closeNav();
   
     return false; // Prevent form submission behavior
+
+    
   }
   
   // Function to check if an element has img tag descendants
@@ -169,10 +178,13 @@ function checkValue() {
     });
   
     // Update the result text
+    
     var result = document.getElementById("result");
     result.textContent = "markeringar borttagna";
+    
   
     document.getElementById("myInput").value = "";
+    document.getElementById("result").textContent = "";
 
     return false; // Prevent form submission behavior
   }
