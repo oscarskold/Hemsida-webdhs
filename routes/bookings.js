@@ -15,7 +15,7 @@ router.post('/', function(req, res, next){
     var email = req.body.email
     var message = req.body.message
     var date = req.body.date
-    // var document = req.body.bookings_name
+    var bookings_name = req.body.bookings_name
     var time = req.body.time
 
     
@@ -33,7 +33,7 @@ router.post('/', function(req, res, next){
       to: email,
       cc: 'kontakt@web-dhs.se',
       subject: 'Bokningsbekräftelse',
-      text: `Klipptid:\nNamn: ${name}\nEmail: ${email}\nDate: ${date}\nBokad tid: ${time}\nMessage: ${message}`
+      text: `${bookings_name}\nNamn: ${name}\nEmail: ${email}\nDatum: ${date}\nBokad tid: ${time}\n'Meddelande': ${message}`
     };
   
     transporter.sendMail(mailOptions, (error, info) => {
