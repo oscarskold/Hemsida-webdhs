@@ -44,7 +44,7 @@
                         <textarea class="form-info" name="message" placeholder="Övrig information"></textarea>
                     </p>
                     <p>
-                        <input type="text" id="prod" name="prod" name="prod" hidden>
+                        <input type="text" id="prod" name="item" value="" hidden>
                     </p>
                     <input class="submit" type="submit" name='submit' value="Köp här">
                 </form>
@@ -60,12 +60,13 @@
                 for(var i = 0; i<=localStorage.length; i++ ) {
                     var key = localStorage.key(i)
                     var prod = localStorage.getItem(key)
-                    if(prod != `honey:core-sdk:*`){
-                        localStorage.removeItem(`honey:core-sdk:*`)
-                        item.push(JSON.parse(prod))
-                        }
-
+                    console.log(prod)
+                    //if(prod != `honey:core-sdk:*`){
+                    localStorage.removeItem(`honey:core-sdk:*`)
+                    item.push(JSON.parse(prod))
+                        //}
                 }
+
                 var product = document.querySelector('#product') 
                 for(var j = 0; j < item.length; j++){
 
@@ -84,16 +85,14 @@
                         </div>
                             `;
                         product.appendChild(productElement)
-
                 }
-                
-                document.getElementById('prod').value = JSON.stringify(item);
+    
+                document.getElementById('prod').name = JSON.stringify(item);
                 
                 function rm(id){
                         localStorage.removeItem(id)
                         location.reload()
                     }
-                     
                 </script>
 
                   <div class="checkbox"> 

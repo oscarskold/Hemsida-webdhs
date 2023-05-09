@@ -4,8 +4,8 @@ const app = express();
 var bodyParser = require('body-parser');
 var router = express.Router();
 
-
-//  app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.json())
+app.use(bodyParser.urlencoded({ extended: true }));
 
 router.post('/', function(req, res, next){
      var name = req.body.name
@@ -14,7 +14,7 @@ router.post('/', function(req, res, next){
      var item = req.body.prod
 
 
-    console.log(name+' name '+ email+' email ' + message+' message '+ JSON.stringify(item[1])+' item ')
+    console.log(name+' name '+ email+' email ' + message+' message '+ JSON.parse(item[1])+' item ')
     //Create a transporter object with a default sender
     // const transporter = nodemailer.createTransport({
     //     host: 'smtp.gmail.com',

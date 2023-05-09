@@ -17,12 +17,10 @@ VALUES
     ('Webhosting', 'Månadsavgift här ingår snabb akrtiv support', '49', '2022-12-02', '2022-12-02');
 
 --@block
-SELECT * FROM products;
+SELECT * FROM test.cart_items;
 
 --@block
-UPDATE products
-SET description = 'hi'
-WHERE id = 3;
+
 
 --@block
 CREATE TABLE cart_items(
@@ -58,8 +56,7 @@ INSERT INTO users (user_name, user_email, user_password, user_session_id) VALUES
 SELECT * FROM users WHERE EXISTS (SELECT * FROM users WHERE user_name = 'test');
 
 --@block
-DELETE FROM users WHERE user_name = 'test';
-
+SELECT * from users WHERE user_name = "ogge";
 --@block
 ALTER TABLE users modify 
 

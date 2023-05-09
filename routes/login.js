@@ -17,6 +17,8 @@ router.post('/', function(req, res, next) {
   hash.update(password).end()
   var password_hash = hash.digest('hex')
 
+  console.log(user)
+
   if (!user || !password_hash) {
     return res.send("Please enter username and password");
   }
@@ -31,7 +33,7 @@ router.post('/', function(req, res, next) {
         return next(err);
       }
 
-      if (result.length === 0) {
+      if (result.length == 0) {
         return res.send("User doesn't exist");
       }
 
@@ -44,7 +46,7 @@ router.post('/', function(req, res, next) {
         return res.send('Incorrect Password');
       }
       req.session.userid = user;
-      res.redirect('/profile')
+      res.redirect('/')
     });
   });
 });
