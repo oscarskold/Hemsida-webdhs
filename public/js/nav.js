@@ -23,6 +23,14 @@ class Header extends HTMLElement {
           </div>
       </div>    
       <ul class="navbar_links nav">
+
+                              
+      <input type="text" id="myInput">
+      <button onclick="checkValue()">Check Value</button>
+      <button onclick="removeHighlight()">Remove Highlight</button>
+
+      <p id="result"></p>
+
           <li>
               <a href="/">Start</a>
           </li>
@@ -100,3 +108,44 @@ const nav = document.querySelector('nav');
                 nav.classList.remove('active_nav');
             }
 })
+function checkValue() {
+    // Get the input value entered by the user
+    var input = document.getElementById("myInput").value;
+  
+    // Loop through each element in the document
+    document.querySelectorAll("*").forEach(function(element) {
+      // Check if the element's text content includes the input value
+      var regex = new RegExp(input, "gi");
+      if (element.innerHTML.match(regex)) {
+        // If the input value is found, highlight the matching text
+        var highlightedContent = element.innerHTML.replace(regex, '<span class="highlight">$&</span>');
+        element.innerHTML = highlightedContent;
+      } else {
+        // If the input value is not found, remove any highlighting
+        element.querySelectorAll(".highlight").forEach(function(highlight) {
+          var parent = highlight.parentNode;
+          parent.replaceChild(highlight.firstChild, highlight);
+          parent.normalize();
+        });
+      }
+    });
+  
+    // Count the number of matches
+    var count = document.querySelectorAll(".highlight").length;
+  
+    // Update the result text
+    var result = document.getElementById("result");
+    result.textContent = count + " match" + (count == 1 ? "" : "es") + " found.";
+  
+    // Close the navigation menu
+    closeNav();
+  
+    return false; // Prevent form submission behavior
+  }
+  
+  document.getElementById("myInput").addEventListener("keydown", function(event) {
+    if (event.key === "Enter") {
+      event.preventDefault();
+      checkValue();
+    }
+  });
