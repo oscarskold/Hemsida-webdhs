@@ -22,6 +22,11 @@ nav {
     z-index: 1;
 }
 
+/* Highlight color */
+.highlight {
+    background-color: yellow;
+  }
+  
 .navbar_links {
     position: absolute;
     right: 0px;
