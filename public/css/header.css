@@ -22,10 +22,28 @@ nav {
     z-index: 1;
 }
 
-/* Highlight color */
+/* search */
+
+.search{
+justify-content: center;
+align-items: center;
+margin-left: 10%;
+margin-right: 10%;
+display: flex;
+align-items: center;
+flex-direction: column;
+
+}
+
+#result{color: white;
+font: bold;
+}
+
+#myInput {hej;}
+
 .highlight {
     background-color: yellow;
-  }
+}
   
 .navbar_links {
     position: absolute;
