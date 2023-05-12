@@ -1,7 +1,6 @@
 //RÖR EJ
-function addtocart(obj, login) {
-  var prodid = obj.id
-  console.log(prodid)
+function addtocart(item, login) {
+  console.log(item)
   let itemCount = 0;
   itemCount++;
 
@@ -19,7 +18,7 @@ function addtocart(obj, login) {
       redirect: 'follow', // manual, *follow, error
       referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
       body: JSON.stringify({
-        prodid: prodid,
+        item: item,
       }) // body data type must match "Content-Type" header 
     })
 

@@ -3,20 +3,25 @@
 var con = require('../SQL/cart/config/database.js');
 var express = require('express');
 var router = express.Router();
+var crypto = require('crypto')
+
+
 
 
 router.post('/', function(req, res, next) {
-  var prodid = req.body.prodid
-  var user = req.session.userid
+  var item = req.body.item
+  var user = req.session.user
 
-  console.log(req.body,'body')
-  console.log(req.body.prodid,'bodyid')
+  var id = crypto.randomInt(0, 254)
 
-     con.query(`INSERT INTO ${user}.cart_items (product_id) SELECT id FROM products WHERE id=${prodid};`, function(err, result){
+  console.log(item.name, 'name')
+  console.log(req.body.item,'bodyitem')
+
+     con.query(`INSERT INTO ${user}.cart_items (id, name, description, price) VALUES ("${id}", "${item.name}", "${item.description}", "${item.price}");`, function(err, result){
        if (err){
        throw err
        } else{
-       console.log(result)
+       console.log(result, 'result added?')
        }     
       });
   }); 

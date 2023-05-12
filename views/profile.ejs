@@ -27,10 +27,10 @@
 
     <div id="title">
         <h1>Username: <%=data[0].user_name%></h1>
-        <h1>Password: <%=data[0].password%></h1>
+        <%console.log(data)%>
     </div>
         <div id="profile-form">
-            <form action="/update-profile" method="POST">
+            <form action="/profile/update-profile" method="POST">
                 <input type="text" name="user_name" placeholder="Ditt användarnamn" value="<%=data[0].user_name%>">
                 <input type="email" name="email" placeholder="Din Mail" value="<%=data[0].email%>">
                 <input type="password" name="password_old" placeholder="Ditt gamla lösenord">
@@ -39,10 +39,7 @@
                 <button type="submit">Uppdatera profil</button>
             </form>
             <button onclick="location.reload()">Reload</button>
-
         </div>
-
-
     </div>
 </body>
 </html>

@@ -6,7 +6,7 @@ USE webdhs;
 USE test;
 
 --@block
-SELECT * FROM webdhs.users where user_name = "test";
+SELECT * FROM webdhs.users;
 
 
 --@block
@@ -20,18 +20,20 @@ VALUES
 SELECT * FROM test.cart_items;
 
 --@block
-
+SELECT * FROM products;
 
 --@block
 CREATE TABLE cart_items(
   id int NOT NULL AUTO_INCREMENT,
-  product_id int NOT NULL,
+  name VARCHAR(255) NOT NULL,
+  description text NOT NULL,
+  price int NOT NULL,
   quantity smallint DEFAULT NULL,
   user_id smallint DEFAULT NULL,
   created smallint DEFAULT NULL,
   modified smallint DEFAULT NULL,
   PRIMARY KEY (id)
-)
+);
 
 --@block
 SELECT * FROM mysql.user;
@@ -56,9 +58,10 @@ INSERT INTO users (user_name, user_email, user_password, user_session_id) VALUES
 SELECT * FROM users WHERE EXISTS (SELECT * FROM users WHERE user_name = 'test');
 
 --@block
-SELECT * from users WHERE user_name = "ogge";
+DELETE FROM webdhs.users WHERE user_id = 23;
 --@block
-ALTER TABLE users modify 
+INSERT INTO test.cart_items (name, description, price) VALUES  "Premiumpaket", ""
+
 
 --@block
 UPDATE products SET description = 'Detta är vår månadsavgift, här ingår snabb och aktiv support' WHERE id = 3;

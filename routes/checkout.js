@@ -1,48 +1,48 @@
 //mysql
 var con = require('../SQL/cart/config/database.js');
-
 var express = require('express');
 var router = express.Router();
 
 //problem fråga
 router.get('/', function (req, res, next) {
-  res.render('checkout', {
-  })
-  var login = req.session.userid;
+  var user = req.session.user;
 
+  var login
+  if (req.session.user == undefined) {
+    login = false;
+    console.log(login)
+  } else {
+    login = true;
+    console.log(login)
+  }
+  
   if (login == true) {
-    con.query(`SELECT product_id FROM ${user}.cart_items ORDER BY id`, function (err, result) {
+    con.query(`SELECT * FROM ${user}.cart_items ORDER BY id`, function (err, result) {
       if (err) {
         console.log('not connected', err)
       }
       if (result != '') {
-        var productid = result[0].product_id;
-        con.query(`SELECT id, name, description, price FROM produkt WHERE id=${productid};`, function (err, result) {
-          if (err) {
-            res.render('checkout', {
-              data: '',
-              productid: ''
-            })
-            console.log(err)
-          } else {
-            console.log(productid)
-            res.render('checkout', {
-              data: result,
-              productid: productid
-            })
-          }
-        });
+        res.render('checkout', {
+          data: result,
+          login: login
+        })
       } else {
+        console.log('else')
         res.render('checkout', {
           data: '',
           productid: ''
         })
       }
 
-      console.log('(:');
-
     });
+  } else {
+    console.log('else2')
+    res.render('checkout', {
+      data: '',
+      productid: ''
+    })
   }
+  
 });
 
 module.exports = router;

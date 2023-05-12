@@ -44,8 +44,12 @@ router.post('/', function(req, res, next) {
 
       if (result[0].user_password !== password_hash) {
         return res.send('Incorrect Password');
-      }
-      req.session.userid = user;
+      } 
+      console.log(user, 'user')
+      req.session.user = user;
+      console.log(result[0].user_id, 'id')
+      req.session.userid = result[0].user_id;
+
       res.redirect('/')
     });
   });

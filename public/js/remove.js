@@ -11,13 +11,11 @@ function remove(productid){
       // 'Content-Type': 'application/x-www-form-urlencoded',
     },
     body: JSON.stringify({
-      productid: productid
+      id: productid,
+    }).then(response => {
+      if (response == 'sucsses'){
+        location.reload
+      }
     }) // body data type must match "Content-Type" header
-  }).then((result)=>{
-    // window.location.href="google.com"
-    console.log('yes')
-  }).catch((error)=>{
-    console.log('error')
   }) 
-
   };

@@ -22,10 +22,10 @@ var register = require('./routes/register');
 var registerconf = require('./routes/registerconf');
 var user = require('./routes/users');
 var profile = require('./routes/profile');
-var profileRouter = require('./routes/profile');
 var ordering = require('./routes/ordering');
 var klipptid = require('./routes/klipptid');
 var bookings = require('./routes/bookings');
+var admin = require('./routes/admin');
 
 
 var app = express();
@@ -37,7 +37,6 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 //middle-ware
-app.use('/profile', profileRouter);
 app.use(bodyParser.urlencoded({ extended: false}));
 app.use(bodyParser.json())
 
@@ -71,9 +70,8 @@ app.use('/user', user);
 app.use('/profile', profile);
 app.use('/klipptid', klipptid);
 app.use('/bookings', bookings);
-app.post('/update-profile', function(req, res) {
-  // Handle the form submission here
-});
+app.use('/admin', admin);
+
 app.use('/ordering', ordering);
 
  

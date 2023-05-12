@@ -4,18 +4,19 @@ var con = require('../SQL/cart/config/database.js');
 var express = require('express');
 var router = express.Router();
 
- router.post('/', function(req, res, next) {
-   req.body.product_id
-   con.query("DELETE FROM cart_items WHERE product_id="+req.body.productid+";", function(err, result){
-     if (err){
+router.post('/', function (req, res, next) {
+  var id = req.body.id
+  var user = req.session.user
+  console.log(id, 'id')
+  con.query(`DELETE FROM ${user}.cart_items WHERE id=${id};`, function (err, result) {
+    if (err) {
       throw err
-     }else{
-      console.log(result)
-     }
-    });
-  // console.log(req.body.productid);
-  // res.send("Success!")
- });
+    } else {
+      console.log('sucsses')
+      res.send('sucsses')
+    }
+  });
+});
 
 
 module.exports = router; 

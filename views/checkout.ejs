@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,12 +11,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
     <script src="../js/nav.js" type="text/javascript" defer></script>
     <script src="../js/footer.js" type="text/javascript" defer></script>
-    <link rel="shortcut icon" href="../img/Logo.png"/>
+    <script src="../js/remove.js" type="text/javascript" defer></script>
+    <link rel="shortcut icon" href="../img/Logo.png" />
     <title>Web-DHS</title>
 </head>
+
 <body>
 
     <nav-component></nav-component>
@@ -48,27 +52,52 @@
                     </p>
                     <input class="submit" type="submit" name='submit' value="Köp här">
                 </form>
-               
+
             </div>
 
             <div id="product" class="product">
-            <h1>Produkter</h1>
+                <h1>Produkter</h1>
+
+                <% for (var i=0; i<data.length; i++){ %>
+                    <div class="showcase">
+                        <div class="card">
+                            <img src="../img/<%=data[i].name%>.png" alt="">
+                            <div>
+                                <span>
+                                    <%=data[i].name%>
+                                </span>
+                                <hr>
+                                <span class="description">
+                                    <%=data[i].description%>
+                                </span>
+                                <span class="price">
+                                    <%=data[i].price%>kr
+                                </span>
+                            </div>
+                            <a class="rm" href="<%-data[i].name%>">Läs mer</a>
+                            <!-- Form ? -->
+                            <a class="rm" onclick="remove(<%=data[i].id%>)">Remove</a>
+                        </div>
+
+                    </div>
+                    <%}%>
+
             </div>
 
-                <script>
-                    var item = []
-                for(var i = 0; i<=localStorage.length; i++ ) {
+            <script>
+                var item = []
+                for (var i = 0; i <= localStorage.length; i++) {
                     var key = localStorage.key(i)
                     var prod = localStorage.getItem(key)
-                    console.log(prod)
+                    // console.log(prod)
                     //if(prod != `honey:core-sdk:*`){
                     localStorage.removeItem(`honey:core-sdk:*`)
                     item.push(JSON.parse(prod))
-                        //}
+                    //}
                 }
 
-                var product = document.querySelector('#product') 
-                for(var j = 0; j < item.length; j++){
+                var product = document.querySelector('#product')
+                for (var j = 0; j < item.length; j++) {
 
                     var productElement = document.createElement("div")
                     productElement.innerHTML = `
@@ -78,24 +107,24 @@
                         <span>${item[j].name}</span>
                         <br>
                         <span class="description">${item[j].description}</span>
-                        <span class="price">${item[j].price} kr</span>
+                        <span class="price">${item[j].price}kr</span>
                         </div>
                         <button class="rm" onclick="rm(${item[j].id})">X</button>
                         </div>        
                         </div>
                             `;
-                        product.appendChild(productElement)
+                    product.appendChild(productElement)
                 }
-    
-                document.getElementById('prod').name = JSON.stringify(item);
-                
-                function rm(id){
-                        localStorage.removeItem(id)
-                        location.reload()
-                    }
-                </script>
 
-                  <div class="checkbox"> 
+                document.getElementById('prod').name = JSON.stringify(item);
+
+                function rm(id) {
+                    localStorage.removeItem(id)
+                    location.reload()
+                }
+            </script>
+
+            <div class="checkbox">
                 <p>
                     <label class="container">Betalning
                         <input type="radio" name="radio" value="show" id="show" onclick="show2();">
@@ -115,7 +144,7 @@
                         <span class="checkmark"></span>
                     </label>
                 </p>
-                
+
                 <div id="div2" class="hide frakt">
                     <hr>
                     <a href="">
@@ -123,12 +152,13 @@
                         <img src="../img/frakt-grey.png" class="img-top" alt="">
                     </a>
                 </div>
-            </div> 
+            </div>
         </div>
     </div>
 
     <footer-component></footer-component>
 
-<script src="../js/index.js"></script>
+    <script src="../js/index.js"></script>
 </body>
+
 </html>
