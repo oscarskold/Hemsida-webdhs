@@ -36,24 +36,24 @@
     </div>
 
     <div class="adding_product" >
-        <form method="post" action="/admin" >
+        <form method="post" action="/admin/add" enctype='multipart/form-data'>
             <p>
                 <label> Product name </label>
-                <input class="" type="text" placeholder="name" >
+                <input class="" type="text" name="name" placeholder="name" >
             </p>
             <p>
                 <label> Product description </label>
-                <input class="" type="text" >
+                <input class="" type="text" name="description" placeholder="description" >
             </p>
             <p>
                 <label> Product price </label>
-                <input class="" type="text">
+                <input class="" type="text" name="price" placeholder="price">
             </p>
             <p>
                 <label>Product img</label>
-                <input class="" type="file">
+                <input class="" name="product_img" type="file">
             </p>
-
+            <input class="submit" type="submit" name='submit' value="Submit">
         
         </form>
     </div>

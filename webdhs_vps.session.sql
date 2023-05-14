@@ -64,4 +64,4 @@ INSERT INTO test.cart_items (name, description, price) VALUES  "Premiumpaket", "
 
 
 --@block
-UPDATE products SET description = 'Detta är vår månadsavgift, här ingår snabb och aktiv support' WHERE id = 3;
+DELETE FROM products where name = "test";
