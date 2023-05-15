@@ -25,7 +25,7 @@ class Header extends HTMLElement {
       <ul class="navbar_links nav">
 
     <div class="search">                        
-      <input type="text" id="myInput" name="search" placeholder="sök..." >
+      <input type="text" id="search" name="search" placeholder="sök..." >
       <placeholder>
       <button onclick="checkValue()">Sök</button>
       <button onclick="removeHighlight()">Ta bort markeringar</button>
@@ -110,7 +110,7 @@ const nav = document.querySelector('nav');
 })
 function checkValue() {
     // Get the input value entered by the user
-    var input = document.getElementById("myInput").value;
+    var input = document.getElementById("search").value;
     if (input === '') {
         return false; // Return without performing any search
       }
@@ -183,13 +183,13 @@ function checkValue() {
     result.textContent = "markeringar borttagna";
     
   
-    document.getElementById("myInput").value = "";
+    document.getElementById("search").value = "";
     document.getElementById("result").textContent = "";
 
     return false; // Prevent form submission behavior
   }
   
-  document.getElementById("myInput").addEventListener("keydown", function (event) {
+  document.getElementById("search").addEventListener("keydown", function (event) {
     if (event.key === "Enter") {
       event.preventDefault();
       checkValue();
