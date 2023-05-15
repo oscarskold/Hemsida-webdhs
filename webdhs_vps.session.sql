@@ -64,4 +64,4 @@ INSERT INTO test.cart_items (name, description, price) VALUES  "Premiumpaket", "
 
 
 --@block
-DELETE FROM products where name = "test";
+DELETE FROM products where name = "gg";

@@ -6,6 +6,7 @@ var router = express.Router();
 var date_time = new Date();
 var multer = require('multer');
 var fs = require('fs-extra')
+var path = require('path')
 
 router.get('/', function (req, res, next) {
     if (req.session.user == "test") {
@@ -42,22 +43,20 @@ router.get('/', function (req, res, next) {
 
 
 
-var storage = multer.diskStorage({
-    destination: function (req, file, cb) {
-        cb(null,__dirname + './public/img')
-    },
-
+const storage = multer.diskStorage({
+    destination: `public/uploads/`,
     filename: function (req, file, cb) {
         var ext = path.extname(file.originalname);
         var name = req.body.name;
         cb(null, name + ext) // rename the file to the "name" variable plus the original extension
+        console.log(req.file, 'file3')
     }
 });
 
-var upload = multer({ des: __dirname + './public/img'})
-
+// var upload = multer({ des: storage, })
+const upload = multer({ storage })
 // upload.single('file'), 
-router.post('/add', upload.single('product_img'), function (req, res, next) {
+router.post('/add', upload.single('product_img'), function (req, res) {
 
     console.log(req.file, 'file')
 
