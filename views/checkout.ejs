@@ -55,13 +55,15 @@
 
             </div>
 
-            <div id="product" class="product">
+            <div id="product" class="product"  >
                 <h1>Produkter</h1>
 
+
+                <div id="prod" hidden >
                 <% for (var i=0; i<data.length; i++){ %>
                     <div class="showcase">
                         <div class="card">
-                            <img src="../img/<%=data[i].name%>.png" alt="">
+                            <img src="../uploads/<%=data[i].name%>.png" alt="">
                             <div>
                                 <span>
                                     <%=data[i].name%>
@@ -76,11 +78,13 @@
                             </div>
                             <a class="rm" href="<%-data[i].name%>">Läs mer</a>
                             <!-- Form ? -->
-                            <a class="rm" onclick="remove(<%=data[i].id%>)">Remove</a>
+                            <button class="rm" onclick="remove(<%=data[i].id%>)"> Remove
+
                         </div>
 
                     </div>
                     <%}%>
+                </div>
 
             </div>
 
@@ -103,7 +107,7 @@
                     productElement.innerHTML = `
                     <div class="showcase">
                         <div class="card">
-                        <img src="/img/${item[j].name}.png">
+                        <img src="../uploads/${item[j].name}.png">
                         <span>${item[j].name}</span>
                         <br>
                         <span class="description">${item[j].description}</span>
@@ -122,6 +126,10 @@
                     localStorage.removeItem(id)
                     location.reload()
                 }
+                function show(){
+                    document.getElementById('prod').hidden = false
+                }
+
             </script>
 
             <div class="checkbox">

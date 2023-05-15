@@ -12,11 +12,9 @@ router.post('/', function (req, res, next) {
     if (err) {
       throw err
     } else {
-      console.log('sucsses')
-      res.send('sucsses')
+      res.redirect('/checkout')
     }
   });
 });
-
 
 module.exports = router; 

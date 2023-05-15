@@ -51,7 +51,7 @@
             <!-- RÖR KANSKE EJ -->
         <% for (var i=0; i<data.length; i++){ %>
                 <div class="cards">
-                    <img src="../img/<%=data[i].name%>.png" alt="">
+                    <img src="../uploads/<%=data[i].name%>.png" alt="">
                     <div>
                         <span class="t1"><%=data[i].name%></span>
                         <hr>
@@ -62,7 +62,7 @@
                     <%var cartItemsString = JSON.stringify(data[i])%>
 
                     <span>
-                    <button class="add"onclick='addtocart(<%-cartItemsString%>, <%-login%>)'>
+                    <button class="add" onclick='addtocart(<%-cartItemsString%>, <%-login%>)'>
                         <img src="../img/add-cart.png" alt=""> 
                         <p>Add to cart</p>
                     </span>
@@ -71,7 +71,7 @@
 
             <% for (var i=0; i<bookingdata.length; i++){ %>
                 <div class="cards">
-                    <img src="../img/<%=bookingdata[i].name%>.png" alt="">
+                    <img src="../uploads/<%=bookingdata[i].name%>.png" alt="">
                     <div>
                         <span class="t1"><%=bookingdata[i].name%></span>
                         <hr>

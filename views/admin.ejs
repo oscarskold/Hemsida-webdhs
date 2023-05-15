@@ -16,8 +16,7 @@
         rel="stylesheet">
     <script src="../js/nav.js" type="text/javascript" defer></script>
     <script src="../js/footer.js" type="text/javascript" defer></script>
-    <script src="../js/slider.js" type="text/javascript" defer></script>
-    <script src="js/add.js" type="text/javascript" defer></script>
+    <script src="../js/remove_prod.js" type="text/javascript" defer></script>
     <link rel="shortcut icon" href="../img/Logo.png" />
     <title>Document</title>
 </head>
@@ -32,18 +31,23 @@
 
     <div class="add/remov">
         <button style="padding-bottom: 50px; padding-top: 50px;" onclick="add()">Add products</button>
-        <button style="padding-bottom: 50px; padding-top: 50px;">remove products</button>
+        <button style="padding-bottom: 50px; padding-top: 50px;" onclick="rem()"> remove products</button>
     </div>
 
-    <div class="adding_product" >
+    <div class="adding_product" hidden>
         <form method="post" action="/admin/add" enctype='multipart/form-data'>
             <p>
+                <input type="radio" checked=true name="database"> webdhs
+                <input type="radio" name="database"> Skölds
+
+            </p>
+            <p>
                 <label> Product name </label>
-                <input class="" type="text" name="name" placeholder="name" >
+                <input class="" type="text" name="name" placeholder="name">
             </p>
             <p>
                 <label> Product description </label>
-                <input class="" type="text" name="description" placeholder="description" >
+                <input class="" type="text" name="description" placeholder="description">
             </p>
             <p>
                 <label> Product price </label>
@@ -54,11 +58,60 @@
                 <input class="" name="product_img" type="file">
             </p>
             <input class="submit" type="submit" name='submit' value="Submit">
-        
+
         </form>
     </div>
 
     <div class="grid-wrapper" id="s-cards">
+
+            <!-- RÖR KANSKE EJ -->
+            <% for (var i=0; i<data.length; i++){ %>
+                <div class="cards">
+                    <img src="../uploads/<%=data[i].name%>.png" alt="">
+                    <div>
+                        <span class="t1">
+                            <%=data[i].name%>
+                        </span>
+                        <hr>
+                        <span>
+                            <%=data[i].price%>kr
+                        </span>
+                        <span class="card-info">
+                            <%=data[i].description%>
+                        </span>
+                    </div>
+                    <a class="rm" href="<%-data[i].name%>">Läs mer</a>
+
+                </div>
+                <%}%>
+
+        <% for (var i=0; i<bookingdata.length; i++){ %>
+            <div class="cards">
+                <img src="../img/<%=bookingdata[i].name%>.png" alt="">
+                <div>
+                    <span class="t1">
+                        <%=bookingdata[i].name%>
+                    </span>
+                    <hr>
+                    <span>
+                        <%=bookingdata[i].price%>kr
+                    </span>
+                    <span class="card-info">
+                        <%=bookingdata[i].description%>
+                    </span>
+                </div>
+                <a class="rm" href="<%-bookingdata[i].name%>">Läs mer</a>
+                <%}%>
+
+                    <div id="s2">
+
+                    </div>
+
+            </div>
+    </div>
+
+
+    <div class="grid-wrapper2" id="s-cards">
 
         <!-- RÖR KANSKE EJ -->
         <% for (var i=0; i<data.length; i++){ %>
@@ -77,37 +130,50 @@
                     </span>
                 </div>
                 <a class="rm" href="<%-data[i].name%>">Läs mer</a>
+                <button class="remove" onclick="remove(<%=data[i].id%>, 'products')"> Remove </button> 
+
             </div>
             <%}%>
 
-                <% for (var i=0; i<bookingdata.length; i++){ %>
-                    <div class="cards">
-                        <img src="../img/<%=bookingdata[i].name%>.png" alt="">
-                        <div>
-                            <span class="t1">
-                                <%=bookingdata[i].name%>
-                            </span>
-                            <hr>
-                            <span>
-                                <%=bookingdata[i].price%>kr
-                            </span>
-                            <span class="card-info">
-                                <%=bookingdata[i].description%>
-                            </span>
-                        </div>
-                        <a class="rm" href="<%-bookingdata[i].name%>">Läs mer</a>
-                        <%}%>
+    <% for (var i=0; i<bookingdata.length; i++){ %>
+        <div class="cards">
+            <img src="../img/<%=bookingdata[i].name%>.png" alt="">
+            <div>
+                <span class="t1">
+                    <%=bookingdata[i].name%>
+                </span>
+                <hr>
+                <span>
+                    <%=bookingdata[i].price%>kr
+                </span>
+                <span class="card-info">
+                    <%=bookingdata[i].description%>
+                </span>
+            </div>
+            <a class="rm" href="<%-bookingdata[i].name%>">Läs mer</a>
+                <button class="remove" onclick="relod_remove(<%=data[i].id%>, 'bookings')"> Remove </button> 
 
-                            <div id="s2">
+            <%}%>
 
-                            </div>
+                <div id="s2">
 
-                    </div>
-    </div>
+                </div>
+
+        </div>
+</div>
+
 
     <script>
-        function add(){
-            document.querySelector('.cards').hidden = true;
+        function add() {
+            document.querySelector('.adding_product').hidden = false;
+        }
+
+        function rem() {
+            document.querySelector('.adding_product').hidden = true;
+            document.querySelector('.grid-wrapper').style.display = "none";
+            document.querySelector('.grid-wrapper2  ').style.display = "grid";
+
+
         }
     </script>
 

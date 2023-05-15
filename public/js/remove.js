@@ -12,10 +12,6 @@ function remove(productid){
     },
     body: JSON.stringify({
       id: productid,
-    }).then(response => {
-      if (response == 'sucsses'){
-        location.reload
-      }
+    })
     }) // body data type must match "Content-Type" header
-  }) 
-  };
+  }

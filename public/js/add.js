@@ -1,6 +1,6 @@
 //RÖR EJ
-function addtocart(item, login) {
-  console.log(item)
+function addtocart(obj, login) {
+  console.log(obj)
   let itemCount = 0;
   itemCount++;
 
@@ -18,16 +18,17 @@ function addtocart(item, login) {
       redirect: 'follow', // manual, *follow, error
       referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
       body: JSON.stringify({
-        item: item,
+        item: obj,
       }) // body data type must match "Content-Type" header 
     })
 
 
   } else {
-    console.log("KKKL")
+    console.log("guest")
     var objStr = JSON.stringify(obj)
     var objStrid = JSON.stringify(obj.id)
     localStorage.setItem(objStrid, objStr);
+    console.log(localStorage.getItem(objStrid))
   }
 
   // }  

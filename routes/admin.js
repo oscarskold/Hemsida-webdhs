@@ -91,11 +91,7 @@ router.post('/add', upload.single('product_img'), function (req, res) {
                             })
                             console.log('not connected', err)
                         }
-                        res.render('admin', {
-                            data: result,
-                            bookingdata: bookres,
-                            message: 'Added product'
-                        })
+                        res.redirect('/admin')
                     })
                 }
 
@@ -106,9 +102,18 @@ router.post('/add', upload.single('product_img'), function (req, res) {
 })
 
 router.post('/delete', function (req, res, next) {
+    var id = req.body.id
+    var table = req.body.table
 
-    con.query(``, function (err, result) { })
+    console.log(id, table, 'id', 'table')
 
+    con.query(`DELETE FROM webdhs.${table} WHERE id=${id};`, function (err, result) {
+        if (err) {
+            throw err
+        } else {
+            res.redirect('/admin')
+        }
+    });
 })
 
 module.exports = router;
