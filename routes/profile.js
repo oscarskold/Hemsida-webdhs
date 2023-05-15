@@ -8,7 +8,6 @@ var session = require('express-session');
 // GET user profile page
 router.get('/', function (req, res, next) {
   var user = req.session.user;
-  var user = 'test';
   console.log(user)
   con.query(`SELECT * FROM webdhs.users WHERE user_name = "${user}"`, function (err, result) {
     if (err) {
