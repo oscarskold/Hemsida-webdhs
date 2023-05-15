@@ -49,7 +49,6 @@ const storage = multer.diskStorage({
         var ext = path.extname(file.originalname);
         var name = req.body.name;
         cb(null, name + ext) // rename the file to the "name" variable plus the original extension
-        console.log(req.file, 'file3')
     }
 });
 
@@ -104,14 +103,21 @@ router.post('/add', upload.single('product_img'), function (req, res) {
 router.post('/delete', function (req, res, next) {
     var id = req.body.id
     var table = req.body.table
+    var prod_name = req.body.prod_name
 
-    console.log(id, table, 'id', 'table')
+console.log(req.body, 'id', 'table')
 
     con.query(`DELETE FROM webdhs.${table} WHERE id=${id};`, function (err, result) {
         if (err) {
             throw err
         } else {
-            res.redirect('/admin')
+            fs.unlink(`public/uploads/` + prod_name +'.png', (err) => {
+                if (err) {
+                    console.log(err);
+                }
+                console.log("Delete File successfully.");
+                res.redirect('/admin')
+            });
         }
     });
 })

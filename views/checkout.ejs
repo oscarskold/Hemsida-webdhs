@@ -59,7 +59,7 @@
                 <h1>Produkter</h1>
 
 
-                <div id="prod" hidden >
+                <div id="prod">
                 <% for (var i=0; i<data.length; i++){ %>
                     <div class="showcase">
                         <div class="card">
@@ -77,7 +77,6 @@
                                 </span>
                             </div>
                             <a class="rm" href="<%-data[i].name%>">Läs mer</a>
-                            <!-- Form ? -->
                             <button class="rm" onclick="remove(<%=data[i].id%>)"> Remove
 
                         </div>
