@@ -8,7 +8,7 @@ router.post('/', function (req, res, next) {
   var id = req.body.id
   var user = req.session.user
   console.log(id, 'id')
-  con.query(`DELETE FROM ${user}.cart_items WHERE id=${id};`, function (err, result) {
+  con.query(`DELETE FROM ${user}_items WHERE id=${id};`, function (err, result) {
     if (err) {
       throw err
     } else {

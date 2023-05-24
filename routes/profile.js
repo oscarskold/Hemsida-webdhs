@@ -30,8 +30,7 @@ router.post('/update-profile', function (req, res, next) {
   var oldPassword = req.body.password_old;
   var newPassword = req.body.password_new;
   var confirmPassword = req.body.password_confirm;
-
-
+  var user = req.body.name
 
   con.query(`SELECT * FROM webdhs.users WHERE user_id = ${userid}`, function (err, result) {
     if (err) {
@@ -54,17 +53,28 @@ router.post('/update-profile', function (req, res, next) {
     } else if (newPassword !== confirmPassword) {
       res.send("New password and confirm password do not match. Please try again!");
     } else {
-      con.query(`UPDATE webdhs.users SET user_name = "${req.body.user_name}", user_email = "${req.body.email}", user_password = "${newPassword_hash}" WHERE user_id = "${userid}"`, function (err, result) {
+      con.query(`UPDATE webdhs.users SET user_name ="${user}", user_password = "${newPassword_hash}" WHERE user_id = "${userid}"`, function (err, result) {
         if (err) {
           res.send('Error when updating database');
           throw err;
+        } else {
+          if (actualUser.user_name != user) {
+            con.query(`RENAME TABLE ${actualUser.user_name}_items to ${user}_items;`, function (err, result) {
+              if (err) {
+                throw err;
+              } else {
+                res.render('profile', { successMsg: "Profile info updated!", data: [actualUser] });
+              }
+            })
+          } else {
+            res.render('profile', { successMsg: "Profile info updated!", data: [actualUser] });
+
+          }
+
         }
 
-        actualUser.user_name = req.body.user_name;
-        actualUser.email = req.body.email;
-        actualUser.password = newPassword;
 
-        res.render('/profile', { successMsg: "Profile info updated!", data: [actualUser] });
+
       });
     }
   });

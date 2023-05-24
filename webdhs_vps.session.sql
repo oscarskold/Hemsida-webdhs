@@ -58,10 +58,10 @@ INSERT INTO users (user_name, user_email, user_password, user_session_id) VALUES
 SELECT * FROM users WHERE EXISTS (SELECT * FROM users WHERE user_name = 'test');
 
 --@block
-DELETE FROM webdhs.users WHERE user_id = 23;
+--Tar bort användare
+DELETE FROM webdhs.users;
 --@block
 INSERT INTO test.cart_items (name, description, price) VALUES  "Premiumpaket", ""
 
-
 --@block
-DELETE FROM products where name = "gg";
+IF NOT EXISTS RENAME TABLE users to users;

@@ -76,7 +76,7 @@ router.post('/add', upload.single('product_img'), function (req, res) {
             con.query('SELECT id, name, description, price FROM products ORDER BY id', function (err, result) {
                 if (err) {
                     res.render('admin', {
-                        data: ''
+                        data: '',
                     })
                     console.log('not connected', err)
 
