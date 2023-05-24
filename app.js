@@ -18,7 +18,6 @@ var WebhostingRouter = require('./routes/Webhosting');
 var addToCart = require('./routes/add_to_cart');
 var remove = require('./routes/remove');
 var login = require('./routes/login');
-var loginconf = require('./routes/loginconf')
 var register = require('./routes/register');
 var registerconf = require('./routes/registerconf');
 var user = require('./routes/users');
@@ -63,7 +62,6 @@ app.use('/premiumPaket', PremiumPaketRouter);
 app.use('/webhosting', WebhostingRouter);
 app.use('/add', addToCart);
 app.use('/login', login);
-app.use('/loginconf', loginconf);
 app.use('/register', register);
 app.use('/registerconf', registerconf);
 app.use('/remove', remove);
