@@ -27,12 +27,12 @@ router.get('/', function(req, res, next) {
   //hihi jag ändrade!!!!!!!!!!!!!!!!!!!!!!!!!!!!!    
   con.query('SELECT id, name, description, price FROM bookings ORDER BY id', function(err, bookres){
     if (err){
-      res.render('Services', {
+      res.render('services', {
         data: ''
       })
       console.log('not connected', err)
     }
-    res.render('Services', {
+    res.render('services', {
       data: result,
       login: login,
       bookingdata: bookres

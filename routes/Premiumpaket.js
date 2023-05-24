@@ -20,7 +20,6 @@ router.get('/', function(req, res, next) {
         data: result
       })
 
-      console.log('(:');
     }
   });
 });

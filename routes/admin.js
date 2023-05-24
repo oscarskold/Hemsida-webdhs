@@ -90,7 +90,7 @@ router.post('/add', upload.single('product_img'), function (req, res) {
                             })
                             console.log('not connected', err)
                         }
-                        res.redirect('/admin')
+                        res.redirect('admin')
                     })
                 }
 
@@ -116,7 +116,7 @@ console.log(req.body, 'id', 'table')
                     console.log(err);
                 }
                 console.log("Delete File successfully.");
-                res.redirect('/admin')
+                res.redirect('admin')
             });
         }
     });
